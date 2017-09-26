@@ -1,8 +1,8 @@
 site_name: My Docs
 pages:
 - 关于 : index.md
-- Java 标准核心类支持 : tijos_runtime_guide/Java Standard Support.md
-- TiJOS Runtime JDK : tijos_runtime_guide/TiJOS Runtime JDK.md
+- Java 标准核心类支持 : tijos_runtime_guide/Java_Standard_Support.md
+- TiJOS Runtime JDK : tijos_runtime_guide/TiJOS_Runtime_JDK.md
 - 设备总线 : tijos_runtime_guide/tijos.runtime.deviceaccess.md
 - TiADC - 模数转换器 : tijos_runtime_guide/tijos.runtime.deviceaccess.TiADC.md
 - TiGPIO - 通用输入/输出 : tijos_runtime_guide/tijos.runtime.deviceaccess.TiGPIO.md
