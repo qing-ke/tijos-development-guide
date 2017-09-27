@@ -1,7 +1,7 @@
-site_name: My Docs
+site_name: 钛极OS(TiJOS)应用开发指南
 pages:
 - 关于 : index.md
-- Java 标准核心类支持 : tijos_runtime_guide/Java_Standard_Support.md
+- Java标准库支持 : tijos_runtime_guide/Java_Standard_Support.md
 - TiJOS Runtime JDK : tijos_runtime_guide/TiJOS_Runtime_JDK.md
 - 设备总线 : tijos_runtime_guide/tijos.runtime.deviceaccess.md
 - TiADC - 模数转换器 : tijos_runtime_guide/tijos.runtime.deviceaccess.TiADC.md
