@@ -6,14 +6,54 @@
 
 TiJOS 设备总线包括如下类：
 
-| 类名          | 说明                                       |      |
-| ----------- | ---------------------------------------- | ---- |
-| TiGPIO      | [通用输入/输出（General Purpose Input Output ）](tijos.runtime.deviceaccess.TiGPIO.md) |      |
-| TiUART      | [通用异步收发传输器（Universal Asynchronous Receiver/Transmitter](tijos.runtime.deviceaccess.TiUART.md) |      |
-| TiADC       | [模数转换器（ Analog-to-Digital Converter）](tijos.runtime.deviceaccess.TiADC.md) |      |
-| TiPWM       | [脉冲宽度调制发生器（ Pulse Width Modulation）](tijos.runtime.deviceaccess.TiPWM.md) |      |
-| TiI2CMaster | [双向二线制同步串行总线（ Inter-Integrated Circuit），主机模式 ](tijos.runtime.deviceaccess.TiI2CMaster.md) |      |
-| TiSPIMaster | [串行外设接口 （Serial Peripheral Interface），主机模式](tijos.runtime.deviceaccess.TiSPIMaster.md) |      |
-| TiOWMaster  | [单总线（one wire），主机模式](tijos.runtime.deviceaccess.TiOWMaster.md) |      |
+| 类名          | 说明                                       |
+| ----------- | ---------------------------------------- |
+| TiGPIO      | 通用输入/输出（General Purpose Input Output ）   |
+| TiUART      | 通用异步收发传输器（Universal Asynchronous Receiver/Transmitter） |
+| TiADC       | 模数转换器（ Analog-to-Digital Converter）      |
+| TiPWM       | 脉冲宽度调制发生器（ Pulse Width Modulation）       |
+| TiI2CMaster | 双向二线制同步串行总线（ Inter-Integrated Circuit），主机模式 |
+| TiSPIMaster | 串行外设接口 （Serial Peripheral Interface），主机模式 |
+| TiOWMaster  | 单总线（one wire），主机模式                       |
 
 
+
+## TiGPIO
+
+TiGPIO的详细技术资料请参考：tijos.runtime.deviceaccess.TiGPIO。
+
+
+
+## TiUART
+
+TiUART的详细技术资料请参考：tijos.runtime.deviceaccess.TiUART。
+
+
+
+## TiADC
+
+TiADC的详细技术资料请参考：tijos.runtime.deviceaccess.TiADC。
+
+
+
+## TiPWM
+
+TiPWM的详细技术资料请参考：tijos.runtime.deviceaccess.TiPWM。
+
+
+
+## TiI2CMaster
+
+TiI2CMaster的详细技术资料请参考：tijos.runtime.deviceaccess.TiI2CMaster。
+
+
+
+## TiSPIMaster
+
+TiSPIMaster的详细技术资料请参考：tijos.runtime.deviceaccess.TiSPIMaster
+
+
+
+## TiOWMaster
+
+TiOWMaster的详细技术资料请参考：tijos.runtime.deviceaccess.TiOWMaster

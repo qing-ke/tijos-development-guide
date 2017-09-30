@@ -43,12 +43,12 @@ WLAN连接目标AP，IP地址动态分配（推荐使用方式）， WLAN相关�
 
 ```java
 ...
-//更改AP的SSID和密码，设置一次即可，本设置掉电不丢失
+//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失
 TiNetworkCenter.getNetworkCenter().getWLAN().changeWLANSSID("TPLink-123");
 TiNetworkCenter.getNetworkCenter().getWLAN().changePassword("12345678");
 ...
 //启动WLAN，连接目标AP，超时10秒
-int status = TiNetworkCenter.getNetworkCenter().getWLAN().startup(10*1000);
+int status = TiNetworkCenter.getNetworkCenter().getWLAN().startup(10);
 if(status == -1) {
     System.out.println("connect timeout.");
     return ;
@@ -65,7 +65,7 @@ WLAN连接目标AP，IP地址静态设置。
 
 ```java
 ...
-//更改AP的SSID和密码，设置一次即可，本设置掉电不丢失
+//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失
 ...
 TiNetworkCenter.getNetworkCenter().getWLAN().changeWLANSSID("TPLink-123");
 TiNetworkCenter.getNetworkCenter().getWLAN().changePassword("12345678");
@@ -74,7 +74,7 @@ TiNetworkCenter.getNetworkCenter().getWLAN().changePassword("12345678");
 TiNetworkCenter.getNetworkCenter().getWLAN().setStaticAddress("192.168.1.100", "192.168.1.1", "255.255.255.0");
 ...
 //启动WLAN，连接目标AP，超时10秒
-int status = TiNetworkCenter.getNetworkCenter().getWLAN().startup(10*1000);
+int status = TiNetworkCenter.getNetworkCenter().getWLAN().startup(10);
 if(status == -1) {
     System.out.println("connect timeout.");
     return ;
@@ -91,7 +91,7 @@ WLAN连接目标AP，IP地址动态分配，同时启动SoftAP。
 
 ```java
 ...
-//更改AP的SSID和密码，设置一次即可，本设置掉电不丢失
+//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失
 ...
 TiNetworkCenter.getNetworkCenter().getWLAN().changeWLANSSID("TPLink-123");
 TiNetworkCenter.getNetworkCenter().getWLAN().changePassword("12345678");
