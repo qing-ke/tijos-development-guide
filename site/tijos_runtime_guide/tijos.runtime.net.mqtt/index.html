@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>MQTT 客户端 - 钛极OS(TiJOS)应用开发指南</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "MQTT \u5ba2\u6237\u7aef";
+    var mkdocs_page_input_path = "tijos_runtime_guide\\tijos.runtime.net.mqtt.md";
+    var mkdocs_page_url = "/tijos_runtime_guide/tijos.runtime.net.mqtt/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 钛极OS(TiJOS)应用开发指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_application_devsuite_setup/">TiJOS应用开发环境搭建</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_device_manager/">Ti-Dev Manager设备管理器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_dev_studio/">Ti-Dev Studio开发工具</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_helloworld/">第一个TiJOS应用</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_examples/">TiJOS应用参考例程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_java_standard_support/">TiJOS JDK Java标准库支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_runtime_sdk/">TiJOS Hardware Access JDK</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess/">TiJOS设备总线支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiADC/">TiADC - 模数转换器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiGPIO/">TiGPIO - 通用输入/输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiI2CMaster/">TiI2CMaster - 双向二线制同步串行总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiOWMaster/">TiOWMaster - 单总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiPWM/">TiPWM - 脉冲宽度调制发生器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiSPIMaster/">TiSPIMaster - 串行外设接口</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiUART/">TiUART - 通用异步收发传输器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor/">TiJOS传感器支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.button/">按键</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.distance/">测距模块</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.gas/">气体传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.humiture/">温湿度传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.infrared/">红外线传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.buzzer/">蜂鸣器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.led/">LED/OLED显示</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.relay/">继电器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_net/">TiJOS网络应用开发指南</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">MQTT 客户端</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#tijosruntimenetmqtt-mqtt">tijos.runtime.net.mqtt - MQTT 客户端</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#mqtt">MQTT 连接配置</a></li>
+        
+            <li><a class="toctree-l3" href="#mqtt_1">MQTT 连接建立步骤</a></li>
+        
+            <li><a class="toctree-l3" href="#mqtt_2">MQTT 事件监听</a></li>
+        
+            <li><a class="toctree-l3" href="#mqtt-topic">MQTT Topic 发布和订阅</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.ntp/">网络时间协议客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.networkcenter/">网络管理中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.ota/">在线应用升级</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util/">TiJOS常用工具类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.base64/">BASE64编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.crc/">CRC校验码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.json/">JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.logging/">日志输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.eventcenter/">硬件事件中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.platform/">平台设置</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">钛极OS(TiJOS)应用开发指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>MQTT 客户端</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tijosruntimenetmqtt-mqtt">tijos.runtime.net.mqtt - MQTT 客户端</h1>
+<p>MQTT是一个物联网传输协议，它被设计用于轻量级的发布/订阅式消息传输，旨在为低带宽和不稳定的网络环境中的物联网设备提供可靠的网络服务， 请参考 https://en.wikipedia.org/wiki/MQTT 或 mqtt.org 了解更多信息。</p>
+<p>目前主流的物联云厂商均支持MQTT， 如Amazon, 百度云，阿里云等等， TiJOS 提供符合MQTT 3.1.1标准协议的MQTT Client, 可与所有支持MQTT 协议的服务器直接连接， 如百度物联云 https://cloud.baidu.com/product/iot.html  及 阿里物联云 https://www.aliyun.com/product/iot. </p>
+<p>TiJOS MQTT Client 包括如下类：</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MqttClient</td>
+<td>Mqtt客户端</td>
+</tr>
+<tr>
+<td>MqttConnectOptions</td>
+<td>Mqtt连接项设置</td>
+</tr>
+<tr>
+<td>IMqttClientListener</td>
+<td>Mqtt消息监听接口</td>
+</tr>
+</tbody>
+</table>
+<p>TiJOS MQTT Client 支持TCP和SSL两种通讯方式， 符合MQTT3.1.1标准规范，支持QOS0,1,2, 支持高性能异步API,   在处理MQTT协议过程中通过事件回调返回操作结果， 可支持突发模式"burst-mode"客户端请求， 实现快速发布无等待， 避免客户端资源等待。</p>
+<h2 id="mqtt">MQTT 连接配置</h2>
+<p>MQTT 连接配置通过MqttConnectOptions 类进行，可进行如下配置：</p>
+<table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>MqttConnectOptions</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CleanSession</td>
+<td>setCleanSession(boolean)</td>
+<td>设置 Client断开连接后Server是否应该保存Client的订阅信息</td>
+</tr>
+<tr>
+<td>UserName</td>
+<td>setUserName(String)</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>setPassword(String)</td>
+<td>密码</td>
+</tr>
+<tr>
+<td>LWT</td>
+<td>setWill(String, byte[], int, boolean)</td>
+<td>"Last Will and Testament" (LWT), 具体请参考MQTT协议</td>
+</tr>
+<tr>
+<td>KeepAliveInterval</td>
+<td>setKeepAliveInterval(int)</td>
+<td>设置客户端与服务器之间最大空闲时间，以秒为单位，默认60秒</td>
+</tr>
+<tr>
+<td>ConnectionTimeout</td>
+<td>setConnectionTimeout(int)</td>
+<td>客户连接服务器超时设置，秒为单位，默认10秒</td>
+</tr>
+<tr>
+<td>AutomaticReconnect</td>
+<td>setAutomaticReconnect(boolean)</td>
+<td>设置是否自动重新连接</td>
+</tr>
+</tbody>
+</table>
+<p>MQTT服务器地址及客户端ClientID通过MqttClient初始化时进行设置。</p>
+<h2 id="mqtt_1">MQTT 连接建立步骤</h2>
+<ol>
+<li>通过MqttConnectOptions设置相应的连接参数:</li>
+</ol>
+<pre><code class="java"> MqttConnectOptions connOpts = new MqttConnectOptions();
+ connOpts.setUserName(username);
+ connOpts.setPassword(password);
+ connOpts.setAutomaticReconnect(true);
+</code></pre>
+
+<ol>
+<li>设置MQTT服务器地址及ClientID, 以百度物联云服务器为例:</li>
+</ol>
+<pre><code class="java">final String broker      = &quot;tcp://tijos.mqtt.iot.gz.baidubce.com:1883&quot;;
+final String clientId     = &quot;mqtt_test_java_client1&quot;;
+
+MqttClient mqttClient = new MqttClient(broker, clientId);
+</code></pre>
+
+<ol>
+<li>设置事件监听并连接服务器</li>
+</ol>
+<pre><code>mqttClient.SetMqttClientListener(new MqttEventLister());
+mqttClient.connect(connOpts, mqttClient);
+</code></pre>
+
+<ol>
+<li>连接成功或失败时会通过IMqttClientListener中onConnected或onDisconnected返回, 用户也可以不使用突发模式直接进行topic的发布和订阅以提高性能。</li>
+</ol>
+<p>​</p>
+<h2 id="mqtt_2">MQTT 事件监听</h2>
+<p>MQTT的通过IMqttClientListener事件回调来处理事件，事件类型包括：</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onConnected(Object)</td>
+<td>当连接成功或重新连接成功时调用</td>
+</tr>
+<tr>
+<td>onDisconnected(Object)</td>
+<td>当连接失败或重新连接失败时调用</td>
+</tr>
+<tr>
+<td>messageArrived(Object, String, byte[])</td>
+<td>当服务器端发送topic更新时调用</td>
+</tr>
+<tr>
+<td>publishCompleted(Object, int, String, int)</td>
+<td>当客户端PUBLISH成功后调用</td>
+</tr>
+<tr>
+<td>subscribeCompleted(Object, int, String, int)</td>
+<td>当客户端SUBSCRIBE成功后调用</td>
+</tr>
+<tr>
+<td>unsubscribeCompleted(Object, int, String, int)</td>
+<td>当客户端UNSUBSCRIBE成功时</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mqtt-topic">MQTT Topic 发布和订阅</h2>
+<p>MQTT协议主要来进行topic的发布和订阅，即将数据发布到服务器和从服务器获得最数据更新，这主要通过MqttClient的publish和subscribe函数来完成：</p>
+<pre><code class="java">String topic        = &quot;topic2&quot;;
+String content      = &quot;Message from MQTT IoT demo&quot;;
+int Qos = 1;
+boolean retain = false;
+
+int msgId = mqttClient.subscribe(topic, Qos);
+msgId = mqttClient.publish(topic, content.getBytes(), Qos, retain);
+</code></pre>
+
+<p>publish和subscribe 返回msgId 用于标识本次操作，当操作完成后的事件回调中可通过msgId或topic名称来获得当前事件的执行结果。</p>
+<p>注意： </p>
+<ul>
+<li>有些物联云服务器仅支持QOS0和1 的发布和订阅， 不支持QOS2. </li>
+<li>TiJOS MQTT发布订阅最大支持512字节数据， 超出部分将被抛弃</li>
+</ul>
+<p>具体可参考MQTT相关例程。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tijos.runtime.net.ntp/" class="btn btn-neutral float-right" title="网络时间协议客户端">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tijos_net/" class="btn btn-neutral" title="TiJOS网络应用开发指南"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../tijos_net/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tijos.runtime.net.ntp/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

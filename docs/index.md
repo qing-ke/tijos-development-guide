@@ -1,10 +1,23 @@
 # 钛极OS(TiJOS)应用开发指南
 
-| 目 录                                      |                                          |
+| 文档版本                 | 2.1                                      |
+| :------------------- | ---------------------------------------- |
+| 最近更新时间               | 2017.9.30                                |
+|                      |                                          |
+| **更多信息请访问如下链接**      |                                          |
+| 钛极OS官网               | [www.tijos.net](http://www.tijos.net)    |
+| 钛极OS开发者社区            | [bbs.tijos.net](http://bbs.tijos.net)    |
+| 钛极OS(TiJOS)物联网操作系统介绍 | [http://dev.tijos.net/overview](http://dev.tijos.net/overview) |
+| 钛极OS(TiJOS) JDK API文档             | <http://dev.tijos.net/javadoc>           |      |
+| 钛极OS(TiJOS) JDK 常用功能例程            | <https://github.com/tijosnet/tijos-software-example> |      |
+| 钛极OS(TiJOS) 外设操作例程                | <https://github.com/tijosnet/tijos-hardware-example> |      |
+
+#目 录
+| 标 题                                      |                                          |
 | ---------------------------------------- | ---------------------------------------- |
 | [开发环境搭建](tijos_runtime_guide/tijos_application_devsuite_setup.md) |                                          |
 | [Ti-Dev Manager设备管理器](tijos_runtime_guide/tijos_device_manager.md) |                                          |
-| Ti-Dev Studio开发工具                        |                                          |
+| [Ti-Dev Studio开发工具](tijos_runtime_guide/tijos_dev_studio.md) |                                          |
 | [第一个TiJOS应用](tijos_runtime_guide/tijos_helloworld.md) |                                          |
 | [参考例程](tijos_runtime_guide/tijos_examples.md) |                                          |
 | [Java标准库支持](tijos_runtime_guide/tijos_java_standard_support.md) |                                          |
@@ -38,12 +51,3 @@
 |                                          | [日志输出](tijos_runtime_guide/tijos.util.logging.md) |
 | [硬件事件中心](tijos_runtime_guide/tijos.runtime.eventcenter.md) |                                          |
 | [平台设置](tijos_runtime_guide/tijos.runtime.platform.md) |                                          |
-
-更多信息请访问如下链接:
-
-| 网站        | 链接                                    |
-| --------- | ------------------------------------- |
-| 钛极OS官网    | [www.tijos.net](http://www.tijos.net) |
-| 钛极OS开发者社区 | [bbs.tijos.net](http://bbs.tijos.net) |
-|           |                                       |
-|           |                                       |

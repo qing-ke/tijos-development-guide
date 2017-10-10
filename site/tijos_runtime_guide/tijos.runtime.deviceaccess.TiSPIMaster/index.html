@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>TiSPIMaster - 串行外设接口 - 钛极OS(TiJOS)应用开发指南</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "TiSPIMaster - \u4e32\u884c\u5916\u8bbe\u63a5\u53e3";
+    var mkdocs_page_input_path = "tijos_runtime_guide\\tijos.runtime.deviceaccess.TiSPIMaster.md";
+    var mkdocs_page_url = "/tijos_runtime_guide/tijos.runtime.deviceaccess.TiSPIMaster/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 钛极OS(TiJOS)应用开发指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_application_devsuite_setup/">TiJOS应用开发环境搭建</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_device_manager/">Ti-Dev Manager设备管理器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_dev_studio/">Ti-Dev Studio开发工具</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_helloworld/">第一个TiJOS应用</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_examples/">TiJOS应用参考例程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_java_standard_support/">TiJOS JDK Java标准库支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_runtime_sdk/">TiJOS Hardware Access JDK</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess/">TiJOS设备总线支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiADC/">TiADC - 模数转换器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiGPIO/">TiGPIO - 通用输入/输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiI2CMaster/">TiI2CMaster - 双向二线制同步串行总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiOWMaster/">TiOWMaster - 单总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiPWM/">TiPWM - 脉冲宽度调制发生器</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">TiSPIMaster - 串行外设接口</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#tijosruntimedeviceaccesstispimaster-">tijos.runtime.deviceaccess.TiSPIMaster - 串行外设接口，主机模式</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#tispimaster">TiSPIMaster工作模式定义</a></li>
+        
+            <li><a class="toctree-l3" href="#tispimaster_1">TiSPIMaster方法定义</a></li>
+        
+            <li><a class="toctree-l3" href="#tispimaster_2">TiSPIMaster对象创建与销毁</a></li>
+        
+            <li><a class="toctree-l3" href="#tispimaster_3">TiSPIMaster模式设置</a></li>
+        
+            <li><a class="toctree-l3" href="#tispimaster_4">TiSPIMaster输入输出</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiUART/">TiUART - 通用异步收发传输器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor/">TiJOS传感器支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.button/">按键</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.distance/">测距模块</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.gas/">气体传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.humiture/">温湿度传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.infrared/">红外线传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.buzzer/">蜂鸣器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.led/">LED/OLED显示</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.relay/">继电器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_net/">TiJOS网络应用开发指南</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.mqtt/">MQTT 客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.ntp/">网络时间协议客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.networkcenter/">网络管理中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.ota/">在线应用升级</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util/">TiJOS常用工具类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.base64/">BASE64编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.crc/">CRC校验码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.json/">JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.logging/">日志输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.eventcenter/">硬件事件中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.platform/">平台设置</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">钛极OS(TiJOS)应用开发指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>TiSPIMaster - 串行外设接口</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tijosruntimedeviceaccesstispimaster-">tijos.runtime.deviceaccess.TiSPIMaster - 串行外设接口，主机模式</h1>
+<p>SPI是串行外设接口（Serial Peripheral Interface）的缩写。SPI，是一种高速的，全双工，同步的通信总线，并且在芯片的管脚上只占用四根线，节约了芯片的管脚，同时为PCB的布局上节省空间，提供方便，正是出于这种简单易用的特性，如今越来越多的芯片集成了这种通信协议。具体可参考https://baike.baidu.com/item/SPI或https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus。</p>
+<p>TiJOS JDK提供TiSPIMaster来支持SPI主机功能，其将SPI Master按照port分组，共支持4组，组号范围0-3，即：port0-port3；每组都支持指定模式的单独设置。</p>
+<h2 id="tispimaster">TiSPIMaster工作模式定义</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工作模式</td>
+<td>0/1/2/3</td>
+<td>MODE0/MODE1/MODE2/MODE3</td>
+</tr>
+<tr>
+<td>波特率</td>
+<td>1/2/3/...</td>
+<td>1Mbps/2Mbps/3Mbps/...</td>
+</tr>
+<tr>
+<td>位传输模式</td>
+<td>MODE_MSB/MODE_LSB</td>
+<td>高位先传输/低位先传输</td>
+</tr>
+<tr>
+<td>位宽模式</td>
+<td>MODE_SIO/MODE_DIO/MODE_QIO</td>
+<td>8位IO/16位IO/32位IO</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tispimaster_1">TiSPIMaster方法定义</h2>
+<p>TiSPIMaster类中主要的方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiSPIMaster open(int portID)</td>
+<td>通过指定port打开指定SPI Master，返回TiSPIMaster对象，<strong>若需要再次打开或打开为其他设备时需要先调用close关闭当前实例</strong></td>
+</tr>
+<tr>
+<td>void close()</td>
+<td>关闭已打开的TiSPIMaster实例</td>
+</tr>
+<tr>
+<td>void setMode(int workMode, int baudRate, int direction, int io)</td>
+<td>设置工作模式，波特率、位传输模式、位宽模式</td>
+</tr>
+<tr>
+<td>void clear()</td>
+<td>清除发送和接收缓冲区</td>
+</tr>
+<tr>
+<td>void selectSlave(boolean enable)</td>
+<td>从机选择使能控制</td>
+</tr>
+<tr>
+<td>int read(byte[] buf, int offset, int len)</td>
+<td>读取数据，返回实际读取长度</td>
+</tr>
+<tr>
+<td>int write(byte[] buf, int offset, int len)</td>
+<td>写入数据，返回实际写入长度</td>
+</tr>
+</tbody>
+</table>
+<p>TiSPIMaster类中他方法的技术说明请参考TiJOS JDK Runtime说明文档。</p>
+<h2 id="tispimaster_2">TiSPIMaster对象创建与销毁</h2>
+<p>TiSPIMaster对象的创建需要调用open静态方法，传入指定port参数，返回创建的接口对象。</p>
+<p>TiSPIMaster对象的销毁需要调用close方法。</p>
+<pre><code class="java">...
+int spiPort0 = 0;
+TiSPIMaster spi0 = TiSPIMaster.open(spiPort0);
+...
+...
+...
+spi0.close();
+</code></pre>
+
+<h2 id="tispimaster_3">TiSPIMaster模式设置</h2>
+<p>TiSPIMaster模式设置通过setMode方法设置，设置参数为工作模式、波特率、位传输模式，位宽模式。</p>
+<pre><code class="java">...
+//MODE3, 8Mbps, MSB高位先传, SIO8位宽模式
+spi0.setMode(3, 8, TiSPIMaster.MODE_MSB, TiSPIMaster.MODE_SIO); 
+...
+</code></pre>
+
+<p>注意：模式支持受平台特性限制，设置时须了解硬件平台特性。</p>
+<h2 id="tispimaster_4">TiSPIMaster输入输出</h2>
+<p>TiSPIMaster的输入输出操作通过selectSlave、read和write方法完成。</p>
+<pre><code class="java">...
+spi0.selectSlave(true);
+byte[] dataBuffer = {1, 2, 3, 4, 5};
+int writeLength = spi0.write(dataBuffer, 0, dataBuffer.length);
+int readLength = spi0.read(dataBuffer, 0, dataBuffer.length);
+spi0.selectSlave(false);
+...
+</code></pre>
+
+<p>具体可参考TiJOS JDK Runtime说明文档。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tijos.runtime.deviceaccess.TiUART/" class="btn btn-neutral float-right" title="TiUART - 通用异步收发传输器">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tijos.runtime.deviceaccess.TiPWM/" class="btn btn-neutral" title="TiPWM - 脉冲宽度调制发生器"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../tijos.runtime.deviceaccess.TiPWM/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tijos.runtime.deviceaccess.TiUART/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

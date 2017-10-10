@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>平台设置 - 钛极OS(TiJOS)应用开发指南</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u5e73\u53f0\u8bbe\u7f6e";
+    var mkdocs_page_input_path = "tijos_runtime_guide\\tijos.runtime.platform.md";
+    var mkdocs_page_url = "/tijos_runtime_guide/tijos.runtime.platform/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 钛极OS(TiJOS)应用开发指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_application_devsuite_setup/">TiJOS应用开发环境搭建</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_device_manager/">Ti-Dev Manager设备管理器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_dev_studio/">Ti-Dev Studio开发工具</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_helloworld/">第一个TiJOS应用</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_examples/">TiJOS应用参考例程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_java_standard_support/">TiJOS JDK Java标准库支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_runtime_sdk/">TiJOS Hardware Access JDK</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess/">TiJOS设备总线支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiADC/">TiADC - 模数转换器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiGPIO/">TiGPIO - 通用输入/输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiI2CMaster/">TiI2CMaster - 双向二线制同步串行总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiOWMaster/">TiOWMaster - 单总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiPWM/">TiPWM - 脉冲宽度调制发生器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiSPIMaster/">TiSPIMaster - 串行外设接口</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiUART/">TiUART - 通用异步收发传输器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor/">TiJOS传感器支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.button/">按键</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.distance/">测距模块</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.gas/">气体传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.humiture/">温湿度传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.infrared/">红外线传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.buzzer/">蜂鸣器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.led/">LED/OLED显示</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.relay/">继电器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_net/">TiJOS网络应用开发指南</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.mqtt/">MQTT 客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.ntp/">网络时间协议客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.networkcenter/">网络管理中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.ota/">在线应用升级</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util/">TiJOS常用工具类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.base64/">BASE64编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.crc/">CRC校验码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.json/">JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.logging/">日志输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.eventcenter/">硬件事件中心</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">平台设置</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#tijosruntimeplatform-">tijos.runtime.platform - 平台设置</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#tipowermgr">TiPowerMgr</a></li>
+        
+            <li><a class="toctree-l3" href="#tisettings">TiSettings</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">钛极OS(TiJOS)应用开发指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>平台设置</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tijosruntimeplatform-">tijos.runtime.platform - 平台设置</h1>
+<p>tijos.runtime.platform中包含了与平台设置相关的类，主机名称，电源管理等等， 这些设置可通过Ti-DevManager工具进行设置，也可通过tijos.runtime.platform中的相关类和接口进行设置。</p>
+<p>包含类如下:</p>
+<table>
+<thead>
+<tr>
+<th>类名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiPowerMgr</td>
+<td>电源管理</td>
+</tr>
+<tr>
+<td>TiSettings</td>
+<td>系统设置，如主机名称</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tipowermgr">TiPowerMgr</h2>
+<p>主要方法如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void hibernate(int timeWakeup)</td>
+<td>系统进入冬眠模式，并在指定时间后自动唤醒，时间单位：秒。<strong>唤醒后程序会重新运行</strong>。</td>
+</tr>
+<tr>
+<td>void hibernate(TiGPIO gpio, int wakeupPinID)</td>
+<td>系统进入冬眠模式，并通过指定gpio的pin唤醒。<strong>唤醒后程序会重新运行</strong>。</td>
+</tr>
+<tr>
+<td>void standby(TiGPIO gpio, int wakeupPinID)</td>
+<td>系统进入待机模式，并通过指定gpio的pin唤醒。 <strong>唤醒后程序会继续运行</strong>。</td>
+</tr>
+</tbody>
+</table>
+<p>TiPowerMgr类中他方法的技术说明请参考TiJOS JDK Runtime说明文档。</p>
+<p>注意：电源管理受平台特性限制，设置时须了解硬件平台特性。</p>
+<p>调用过程举例：</p>
+<pre><code class="java">...
+TiPowerMgr.hibernate(60); //系统进入冬眠模式，并在60秒以后自动唤醒。
+...
+</code></pre>
+
+<h2 id="tisettings">TiSettings</h2>
+<p>主要方法如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void hostRename(String name)</td>
+<td>主机重命名</td>
+</tr>
+<tr>
+<td>void setLoggerLevel(int level)</td>
+<td>设置全局日志等级</td>
+</tr>
+</tbody>
+</table>
+<p>TiSettings类中他方法的技术说明请参考TiJOS JDK Runtime说明文档。</p>
+<p>调用过程举例：</p>
+<pre><code class="java">...
+TiSettings.hostRename(&quot;TiJOS-12345678&quot;); //重新命名主机名
+...
+TiSettings.setLoggerLevel(1000); //设置全局日志等级为1000
+...
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../tijos.runtime.eventcenter/" class="btn btn-neutral" title="硬件事件中心"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../tijos.runtime.eventcenter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

@@ -128,3 +128,30 @@ Ti-Dev Studio可通过Eclipse在线update site地址进行安装。
 
 ![20170914113837](.\img\20170914114708.png)
 
+# 常见问题
+
+1. 安装Ti-Dev Studio时出现下图提示
+
+   ![20171009132559](.\img\20171009132559.png)
+
+   出现这种提示客户忽略，直接点击“OK”即可。
+
+2. 提示"Device manager startup failed"
+
+   请检查Ti-Device Manager是否正确安装，检查Preferences中Ti-Dev Studio配置路径是否正确。
+
+3. Run as --> TiJOS Application在线链接失败?
+
+   在线链接功能需连接网络，请检查网络是否正常，或换个时间段再进行链接。
+
+4. Run as --> TiJOS Application运行失败?
+
+   请检查Ti-Device Manager中设备是否连接成功。
+
+5. 提示“Can only run in WORK mode and wait for toggle switch to WORK mode...”
+
+   开发板分为BOOT模式和WORK两种工作模式，请将开发板上工作模式开关拨动到WORK模式。
+
+6. TiJOS LogCat不输出日志
+
+   请检查Ti-Device Manager中是否打开端口，打开端口后日志输出恢复正常。

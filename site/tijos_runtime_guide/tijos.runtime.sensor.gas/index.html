@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>气体传感器 - 钛极OS(TiJOS)应用开发指南</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u6c14\u4f53\u4f20\u611f\u5668";
+    var mkdocs_page_input_path = "tijos_runtime_guide\\tijos.runtime.sensor.gas.md";
+    var mkdocs_page_url = "/tijos_runtime_guide/tijos.runtime.sensor.gas/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 钛极OS(TiJOS)应用开发指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_application_devsuite_setup/">TiJOS应用开发环境搭建</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_device_manager/">Ti-Dev Manager设备管理器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_dev_studio/">Ti-Dev Studio开发工具</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_helloworld/">第一个TiJOS应用</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_examples/">TiJOS应用参考例程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_java_standard_support/">TiJOS JDK Java标准库支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_runtime_sdk/">TiJOS Hardware Access JDK</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess/">TiJOS设备总线支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiADC/">TiADC - 模数转换器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiGPIO/">TiGPIO - 通用输入/输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiI2CMaster/">TiI2CMaster - 双向二线制同步串行总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiOWMaster/">TiOWMaster - 单总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiPWM/">TiPWM - 脉冲宽度调制发生器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiSPIMaster/">TiSPIMaster - 串行外设接口</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiUART/">TiUART - 通用异步收发传输器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor/">TiJOS传感器支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.button/">按键</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.distance/">测距模块</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">气体传感器</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#tijosruntimesensorgas-">tijos.runtime.sensor.gas - 气体传感类</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#timq2">TiMQ2</a></li>
+        
+            <li><a class="toctree-l3" href="#timq2_1">TiMQ2的创建、绑定与使用</a></li>
+        
+            <li><a class="toctree-l3" href="#timq2_2">TiMQ2事件监听</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.humiture/">温湿度传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.infrared/">红外线传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.buzzer/">蜂鸣器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.led/">LED/OLED显示</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.relay/">继电器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_net/">TiJOS网络应用开发指南</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.mqtt/">MQTT 客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.ntp/">网络时间协议客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.networkcenter/">网络管理中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.ota/">在线应用升级</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util/">TiJOS常用工具类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.base64/">BASE64编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.crc/">CRC校验码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.json/">JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.logging/">日志输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.eventcenter/">硬件事件中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.platform/">平台设置</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">钛极OS(TiJOS)应用开发指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>气体传感器</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tijosruntimesensorgas-">tijos.runtime.sensor.gas - 气体传感类</h1>
+<p>tijos.runtime.sensor.gas中包含了与可燃气体检测、报警相关的类，通过MQ2可燃气体浓度检测传感器，测量周围环境中的可燃气体浓度（包含甲烷、丙烷、丁烷、氢气、酒精以及液化气等易燃气体），并通过相应的模拟电压值的输出和数字信号输出实现浓度监测和报警的功能。</p>
+<p>包含类如下:</p>
+<table>
+<thead>
+<tr>
+<th>类名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiMQ2</td>
+<td>MQ2可燃气体浓度检测传感器类</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timq2">TiMQ2</h2>
+<p>TiJOS提供使用MQ2可燃气体浓度检测传感器的类。</p>
+<p>TiJOS MQ2 包括如下类：</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiMQ2</td>
+<td>MQ2可燃气体浓度检测传感器类</td>
+</tr>
+<tr>
+<td>TiMQ2EventListener</td>
+<td>MQ2可燃气体浓度报警事件接口</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timq2_1">TiMQ2的创建、绑定与使用</h2>
+<p>TiMQ2实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.runtime.deviceaccess.TiGPIO和tijos.runtime.deviceaccess.TiADC；设备总线的使用请参考：tijos.runtime.deviceaccess。</p>
+<p>构造器如下：</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiMQ2(TiGPIO gpio, int ttlPinID)</td>
+<td>创建实例</td>
+</tr>
+<tr>
+<td>TiMQ2(TiGPIO gpio, int ttlPinID, TiADC adc)</td>
+<td>创建实例，允许获取当前传感器输出模拟电压值</td>
+</tr>
+<tr>
+<td>TiMQ2EventListener()</td>
+<td>创建实例，可燃气体浓度报警事件监听</td>
+</tr>
+</tbody>
+</table>
+<p>TiMQ2类中主要方法的使用：</p>
+<p>主要方法如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>double getAnalogVoltage()</td>
+<td>获取当前传感器输出的电压值（单位：V）</td>
+</tr>
+<tr>
+<td>long getEventTime()</td>
+<td>获取事件发生时间，单位：us</td>
+</tr>
+<tr>
+<td>int getTTLPinID()</td>
+<td>获取报警pin ID</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timq2_2">TiMQ2事件监听</h2>
+<p>TiMQ2的事件监听主要通过TiMQ2EventListener事件回调来处理事件，事件类型包括：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void setEventListener(TiMQ2EventListener lc)</td>
+<td>设置监听</td>
+</tr>
+<tr>
+<td>void OnAlarm(TiMQ2 mq2)</td>
+<td>报警事件</td>
+</tr>
+<tr>
+<td>void OnRecovery(TiMQ2 mq2)</td>
+<td>传感器恢复事件</td>
+</tr>
+</tbody>
+</table>
+<p>创建TiMQ2事件监听对象：</p>
+<pre><code class="java">/*
+* 资源使用，
+* 创建事件监听对象并设置事件监听
+* 在事件监听中处理报警事件逻辑
+*/          
+MQ2EventListener lc = new MQ2EventListener();
+mq2.setEventListener(lc);
+</code></pre>
+
+<p>事件处理：</p>
+<pre><code class="java">class MQ2EventListener implements TiMQ2EventListener {
+  /*报警事件处理*/
+    public void OnAlarm(TiMQ2 mq2){
+      /*①读取ADC接口采集到的传感器输出的实际电压值*/
+      double vol = mq2.getAnalogVoltage();
+    }
+    /*传感器已恢复到正常状态*/
+    public void OnRecovery(TiMQ2 mq2){
+    }
+}
+</code></pre>
+
+<p>①注：由于MQx类型的传感器本身属于化学成分检测的传感器，对于各类可燃气体的浓度，仅能以电压值的高低来表示。另一方面，化学气体浓度检测传感器在使用前，需要在可信实验室中采用定浓度气体进行对比校准，方可得到传感器的等效的浓度转换曲线以及换算公式。基于以上原因，在我们的示例场景中，并未做xx气体浓度与电压值的换算关系，仅在传感器输出的电压达到较高值（例如5V）时，做出报警的提示，来模拟环境中可燃气体浓度较高、需要报警提示的场景。</p>
+<p>TiMQ2类中他方法的使用请参考TiMQ2可燃气体浓度监测例程。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tijos.runtime.sensor.humiture/" class="btn btn-neutral float-right" title="温湿度传感器">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tijos.runtime.sensor.distance/" class="btn btn-neutral" title="测距模块"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../tijos.runtime.sensor.distance/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tijos.runtime.sensor.humiture/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>第一个TiJOS应用 - 钛极OS(TiJOS)应用开发指南</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u7b2c\u4e00\u4e2aTiJOS\u5e94\u7528";
+    var mkdocs_page_input_path = "tijos_runtime_guide\\tijos_helloworld.md";
+    var mkdocs_page_url = "/tijos_runtime_guide/tijos_helloworld/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 钛极OS(TiJOS)应用开发指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_application_devsuite_setup/">TiJOS应用开发环境搭建</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_device_manager/">Ti-Dev Manager设备管理器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_dev_studio/">Ti-Dev Studio开发工具</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">第一个TiJOS应用</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#tijos-hello-world">第一个TiJOS应用 - Hello World</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_1">开发环境</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">准备工作</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">新建工程</a></li>
+        
+            <li><a class="toctree-l3" href="#helloworld">创建HelloWorld类</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">编译、运行</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">调试</a></li>
+        
+            <li><a class="toctree-l3" href="#_6">导出</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_examples/">TiJOS应用参考例程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_java_standard_support/">TiJOS JDK Java标准库支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_runtime_sdk/">TiJOS Hardware Access JDK</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess/">TiJOS设备总线支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiADC/">TiADC - 模数转换器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiGPIO/">TiGPIO - 通用输入/输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiI2CMaster/">TiI2CMaster - 双向二线制同步串行总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiOWMaster/">TiOWMaster - 单总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiPWM/">TiPWM - 脉冲宽度调制发生器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiSPIMaster/">TiSPIMaster - 串行外设接口</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiUART/">TiUART - 通用异步收发传输器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor/">TiJOS传感器支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.button/">按键</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.distance/">测距模块</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.gas/">气体传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.humiture/">温湿度传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.infrared/">红外线传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.buzzer/">蜂鸣器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.led/">LED/OLED显示</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.relay/">继电器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_net/">TiJOS网络应用开发指南</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.mqtt/">MQTT 客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.ntp/">网络时间协议客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.networkcenter/">网络管理中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.ota/">在线应用升级</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util/">TiJOS常用工具类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.base64/">BASE64编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.crc/">CRC校验码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.json/">JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.logging/">日志输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.eventcenter/">硬件事件中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.platform/">平台设置</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">钛极OS(TiJOS)应用开发指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>第一个TiJOS应用</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tijos-hello-world">第一个TiJOS应用 - Hello World</h1>
+<p>在开始进行TiJOS应用开始前， 请从Eclipse中安装Ti-Dev Studio， 具体过程请参考Ti-Dev Studio安装文档。</p>
+<h2 id="_1">开发环境</h2>
+<p>操作系统：Win7及以上</p>
+<p>Eclipse4.2 及以上</p>
+<p>Internet网络连接正常</p>
+<h2 id="_2">准备工作</h2>
+<ol>
+<li>安装Ti-Dev Manager</li>
+<li>在Eclipse安装Ti-Dev Studio 插件</li>
+<li>TiKit 开发板连接正常并在Ti-Dev Manager中状态正常</li>
+</ol>
+<h2 id="_3">新建工程</h2>
+<p>在Eclipse中新建菜单中选择"Other"</p>
+<p><img alt="NewTiJOSProject_Other" src="../.\img\NewTiJOSProject_Other.png" /></p>
+<p>从弹出的新建项目类型中选择“TiJOS Development"下的”TiJOS Application Project":</p>
+<p><img alt="NewTiJOSProject_TiJOSProject" src="../.\img\NewTiJOSProject_TiJOSProject.png" /></p>
+<p>点击“Next" , 输入工程名称，JRE选择默认即可，点击“Finish" 即可完成工程创建。</p>
+<p><img alt="NewTiJOSProject_ProjectName" src="../.\img\NewTiJOSProject_ProjectName.png" /></p>
+<p>创建TiJOS Application Project的过程与标准Java过程类似， 一般只需输入工程名称其它选择默认即可完成工程的创建过程， 创建后的工程如下图所示：</p>
+<p><img alt="NewTiJOSProject_Tree" src="../.\img\NewTiJOSProject_Tree.png" /></p>
+<h2 id="helloworld">创建HelloWorld类</h2>
+<p>我们从最简单的hello world程序开始，首先创建一个HelloTiJOS类, 在HelloTiJOS工程中新建“Java Class", 输入类名HelloTiJOS,  包名Package可选，同时选中“Public static void main(Sring[] args)"加入标准的java main方法（函数）作为程序的入口， 点击“Finish"即可创建成功，如下图所示：</p>
+<p><img alt="NewTiJOSClass_Name" src="../.\img\NewTiJOSClass_Name.png" /></p>
+<p>类创建成功后，如下图所示：</p>
+<p><img alt="HellowTiJOS_Class" src="../.\img\HellowTiJOS_Class.png" /></p>
+<p>加入代码将输出打印到Ti-DevManager日志输出中</p>
+<pre><code>  public class HelloWorld {
+        public static void main (String[] args) {
+          System.out.println(&quot;Hello World&quot;);
+        }
+      }
+</code></pre>
+
+<p><img alt="HellowTiJOS_OutputHello" src="../.\img\HellowTiJOS_OutputHello.png" /></p>
+<p>这样，最简单的Hello TiJOS例子是完成了</p>
+<h2 id="_4">编译、运行</h2>
+<p>接下来，对完成的例子进行编译运行， 在进行编译之前，请确保机器连接Internet， 整个过程与标准Java类似，在工程右键菜单中选择Run As下的"TiJOS Application"，即可运行， 并在Console中观察编译和运行结果：</p>
+<p>![RunAs TiJOS Application](.\img\RunAs TiJOS Application.png)</p>
+<p>在开发板上运行TiJOS应用时，需要将开发板从BOOT模式切换为WORK模式， 这个过程可通过开发板上的拨码开关来设置。</p>
+<h2 id="_5">调试</h2>
+<p>当需要进行调试时， 如果是与硬件无关的操作，可通过Debug As 中选择 "Java Application"进行调试， 如果是与硬件相应的功能调试， 则需要通过打印的方式观察输出结果。</p>
+<p>硬件开发板在线调试目前暂时不支持，将在后续版本中增加此功能。 </p>
+<h2 id="_6">导出</h2>
+<p>当应用调试测试成功后， 可将编译结果导出为tapk文件通过Ti-Dev Manager直接下载到设备中进行测试， 同时该文件也用于最新的量产或OTA应用更新过程。</p>
+<p>导出tapk时， 在工程右键菜单中选择"Export", 在弹出的导出类型列表中选择“TiJOS Development"下的”Export TiJOS Application Package..."</p>
+<p><img alt="ExportTAPK_ProjectSelection" src="../.\img\ExportTAPK_Selection.png" /></p>
+<p>点击Next后， 选择HelloTiJOS工程</p>
+<p><img alt="ExportTAPK_ProjectSelection" src="../.\img\ExportTAPK_ProjectSelection.png" /></p>
+<p>点击"Next"后选择主类及tapk文件存储路径：</p>
+<p><img alt="ExportTAPK_StorageOptions" src="../.\img\ExportTAPK_StorageOptions.png" /></p>
+<p>点击"Finish"即可完成tapk应用包导出， 导出的tapk文件可通过Ti-Dev Manager中的下载、运行功能直接对实际设备进行测试。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tijos_examples/" class="btn btn-neutral float-right" title="TiJOS应用参考例程">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tijos_dev_studio/" class="btn btn-neutral" title="Ti-Dev Studio开发工具"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../tijos_dev_studio/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tijos_examples/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

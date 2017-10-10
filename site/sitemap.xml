@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos_application_devsuite_setup/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos_device_manager/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos_dev_studio/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos_helloworld/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos_examples/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos_java_standard_support/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos_runtime_sdk/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.deviceaccess/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.deviceaccess.TiADC/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.deviceaccess.TiGPIO/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.deviceaccess.TiI2CMaster/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.deviceaccess.TiOWMaster/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.deviceaccess.TiPWM/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.deviceaccess.TiSPIMaster/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.deviceaccess.TiUART/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.sensor/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.sensor.button/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.sensor.distance/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.sensor.gas/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.sensor.humiture/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.sensor.infrared/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.transducer.buzzer/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.transducer.led/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.transducer.relay/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos_net/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.net.mqtt/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.net.ntp/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.networkcenter/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.ota/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.util/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.util.base64/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.util.crc/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.util.json/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.util.logging/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.eventcenter/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/tijos_runtime_guide/tijos.runtime.platform/</loc>
+     <lastmod>2017-10-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

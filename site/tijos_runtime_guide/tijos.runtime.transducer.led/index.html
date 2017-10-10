@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>LED/OLED显示 - 钛极OS(TiJOS)应用开发指南</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "LED/OLED\u663e\u793a";
+    var mkdocs_page_input_path = "tijos_runtime_guide\\tijos.runtime.transducer.led.md";
+    var mkdocs_page_url = "/tijos_runtime_guide/tijos.runtime.transducer.led/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 钛极OS(TiJOS)应用开发指南</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_application_devsuite_setup/">TiJOS应用开发环境搭建</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_device_manager/">Ti-Dev Manager设备管理器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_dev_studio/">Ti-Dev Studio开发工具</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_helloworld/">第一个TiJOS应用</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_examples/">TiJOS应用参考例程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_java_standard_support/">TiJOS JDK Java标准库支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_runtime_sdk/">TiJOS Hardware Access JDK</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess/">TiJOS设备总线支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiADC/">TiADC - 模数转换器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiGPIO/">TiGPIO - 通用输入/输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiI2CMaster/">TiI2CMaster - 双向二线制同步串行总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiOWMaster/">TiOWMaster - 单总线</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiPWM/">TiPWM - 脉冲宽度调制发生器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiSPIMaster/">TiSPIMaster - 串行外设接口</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.deviceaccess.TiUART/">TiUART - 通用异步收发传输器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor/">TiJOS传感器支持</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.button/">按键</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.distance/">测距模块</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.gas/">气体传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.humiture/">温湿度传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.sensor.infrared/">红外线传感器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.buzzer/">蜂鸣器</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">LED/OLED显示</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#tijosruntimetransducerled-led">tijos.runtime.transducer.led - LED显示类</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#tiled">TiLED</a></li>
+        
+            <li><a class="toctree-l3" href="#tiled_1">TiLED的创建、绑定与使用</a></li>
+        
+            <li><a class="toctree-l3" href="#tirgbled">TiRGBLED</a></li>
+        
+            <li><a class="toctree-l3" href="#tirgbled_1">TiRGBLED的创建、绑定与使用</a></li>
+        
+            <li><a class="toctree-l3" href="#tioled_ug2864">TiOLED_UG2864</a></li>
+        
+            <li><a class="toctree-l3" href="#tioled_ug2864_1">TiOLED_UG2864的创建、绑定与使用</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.transducer.relay/">继电器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos_net/">TiJOS网络应用开发指南</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.mqtt/">MQTT 客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.net.ntp/">网络时间协议客户端</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.networkcenter/">网络管理中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.ota/">在线应用升级</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util/">TiJOS常用工具类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.base64/">BASE64编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.crc/">CRC校验码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.json/">JSON</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.util.logging/">日志输出</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.eventcenter/">硬件事件中心</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tijos.runtime.platform/">平台设置</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">钛极OS(TiJOS)应用开发指南</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>LED/OLED显示</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tijosruntimetransducerled-led">tijos.runtime.transducer.led - LED显示类</h1>
+<p>tijos.runtime.transducer.led中包含了LED灯、RGBELD灯以及OLED屏幕相关的类。其中LED灯为普通单色发光二极管，套件中自带红色、黄色、蓝色、绿色四种颜色的发光二极管，可以通过不同的PIN口单独控制亮灭，适用于需要指示灯、报警灯等场景；RGB三基色LED灯包含红色、绿色和蓝色三种基础色，可通过TiPWM接口各自输出不同的亮度等级，最终混色成相应的颜色，适用于需要变色指示灯、呼吸灯等场景；OLED屏幕使用TiICMaster接口控制，可输出4*16个字符，适用于需要显示信息、带有人机交互界面的设备。</p>
+<p>包含类如下:</p>
+<table>
+<thead>
+<tr>
+<th>类名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiLED</td>
+<td>LED灯类</td>
+</tr>
+<tr>
+<td>TIRGBLED</td>
+<td>RGBLED灯类</td>
+</tr>
+<tr>
+<td>TiOLED_UG2864</td>
+<td>OLED12864屏幕类</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tiled">TiLED</h2>
+<p>TiJOS提供控制LED灯的类。</p>
+<p>TiJOS LED包括如下类：</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiLED</td>
+<td>LED灯类</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tiled_1">TiLED的创建、绑定与使用</h2>
+<p>TiLED实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.runtime.deviceaccess.TiGPIO；设备总线的使用请参考：tijos.runtime.deviceaccess。</p>
+<p>构造器如下：</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiLED(TiGPIO gpio, int signalPinID)</td>
+<td>创建实例,默认为低电平点亮</td>
+</tr>
+<tr>
+<td>TiLED(TiGPIO gpio, int signalPinID, boolean highLevel)</td>
+<td>创建实例，点亮电平可配置</td>
+</tr>
+</tbody>
+</table>
+<p>主要方法如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void turnOn()</td>
+<td>点亮LED灯</td>
+</tr>
+<tr>
+<td>void turnOff()</td>
+<td>关闭LED灯</td>
+</tr>
+<tr>
+<td>boolean isTurnedOn()</td>
+<td>获取当前LE灯D状态（开/关）</td>
+</tr>
+<tr>
+<td>void turnOver()</td>
+<td>对当前LED灯开关状态取相反状态</td>
+</tr>
+</tbody>
+</table>
+<p>TiLED中主要方法的使用如下：</p>
+<pre><code class="java">//创建TiLED对象
+TiLED red = new TiLED(gpio0, gpioPin0,false);
+//点亮LED灯
+red.turnOn();
+//关闭LED灯
+red.turnOff();
+</code></pre>
+
+<p>TiLED类中他方法的使用请参考TiLED灯控制例程。</p>
+<h2 id="tirgbled">TiRGBLED</h2>
+<p>TiJOS提供控制RGBLED三基色灯的类。</p>
+<p>TiJOS RGBLED包括如下类：</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiRGBLED</td>
+<td>TiRGBLED三基色灯类</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tirgbled_1">TiRGBLED的创建、绑定与使用</h2>
+<p>TiRGBLED实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.runtime.deviceaccess.TiPWM；设备总线的使用请参考：tijos.runtime.deviceaccess。</p>
+<p>构造器如下：</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiRGBLED(TiPWM pwm, int redChannelID, int greenChannelID, int blueChannelID)</td>
+<td>创建实例,默认为低电平点亮</td>
+</tr>
+<tr>
+<td>TiRGBLED(TiPWM pwm, int redChannelID, int greenChannelID, int blueChannelID, boolean highLevel)</td>
+<td>创建实例，点亮电平可配置</td>
+</tr>
+</tbody>
+</table>
+<p>主要方法如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void setPeriod(int period)</td>
+<td>设置PWM频率（默认为1Khz）</td>
+</tr>
+<tr>
+<td>int getPeriod()</td>
+<td>获取PWM频率</td>
+</tr>
+<tr>
+<td>void setRedBrightness(int level)</td>
+<td>设置红色灯的亮度等级（支持等级：0~255）</td>
+</tr>
+<tr>
+<td>void setGreenBrightness(int level)</td>
+<td>设置绿色灯的亮度等级（支持等级：0~255）</td>
+</tr>
+<tr>
+<td>void setBlueBrightness(int level)</td>
+<td>设置蓝色灯的亮度等级（支持等级：0~255）</td>
+</tr>
+<tr>
+<td>void updateBrightness()</td>
+<td>将设置好的三基色灯的亮度登记更新到PWM并输出</td>
+</tr>
+<tr>
+<td>int getRedBrightness()</td>
+<td>获取红色灯的当前亮度等级（其余绿色和蓝色均有相应方法）</td>
+</tr>
+</tbody>
+</table>
+<p>TiRGBLED类中主要方法的使用如下：</p>
+<pre><code class="java">//创建TiRGBLED对象,传入需要使用的pwm对象并绑定相应的通道
+TiRGBLED rgbled = new TiRGBLED(pwm0, CH0,CH1,CH2,false);
+//设置PWM周期为1000hz
+rgbled.setPeriod(1000);
+//随机选取三个亮度等级
+r = 35;
+g = 87;
+b = 128;
+//设置相应颜色的亮等级
+rgbled.setRedBrightness(r);
+rgbled.setGreenBrightness(g);
+rgbled.setBlueBrightness(b);
+//将设置好的亮度等级更新到硬件中
+rgbled.updateBrightness();
+</code></pre>
+
+<p>TiRGBLE类中他方法的使用请参考TiRGBLED灯控制例程。</p>
+<h2 id="tioled_ug2864">TiOLED_UG2864</h2>
+<p>TiJOS提供操作TiOLED_UG2864屏幕的类。</p>
+<p>TiJOS OLED_UG2864包括如下类：</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiOLED_UG2864</td>
+<td>OLED12864屏幕类</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tioled_ug2864_1">TiOLED_UG2864的创建、绑定与使用</h2>
+<p>TiOLED_UG2864实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.runtime.deviceaccess.TiI2C；设备总线的使用请参考：tijos.runtime.deviceaccess。</p>
+<p>构造器如下：</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TiOLED_UG2864(TiI2CMaster i2c, int address)</td>
+<td>创建实例,设备地址根据实际设定</td>
+</tr>
+</tbody>
+</table>
+<p>主要方法如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>void turnOn()</td>
+<td>点亮屏幕</td>
+</tr>
+<tr>
+<td>void turnOff()</td>
+<td>关闭屏幕</td>
+</tr>
+<tr>
+<td>boolean clear()</td>
+<td>清除当前屏幕显示的所有信息</td>
+</tr>
+<tr>
+<td>boolean print(int lineId, int columnId, String text)</td>
+<td>在指定行列坐标处开始显示字符（可显示的最大数据量为一个满屏幕的数据量，即：4*16个字符，多余字符将无法显示）</td>
+</tr>
+<tr>
+<td>void setPosition(int lineId, int columnId)</td>
+<td>设置指定的行坐标和列坐标（支持0~3行，0~15列）</td>
+</tr>
+<tr>
+<td>boolean output(String text)</td>
+<td>在指定坐标（由setPosition方法设置）处开始显示字符（当字符超出屏幕末端时，回滚从0行0列开始覆盖显示）</td>
+</tr>
+</tbody>
+</table>
+<p>TiOLED_UG2864类中主要方法的使用如下(单屏显示)：</p>
+<pre><code class="java">//创建对象并传入默认设备地址0x78
+TiOLED_UG2864 oled = new TiOLED_UG2864(i2c0, 0x78);
+String s = &quot;Welcome to the TiKit world !&quot;;
+/*给屏幕上电*/
+oled.turnOn();
+/*清屏*/
+oled.clear();
+/*从第0行0列开始打印字符串*/
+oled.print(0, 0, s);
+</code></pre>
+
+<p>支持回滚的显示方法：</p>
+<pre><code class="java">//创建对象并传入默认设备地址0x78
+TiOLED_UG2864 oled = new TiOLED_UG2864(i2c0, 0x78);
+String s = &quot;Welcome to the TiKit world !&quot;;
+/*给屏幕上电*/
+oled.turnOn();
+/*清屏*/
+oled.clear();
+/*设置行起始坐标和列起始坐标，第1行第2列*/
+oled.setPosition(1, 2);
+/*在已经设置好的指定位置显示字符串（第1行第2列）*/
+oled.output(s);
+</code></pre>
+
+<p>TiOLED_UG286类中他方法的使用请参TiOLED_UG2864屏幕控制例程。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tijos.runtime.transducer.relay/" class="btn btn-neutral float-right" title="继电器">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tijos.runtime.transducer.buzzer/" class="btn btn-neutral" title="蜂鸣器"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../tijos.runtime.transducer.buzzer/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tijos.runtime.transducer.relay/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>
