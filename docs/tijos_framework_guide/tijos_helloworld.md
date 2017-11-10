@@ -6,7 +6,7 @@
 
 操作系统：Win7及以上
 
-Eclipse4.2 及以上
+Eclipse4.6 及以上
 
 Internet网络连接正常
 
@@ -64,7 +64,7 @@ Internet网络连接正常
 
 接下来，对完成的例子进行编译运行， 在进行编译之前，请确保机器连接Internet， 整个过程与标准Java类似，在工程右键菜单中选择Run As下的"TiJOS Application"，即可运行， 并在Console中观察编译和运行结果：
 
-![RunAs TiJOS Application](.\img\RunAs TiJOS Application.png)
+![RunAsTiJOS_Application](.\img\RunAsTiJOS_Application.png)
 
 在开发板上运行TiJOS应用时，需要将开发板从BOOT模式切换为WORK模式， 这个过程可通过开发板上的拨码开关来设置。
 

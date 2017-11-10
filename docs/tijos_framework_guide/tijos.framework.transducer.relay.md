@@ -32,7 +32,7 @@ TiRelay1CH实例在创建时需要和具体总线设备绑定，具体绑定类�
 
 | 构造器                                      | 说明                 |
 | ---------------------------------------- | ------------------ |
-| TiRelay1CH(TiGPIO gpio, int signalPinID) | 创建实例,默认为低电平导通继电器   |
+| TiRelay1CH(TiGPIO gpio, int signalPinID) | 创建实例,默认为高电平导通继电器   |
 | TiRelay1CH(TiGPIO gpio, int signalPinID, boolean highLevel) | 创建实例，控制继电器导通的电平可配置 |
 
 
@@ -49,7 +49,7 @@ TiRelay中主要方法的使用如下：
 
 ```java
 //创建TiRelay对象
-TiRelay1CH relay = new TiRelay1CH(gpio0, gpioPin0,true);
+TiRelay1CH relay = new TiRelay1CH(gpio0, gpioPin0);
 //打开继电器
 relay.turnOn();
 //关闭继电器

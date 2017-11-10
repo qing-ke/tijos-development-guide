@@ -28,7 +28,7 @@ TiSPIMaster类中主要的方法：
 | void setMode(int workMode, int baudRate, int direction, int io) | 设置工作模式，波特率、位传输模式、位宽模式                    |
 | void selectSlave(boolean enable)         | 从机选择使能控制                                 |
 | int read(byte[] data, int offset, int len) | 读取数据，返回实际读取长度                            |
-| int write(byte[] data, int offset, int len) | 读取数据，返回实际读取长度                            |
+| int write(byte[] data, int offset, int len) | 写入数据，返回实际写入长度                            |
 
 TiSPIMaster类中他方法的技术说明请参考TiJOS Framework说明文档。
 

@@ -1,0 +1,1340 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.0.4">
+    
+    
+      
+        <title>Ti-Dev Manager设备管理器 - 钛极OS(TiJOS)应用开发指南</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-709eec9410.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="钛极OS(TiJOS)应用开发指南" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Ti-Dev Manager设备管理器
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    钛极OS(TiJOS)应用开发指南
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="目录" class="md-nav__link">
+      目录
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos_application_devsuite_setup/" title="TiJOS应用开发环境搭建" class="md-nav__link">
+      TiJOS应用开发环境搭建
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Ti-Dev Manager设备管理器
+      </label>
+    
+    <a href="./" title="Ti-Dev Manager设备管理器" class="md-nav__link md-nav__link--active">
+      Ti-Dev Manager设备管理器
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ti-dev-manager_1" title="Ti-Dev Manager安装" class="md-nav__link">
+    Ti-Dev Manager安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ti-dev-manager_2" title="Ti-Dev Manager主界面" class="md-nav__link">
+    Ti-Dev Manager主界面
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="菜单导航区域" class="md-nav__link">
+    菜单导航区域
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="添加设备" class="md-nav__link">
+    添加设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="删除设备" class="md-nav__link">
+    删除设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="修改设备" class="md-nav__link">
+    修改设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="连接设备" class="md-nav__link">
+    连接设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="断开设备" class="md-nav__link">
+    断开设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="设备属性" class="md-nav__link">
+    设备属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app" title="下载APP" class="md-nav__link">
+    下载APP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="运行" class="md-nav__link">
+    运行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="日志" class="md-nav__link">
+    日志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="设备管理器" class="md-nav__link">
+    设备管理器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="设备列表区域" class="md-nav__link">
+    设备列表区域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="日志输出区域" class="md-nav__link">
+    日志输出区域
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="设备连接" class="md-nav__link">
+    设备连接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="设备属性" class="md-nav__link">
+    设备属性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="主机名称" class="md-nav__link">
+    主机名称
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wlan" title="WLAN" class="md-nav__link">
+    WLAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ap" title="AP" class="md-nav__link">
+    AP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" title="DNS" class="md-nav__link">
+    DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="其它" class="md-nav__link">
+    其它
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" title="下载应用到设备" class="md-nav__link">
+    下载应用到设备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" title="设备中运行应用" class="md-nav__link">
+    设备中运行应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" title="常见问题" class="md-nav__link">
+    常见问题
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos_dev_studio/" title="Ti-Dev Studio开发工具" class="md-nav__link">
+      Ti-Dev Studio开发工具
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos_helloworld/" title="第一个TiJOS应用" class="md-nav__link">
+      第一个TiJOS应用
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos_examples/" title="TiJOS应用参考例程" class="md-nav__link">
+      TiJOS应用参考例程
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos_java_standard_support/" title="TiJOS Java标准库支持" class="md-nav__link">
+      TiJOS Java标准库支持
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos_framework_sdk/" title="TiJOS Framework" class="md-nav__link">
+      TiJOS Framework
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      TiJOS设备总线支持
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        TiJOS设备总线支持
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.devicecenter/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.devicecenter.TiADC/" title="TiADC - 模数转换器" class="md-nav__link">
+      TiADC - 模数转换器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.devicecenter.TiGPIO/" title="TiGPIO - 通用输入/输出" class="md-nav__link">
+      TiGPIO - 通用输入/输出
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.devicecenter.TiI2CMaster/" title="TiI2CMaster - 双向二线制同步串行总线" class="md-nav__link">
+      TiI2CMaster - 双向二线制同步串行总线
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.devicecenter.TiOWMaster/" title="TiOWMaster - 单总线" class="md-nav__link">
+      TiOWMaster - 单总线
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.devicecenter.TiPWM/" title="TiPWM - 脉冲宽度调制发生器" class="md-nav__link">
+      TiPWM - 脉冲宽度调制发生器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.devicecenter.TiSPIMaster/" title="TiSPIMaster - 串行外设接口" class="md-nav__link">
+      TiSPIMaster - 串行外设接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.devicecenter.TiUART/" title="TiUART - 通用异步收发传输器" class="md-nav__link">
+      TiUART - 通用异步收发传输器
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      TiJOS传感器支持
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        TiJOS传感器支持
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.button/" title="按键" class="md-nav__link">
+      按键
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.distance/" title="测距模块" class="md-nav__link">
+      测距模块
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.gas/" title="气体传感器" class="md-nav__link">
+      气体传感器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.humiture/" title="温湿度传感器" class="md-nav__link">
+      温湿度传感器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.infrared/" title="红外线传感器" class="md-nav__link">
+      红外线传感器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.transducer.buzzer/" title="蜂鸣器" class="md-nav__link">
+      蜂鸣器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.transducer.led/" title="LED/OLED显示" class="md-nav__link">
+      LED/OLED显示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.transducer.relay/" title="继电器" class="md-nav__link">
+      继电器
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      TiJOS网络应用开发指南
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        TiJOS网络应用开发指南
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos_net/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.net.mqtt/" title="MQTT 客户端" class="md-nav__link">
+      MQTT 客户端
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.net.ntp/" title="网络时间协议客户端" class="md-nav__link">
+      网络时间协议客户端
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.networkcenter/" title="网络管理中心" class="md-nav__link">
+      网络管理中心
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      TiJOS常用工具类
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        TiJOS常用工具类
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.util/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.util.base64/" title="BASE64编码" class="md-nav__link">
+      BASE64编码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.util.crc/" title="CRC校验码" class="md-nav__link">
+      CRC校验码
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.util.json/" title="JSON" class="md-nav__link">
+      JSON
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.util.logging/" title="日志输出" class="md-nav__link">
+      日志输出
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.ota/" title="在线应用升级" class="md-nav__link">
+      在线应用升级
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.eventcenter/" title="硬件事件中心" class="md-nav__link">
+      硬件事件中心
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.platform/" title="平台设置" class="md-nav__link">
+      平台设置
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../resources/" title="更多在线资源" class="md-nav__link">
+      更多在线资源
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ti-dev-manager_1" title="Ti-Dev Manager安装" class="md-nav__link">
+    Ti-Dev Manager安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ti-dev-manager_2" title="Ti-Dev Manager主界面" class="md-nav__link">
+    Ti-Dev Manager主界面
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="菜单导航区域" class="md-nav__link">
+    菜单导航区域
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="添加设备" class="md-nav__link">
+    添加设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="删除设备" class="md-nav__link">
+    删除设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="修改设备" class="md-nav__link">
+    修改设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="连接设备" class="md-nav__link">
+    连接设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="断开设备" class="md-nav__link">
+    断开设备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="设备属性" class="md-nav__link">
+    设备属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app" title="下载APP" class="md-nav__link">
+    下载APP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="运行" class="md-nav__link">
+    运行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="日志" class="md-nav__link">
+    日志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="设备管理器" class="md-nav__link">
+    设备管理器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="设备列表区域" class="md-nav__link">
+    设备列表区域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="日志输出区域" class="md-nav__link">
+    日志输出区域
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" title="设备连接" class="md-nav__link">
+    设备连接
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" title="设备属性" class="md-nav__link">
+    设备属性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="主机名称" class="md-nav__link">
+    主机名称
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wlan" title="WLAN" class="md-nav__link">
+    WLAN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ap" title="AP" class="md-nav__link">
+    AP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" title="DNS" class="md-nav__link">
+    DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="其它" class="md-nav__link">
+    其它
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" title="下载应用到设备" class="md-nav__link">
+    下载应用到设备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" title="设备中运行应用" class="md-nav__link">
+    设备中运行应用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" title="常见问题" class="md-nav__link">
+    常见问题
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="ti-dev-manager">Ti-Dev Manager 设备管理器使用说明</h1>
+<p>Ti-Dev Manager设备管理器是钛极OS(TiJOS)应用开发套件的一部分， 该工具由Ti-Dev Studio自动启动运行，通过此工具开发者可轻松操作TiKit开发板进行设备诊断、配置、应用执行等功能。</p>
+<p>Ti-Dev Manager功能包括：</p>
+<ul>
+<li>
+<p>通过应用下载口与开发板建立连接获取设备信息</p>
+</li>
+<li>
+<p>对TiKit开发板基础信息及网络信息进行设置</p>
+</li>
+<li>
+<p>快速下载应用到TiKit开发板中</p>
+</li>
+<li>
+<p>运行TiKit开发板中应用并输出日志</p>
+</li>
+</ul>
+<h2 id="ti-dev-manager_1">Ti-Dev Manager安装</h2>
+<p>点击安装包[Ti-DeviceManager_setup.exe]，根据提示选择安装路径进行安装即可</p>
+<h2 id="ti-dev-manager_2">Ti-Dev Manager主界面</h2>
+<p>该工具主界面分为三大区域，如下图：</p>
+<p><img alt="" src="../.\img\toolmain.png" /></p>
+<h3 id="_1">菜单导航区域</h3>
+<p>通过菜单导航区域内的按钮可实现如下功能：</p>
+<ul>
+<li>
+<p>对设备添加、删除、修改、连接、断开操作</p>
+</li>
+<li>
+<p>在连接成功的设备可进行设备属性、下载APP、运行操作</p>
+</li>
+</ul>
+<p>该区域按钮功能如下</p>
+<h4 id="_2">添加设备</h4>
+<p>第一次使用时，需要手动添加，根据设备在系统中识别的COM端口进行连接</p>
+<h4 id="_3">删除设备</h4>
+<p>若不需要对此设备操作，可进行删除</p>
+<h4 id="_4">修改设备</h4>
+<p>设备中系统中识别的COM端口可能会更改，可通过此操作重新连接设备</p>
+<h4 id="_5">连接设备</h4>
+<p>当重新插拔设备，需要再次连接</p>
+<h4 id="_6">断开设备</h4>
+<p>拔设备之前需要进行断开</p>
+<h4 id="_7">设备属性</h4>
+<p>可对主机名称、WLAN、AP、日志等级进行设置</p>
+<h4 id="app">下载APP</h4>
+<p>选择APP文件进行下载，同时记录下载过的APP</p>
+<h4 id="_8">运行</h4>
+<p>手动运行TiKit开发板中的应用，在运行时需要通过拔码开关将TiKit工作模式切换到WORK模式，已经在运行中的设备将无法通过Ti-Dev Manager操作，此时可通过TiKit上的拔码开并关切换到BOOT模式，并且通过复位按键进行复位操作后才能继续操作</p>
+<h4 id="_9">日志</h4>
+<p>开发板中的日志打印口需要连接计算机，通过日志打印口输出，日志可保存</p>
+<h4 id="_10">设备管理器</h4>
+<p>打开Windows操作系统的计算机设备管理器</p>
+<h3 id="_11">设备列表区域</h3>
+<p>列出操作的设备，成功连接设备，将显示信息的基本信息</p>
+<h3 id="_12">日志输出区域</h3>
+<p>通过打印口输出日志，另外日志可保存，也可输出到文件</p>
+<h2 id="_13">设备连接</h2>
+<p>第一次使用需要在工具中添加设备，保存设备的COM端口，点击导航中“添加设备”，弹出COM口配置窗口，如下图：</p>
+<p><img alt="" src="../.\img\connDevInfo.png" /></p>
+<p>如果插有设备，点击“自动检测COM端口”，COM端口会列出可操作的设备，为设备定义别名后，点击“连接”，如下图：</p>
+<p><img alt="" src="../.\img\DevInfo.png" /></p>
+<p>连接成功后，显示设置的ID、版本、处理器、存储空间等信息。</p>
+<p>如对设置连接有更新操作，可用删除设备、修改设备、连接设备、断开设备去操作，开发过程中如重新连接了设备，可通过刷新去获取设备信息</p>
+<h2 id="_14">设备属性</h2>
+<p>当设备连接成功后，点击设备属性，如下图：</p>
+<p><img alt="" src="../.\img\netinfo.png" /></p>
+<h4 id="_15">主机名称</h4>
+<p>网络连接名称，类似于计算机连接路由器，在路由器中显示的客户端名称</p>
+<p><img alt="" src="../.\img\netinfo2.png" /></p>
+<h4 id="wlan">WLAN</h4>
+<p>类似于无线终端，本身并不接受无线的接入，它可以连接到AP，一般无线网卡即工作在该模式，设置SSID及密码，可自动获取IP地址，或手动填写指定IP、子网掩码、网关信息</p>
+<p><img alt="" src="../.\img\netinfo3.png" /></p>
+<h4 id="ap">AP</h4>
+<p>AP模式，提供无线接入服务，允许其它无线设备接入，提供数据访问，设置SSID及密码，IP、可自动获取IP地址，或手动填写指定IP、子网掩码、网关信息</p>
+<p><img alt="" src="../.\img\netinfo4.png" /></p>
+<h4 id="dns">DNS</h4>
+<p>首选DNS与备用DNS设置，如果没有更优的DNS可采用设备默认DNS</p>
+<p><img alt="" src="../.\img\netinfo5.png" /></p>
+<h4 id="_16">其它</h4>
+<p>输出日志等级，根据开发的过程设置输出相关日志</p>
+<p>以上信息，修改后点击确定即可</p>
+<h2 id="_17">下载应用到设备</h2>
+<p>Ti-Dev Manager支持手工下载通过Ti-Dev Studio导出的应用tapk文件，通过点击"下载APP"，选择要下载的应用tapk文件，如下图：</p>
+<p><img alt="" src="../.\img\appdown.png" /></p>
+<p>下载过程中请勿断开设备，以免造成下载失败</p>
+<h2 id="_18">设备中运行应用</h2>
+<p>APP若已下载，可点击“运行”按钮，如下图：</p>
+<p><img alt="" src="../.\img\run.png" /></p>
+<p>只需要在设备上将模式切换为WORK模式，另外，日志窗口会有日志输出，如下图：</p>
+<p><img alt="" src="../.\img\logs.png" /></p>
+<p>日志可以保存成文件，也可输出到文件实时监测COM口数据输出，在日志窗口中右键，如下图：</p>
+<p><img alt="" src="../.\img\logsmenue.png" /></p>
+<p>设置日志输出：可将日志输出到临时目录的文件中，方便查看</p>
+<h2 id="_19">常见问题</h2>
+<p><strong>问题1：操作中遇到如下提示如何解决？</strong></p>
+<p><img alt="" src="../.\img\comerror.png" /></p>
+<p><strong>解决方法：</strong></p>
+<p>设备未连接或模式不正确，通过下边两点进行判断：</p>
+<p>（1）设备可能已断开，通过系统的设备管理器来判断，如下图：</p>
+<p><img alt="" src="../.\img\devmgrinfo.png" /></p>
+<p>端口中出现如上图，代表设备是正常的，其它即为失败连接</p>
+<p>（2）设备模式是否为WORK模式，如果已是WORK模式，再次按下复位按钮即可</p>
+<p><strong>问题2：如何获取设备的下载端口及打印端口？</strong></p>
+<p><strong>解决方法：</strong></p>
+<p>（1）下载端口：连接设备时，选中“自动检测COM端口”，下拉列表框中显示当前设备COM口，</p>
+<p>（2）打印端口：日志输出窗口会自动识别</p>
+<p>如果工具无法自动识别，可打开设备管理器，端口中查看是否有设备接入</p>
+<p><strong>问题3：如何对设备下载APP？</strong></p>
+<p><strong>解决方法：</strong></p>
+<p>设备必须切换到BOOT模式，点击下载APP，选择编译成功的APP下载即可</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tijos_application_devsuite_setup/" title="TiJOS应用开发环境搭建" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                TiJOS应用开发环境搭建
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../tijos_dev_studio/" title="Ti-Dev Studio开发工具" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Ti-Dev Studio开发工具
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 - 2020 TiCloud Technology
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-8e4952e681.js"></script>
+      
+      <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

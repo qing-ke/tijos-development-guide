@@ -20,61 +20,22 @@ Ti-Dev Studio提供如下功能:
 
 # 安装
 
-Ti-Dev Studio支持在线安装和本地安装两种方式来安装插件，开发者可根据实际情况选择一种方式来进行安装即可(推荐使用在线安装)。
+### 环境要求
 
+- Windows 7及以上
 
-
-### 要求
-
-- Eclipse 4.2 (Juno) or later
+- Eclipse 4.6 (Mars) or later
 
 - Java 6 or later
 
-  ​
 
-### 在线安装
+### 安装过程
 
-Ti-Dev Studio可通过Eclipse在线update site地址进行安装。
-
-1. 打开Eclipse点击菜单 Help --> Install New Software... 
-
-![](.\img\20170913175732.png)
-
-1. 在Install窗口中点击Add...，然后在弹出的Add Repository窗口中填入Update Site地址：http://dev.tijos.net/studio/release
-
-![20170913181701](.\img\20170913181701.png)
-
-1. 在界面中选择TiJOS后点击Next 按钮后进入Install Details界面，继续点击Next按钮进入授权页面。在授权界面选择单选按钮I accept the terms of the license agreement后点击Finish进入安装过程。![0170913182250](.\img\20170913182250.png)
-
-![20170913182605](.\img\20170913182605.png)
-
-![20170913182735](.\img\20170913182735.png)
+​   请参考《钛极OS(TiJOS)应用开发环境搭建》文档
 
 
-
-1. 安装结束后弹出提示窗口提示重启Eclipse，点击Yes重启即可。
-
-![20170913183431](.\img\20170913183431.png)
-
-# 卸载
-
-1. 打开Eclipse点击菜单 Help -->点击Installation Details按钮
-
-![20170913201027](.\img\20170913201027.png)
-
-1. 选择Ti-Dev Studio Release后点击Uninstall按钮即可卸载。
-
-![20170913201353](.\img\20170913201353.png)
 
 # 创建工程
-
-### 要求
-
-- Ti-DeviceManager 1.0.17 or later
-
-- TiJOS Runtime 1.0 or later
-
-  ​
 
 通过Ti-Dev Studio创建TiJOS Application工程，过程如下。
 
