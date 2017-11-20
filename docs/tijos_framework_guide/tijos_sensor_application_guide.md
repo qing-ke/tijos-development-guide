@@ -85,7 +85,7 @@ public TiLED(TiGPIO gpio, int signalPinID)
 
 
 
-**注：**TiGPIO技术原理可以参考：“tijos.framework.devicecenter.TiGPIO.md”。
+**注：**TiGPIO技术原理可以参考：<http://dev.tijos.net/manual/tijos_framework_guide/tijos.framework.devicecenter.TiGPIO/>
 
 
 

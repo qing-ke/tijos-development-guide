@@ -1,9 +1,9 @@
 # 钛极OS(TiJOS)应用开发指南
 
-| 文档版本   | 2.1       |
-| :----- | --------- |
-| 最近更新时间 | 2017.9.30 |
-|        |           |
+| 文档版本   |    2.2     |
+| :----- | :--------: |
+| 最近更新时间 | 2017.11.10 |
+|        |            |
 
 
 
@@ -26,6 +26,7 @@
 |                                          | [TiPWM - 脉冲宽度调制发生器](tijos_framework_guide/tijos.framework.devicecenter.TiPWM.md) |
 |                                          | [TiSPIMaster - 串行外设接口](tijos_framework_guide/tijos.framework.devicecenter.TiSPIMaster.md) |
 |                                          | [TiUART - 通用异步收发传输器](tijos_framework_guide/tijos.framework.devicecenter.TiUART.md) |
+| [TiJOS传感器应用开发指南](tijos_framework_guide/tijos_sensor_application_guide.md) |                                          |
 | [传感器支持](tijos_framework_guide/tijos.framework.sensor.md) |                                          |
 |                                          | [按键](tijos_framework_guide/tijos.framework.sensor.button.md) |
 |                                          | [测距模块](tijos_framework_guide/tijos.framework.sensor.distance.md) |

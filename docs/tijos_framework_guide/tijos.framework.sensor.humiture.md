@@ -31,28 +31,26 @@ TiDHT实例在创建时需要和具体总线设备绑定，具体绑定类型与
 
 构造器如下：
 
-| 构造器                               | 说明   |
-| --------------------------------- | ---- |
-| TiDHT(TiGPIO gpio, int dataPinID) | 创建实例 |
+| 构造器                                      | 说明               |
+| ---------------------------------------- | ---------------- |
+| TiDHT(TiGPIO gpio, int dataPinID)        | 创建实例，默认DHT11     |
+| TiDHT(TiGPIO gpio, int dataPinID, boolean model22) | 创建实例，DHT11或DHT22 |
 
 
 
 主要方法如下：
 
-| 方法                      | 说明                      |
-| ----------------------- | ----------------------- |
-| void setModel11()       | 设置传感器型号为DHT11（默认为DHT11） |
-| void setModel22()       | 设置传感器型号为DHT22           |
-| int measure()           | 测量当前温度和湿度               |
-| double getTemperature() | 获取当前环境温度（单位：摄氏度）        |
-| double getHumidity()    | 获取当前环境湿度（单位：与空气相对百分比）   |
+| 方法                      | 说明                    |
+| ----------------------- | --------------------- |
+| int measure()           | 测量当前温度和湿度             |
+| double getTemperature() | 获取当前环境温度（单位：摄氏度）      |
+| double getHumidity()    | 获取当前环境湿度（单位：与空气相对百分比） |
 
 TiDHT中方法的使用如下：
 
 ```java
 TiDHT dht = new TiDHT(gpio0, gpioPin0);
 // 设置传感器模式，本例程默认为DHT11
-dht.setModel11();
 while(true){
   //调用测量方法
   int err = dht.measure();
