@@ -12,9 +12,8 @@ Internet网络连接正常
 
 ## 准备工作
 
-1. 安装Ti-Dev Manager
-2. 在Eclipse安装Ti-Dev Studio 插件
-3. TiKit 开发板连接正常并在Ti-Dev Manager中状态正常
+1. 在Eclipse安装Ti-Dev Studio 插件
+2. TiKit 开发板连接正常并在Ti-Dev Manager中状态正常
 
 ## 新建工程
 
@@ -66,7 +65,7 @@ Internet网络连接正常
 
 ![RunAsTiJOS_Application](.\img\RunAsTiJOS_Application.png)
 
-在开发板上运行TiJOS应用时，需要将开发板从BOOT模式切换为WORK模式， 这个过程可通过开发板上的拨码开关来设置。
+在开发板上运行TiJOS应用时，请确保在Ti-Dev Manger设备管理器中可看到TiKit开发板已连接。
 
 ## 调试
 

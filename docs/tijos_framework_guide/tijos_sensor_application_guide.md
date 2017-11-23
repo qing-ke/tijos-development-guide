@@ -113,7 +113,7 @@ public TiLED(TiGPIO gpio, int signalPinID)
 
 ## 总结
 
-以上，详细讲解了“资源三部曲”原则的每个技术基础知识点，并通过一个简单的TiLED应用实例代码片段，从开发层面深入详细讲解，意在帮助用户更快的了解TiJOS传感器应用开发的核心技术；由于篇幅限制，无法将所有传感器的使用都一一讲解，用户可以下载GitHub中钛极OS(TiJOS) 外设操作例程源代码做更深入的学习，举一反三，快速掌握其他传感器的应用。例程下载地址: https://github.com/tijosnet/tijos-hardware-example。
+以上，详细讲解了“资源三部曲”原则的每个技术基础知识点，并通过一个简单的TiLED应用实例代码片段，从开发层面深入详细讲解，意在帮助用户更快的了解TiJOS传感器应用开发的核心技术；由于篇幅限制，无法将所有传感器的使用都一一讲解，用户可以下载GitHub中钛极OS(TiJOS) 外设操作例程源代码做更深入的学习，举一反三，快速掌握其他传感器的应用。例程下载地址: https://github.com/TiJOSteam/tijos-hardware-example。
 
 
 

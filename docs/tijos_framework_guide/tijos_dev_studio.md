@@ -99,7 +99,7 @@ Ti-Dev Studio提供如下功能:
 
 2. 提示"Device manager startup failed"
 
-   请检查Ti-Device Manager是否正确安装，检查Preferences中Ti-Dev Studio配置路径是否正确。
+   请检查Ti-Device Manager是否正确安装，检查Preferences中Ti-Dev Studio配置路径是否正确。并尝试在菜单Ti-Dev --> Ti-Device Manager来启动工具。
 
 3. Run as --> TiJOS Application在线链接失败?
 
@@ -115,4 +115,4 @@ Ti-Dev Studio提供如下功能:
 
 6. TiJOS LogCat不输出日志
 
-   请检查Ti-Device Manager中是否打开端口，打开端口后日志输出恢复正常。
+   请检查Ti-Device Manager中是否打开端口，打开端口后日志输出恢复正常。如仍无法正常输出日志，请尝试重启Eclipse。

@@ -3,6 +3,7 @@ pages:
 - 目录 : index.md
 - TiJOS应用开发环境搭建 : tijos_framework_guide/tijos_application_devsuite_setup.md
 - Ti-Dev Manager设备管理器 : tijos_framework_guide/tijos_device_manager.md
+- TiJOS系统工作模式: tijos_framework_guide/tijos_workingmode.md
 - Ti-Dev Studio开发工具 : tijos_framework_guide/tijos_dev_studio.md
 - 第一个TiJOS应用 : tijos_framework_guide/tijos_helloworld.md
 - TiJOS应用参考例程 :  tijos_framework_guide/tijos_examples.md

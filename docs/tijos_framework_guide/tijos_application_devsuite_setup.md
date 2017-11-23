@@ -1,5 +1,7 @@
 # 钛极OS(TiJOS)应用开发环境搭建
 
+钛极OS(TiJOS)应用开发环境只需在Eclipse中在线安装Ti-Dev Studio插件即可，安装成功后即可在Eclipse中进行TiJOS应用的开发和运行，Eclipse中Ti-Dev Studio插件安装路径http://dev.tijos.net/studio/release, 按Eclipse标准插件安装流程进行安装即可。具体过程如下：
+
 ## 开发平台支持
 
 最低要求：Windows 7及以上
@@ -12,13 +14,9 @@ TiJOS应用与标准Java 应用类似，通过在Eclipse中安装Ti-Dev Studio�
 
 Eclipse版本支持：4.6 及以上
 
-## 安装Ti-Dev Manager
 
-TiJOS提供了Ti-Dev Manager安装包，直接点击运行安装程序即可完成。
 
-Ti-Dev Manager安装包可行如下链接获得: [Ti-DevManager_Setup](http://dev.tijos.net/setup/Ti-DeviceManager_setup.exe)
-
-## 安装Ti-Dev Studio Eclipse Plugin
+## 安装Ti-Dev Studio
 
 在Eclipse中通过Help菜单下的"Install New Software" 安装Ti-Dev Stuido 插件, 安装过程如下:
 
@@ -66,7 +64,17 @@ Installing...
 
 ## 连接TiKit开发板
 
-将TiKit硬件开发板连接到开发机器， 并在Ti-Dev Manager添加设备，检测设备连接，如果是网络应用，还可在Ti-Dev Manager中配置网络设置，如无线WIFI， 网关，DNS等等， 在进行配置时， 请将开发板设置为BOOT模式， 在开发过程中可根据需求连接相关的传感器进行开发和测试。
+将TiKit硬件开发板连接到开发机器， 并在Ti-Dev Manager检测设备连接，如果是网络应用，还可在Ti-Dev Manager中配置网络设置，如无线WIFI， 网关，DNS等等， 在开发过程中可根据需求连接相关的传感器进行开发和测试。
+
+Ti-Dev Manager可通过Ti-Dev菜单直接打开：
+
+![TiJOSPlugin_DevManager](./img/TiJOSPlugin_DevManager.png)
+
+如果设备连接成功，在Ti-Dev Manager中可以看到当前连接的设备：
+
+![DevInfo](./img/DevInfo.png)
+
+
 
 ## TiJOS应用开发
 

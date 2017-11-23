@@ -5,7 +5,7 @@
 | 例程分类             | 链接                                       |
 | ---------------- | ---------------------------------------- |
 | TiJOS JDK 常用功能例程 | [https://github.com/TiJOSteam/tijos-software-example](https://github.com/TiJOSteam/tijos-software-example) |
-| TiJOS 外设操作例程     | [https://github.com/TiJOSteam/tijos-hardware-example](https://github.com/TiJOSteam/tijos-software-example) |
+| TiJOS 外设操作例程     | [https://github.com/TiJOSteam/tijos-hardware-example](https://github.com/TiJOSteam/tijos-hardware-example) |
 
 以上的链接中包含了如下例程， 相关例程在不断更新丰富中。
 
