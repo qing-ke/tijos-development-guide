@@ -95,11 +95,11 @@ Ti-Dev Studio提供如下功能:
 
    ![20171009132559](.\img\20171009132559.png)
 
-   出现这种提示客户忽略，直接点击“OK”即可。
+   出现这种提示请直接勾选后点击“OK”即可。
 
 2. 提示"Device manager startup failed"
 
-   请检查Ti-Device Manager是否正确安装，检查Preferences中Ti-Dev Studio配置路径是否正确。并尝试在菜单Ti-Dev --> Ti-Device Manager来启动工具。
+   请检查Preferences中Ti-Dev Studio配置路径是否正确。并尝试在菜单Ti-Dev --> Ti-Device Manager来启动工具。
 
 3. Run as --> TiJOS Application在线链接失败?
 
@@ -109,10 +109,6 @@ Ti-Dev Studio提供如下功能:
 
    请检查Ti-Device Manager中设备是否连接成功。
 
-5. 提示“Can only run in WORK mode and wait for toggle switch to WORK mode...”
-
-   开发板分为BOOT模式和WORK两种工作模式，请将开发板上工作模式开关拨动到WORK模式。
-
-6. TiJOS LogCat不输出日志
+5. TiJOS LogCat不输出日志
 
    请检查Ti-Device Manager中是否打开端口，打开端口后日志输出恢复正常。如仍无法正常输出日志，请尝试重启Eclipse。
