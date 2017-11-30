@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -830,7 +878,7 @@
               
                 
                 
-                <h1 id="tijosframeworksensorbutton-">tijos.framework.sensor.button - 按键类</h1>
+                <h1 id="tijosframeworksensorbutton-">tijos.framework.sensor.button - 按键类<a class="headerlink" href="#tijosframeworksensorbutton-" title="Permanent link">&para;</a></h1>
 <p>tijos.framework.sensor.button中包含了与按键相关的类，如单按键，矩阵键盘等等，通过按键事件监听模式满足不同的按键应用场景。</p>
 <p>包含类如下:</p>
 <table>
@@ -847,7 +895,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tibutton">TiButton</h2>
+<h2 id="tibutton">TiButton<a class="headerlink" href="#tibutton" title="Permanent link">&para;</a></h2>
 <p>TiJOS提供的单按键类支持按键事件监听；可支持激活电平配置为高电平激活和低电平激活两种，按键默认使用低电平激活。</p>
 <p>TiJOS Button 包括如下类：</p>
 <table>
@@ -868,7 +916,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tibutton_1">TiButton的创建、绑定与使用</h2>
+<h2 id="tibutton_1">TiButton的创建、绑定与使用<a class="headerlink" href="#tibutton_1" title="Permanent link">&para;</a></h2>
 <p>TiButton对象在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本对象绑定的设备总线类为 tijos.framework.devicecenter.TiGPIO；设备总线的使用请参考：tijos.framework.devicecenter。</p>
 <p>构造器如下：</p>
 <table>
@@ -912,7 +960,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tibutton_2">TiButton事件监听</h2>
+<h2 id="tibutton_2">TiButton事件监听<a class="headerlink" href="#tibutton_2" title="Permanent link">&para;</a></h2>
 <p>TiButton的事件监听主要通过TiButtonEventListener事件回调来处理事件，事件类型包括</p>
 <table>
 <thead>
@@ -937,31 +985,33 @@
 </tbody>
 </table>
 <p>创建TiButton事件监听对象：</p>
-<pre><code class="java">/*
- * 资源使用，
- * 创建事件监听对象并设置事件监听
- * 在事件监听中处理按键事件逻辑
- */         
-OneButtonEventListener lc = new OneButtonEventListener();
-buttonS1.setEventListener(lc);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * 资源使用，</span>
+<span class="cm"> * 创建事件监听对象并设置事件监听</span>
+<span class="cm"> * 在事件监听中处理按键事件逻辑</span>
+<span class="cm"> */</span>         
+<span class="n">OneButtonEventListener</span> <span class="n">lc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OneButtonEventListener</span><span class="o">();</span>
+<span class="n">buttonS1</span><span class="o">.</span><span class="na">setEventListener</span><span class="o">(</span><span class="n">lc</span><span class="o">);</span>
+</pre></div>
+
 
 <p>事件处理：</p>
-<pre><code class="java">class OneButtonEventListener implements TiButtonEventListener {
-    /**
-     * 按键按下事件处理
-     */
-    public void onPressed(TiButton arg0) {
-        System.out.println(&quot;onPressed&quot;+&quot;  time(us):&quot;+arg0.getEventTime()+&quot;  ButtonPinID:&quot;+arg0.getPinID());     
-    }
-    /**
-     * 按键释放事件处理
-     */
-    public void onReleased(TiButton arg0) {
-        System.out.println(&quot;onReleased&quot;+&quot;  time(us):&quot;+arg0.getEventTime()+&quot;  ButtonPinID:&quot;+arg0.getPinID());        
-    }   
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">OneButtonEventListener</span> <span class="kd">implements</span> <span class="n">TiButtonEventListener</span> <span class="o">{</span>
+    <span class="cm">/**</span>
+<span class="cm">     * 按键按下事件处理</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onPressed</span><span class="o">(</span><span class="n">TiButton</span> <span class="n">arg0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;onPressed&quot;</span><span class="o">+</span><span class="s">&quot;  time(us):&quot;</span><span class="o">+</span><span class="n">arg0</span><span class="o">.</span><span class="na">getEventTime</span><span class="o">()+</span><span class="s">&quot;  ButtonPinID:&quot;</span><span class="o">+</span><span class="n">arg0</span><span class="o">.</span><span class="na">getPinID</span><span class="o">());</span>     
+    <span class="o">}</span>
+    <span class="cm">/**</span>
+<span class="cm">     * 按键释放事件处理</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReleased</span><span class="o">(</span><span class="n">TiButton</span> <span class="n">arg0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;onReleased&quot;</span><span class="o">+</span><span class="s">&quot;  time(us):&quot;</span><span class="o">+</span><span class="n">arg0</span><span class="o">.</span><span class="na">getEventTime</span><span class="o">()+</span><span class="s">&quot;  ButtonPinID:&quot;</span><span class="o">+</span><span class="n">arg0</span><span class="o">.</span><span class="na">getPinID</span><span class="o">());</span>        
+    <span class="o">}</span>   
+<span class="o">}</span>
+</pre></div>
+
 
 <p>TiButton类中他方法的使用请参考 TiButton 按键功能例程。</p>
                 
@@ -1030,6 +1080,14 @@ buttonS1.setEventListener(lc);
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

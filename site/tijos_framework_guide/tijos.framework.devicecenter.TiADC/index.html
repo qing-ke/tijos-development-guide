@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -830,10 +878,10 @@
               
                 
                 
-                <h1 id="tijosframeworkdevicecentertiadc-">tijos.framework.devicecenter.TiADC - 模数转换器</h1>
+                <h1 id="tijosframeworkdevicecentertiadc-">tijos.framework.devicecenter.TiADC - 模数转换器<a class="headerlink" href="#tijosframeworkdevicecentertiadc-" title="Permanent link">&para;</a></h1>
 <p>ADC，Analog-to-Digital Converter的缩写ADC，指模/数转换器或者模数转换器。是指将连续变化的模拟信号转换为离散的数字信号的器件，具体可参考https://baike.baidu.com/item/ADC/6529867或https://en.wikipedia.org/wiki/Analog-to-digital_converter。</p>
 <p>TiJOS Framework提供TiADC来支持ADC功能，其将ADC按照port分组，共支持4组，组号范围0-3，即：port0-port3；每组都支持指定模式的单独设置， 测试模拟量为电压值。</p>
-<h2 id="tiadc">TiADC方法定义</h2>
+<h2 id="tiadc">TiADC方法定义<a class="headerlink" href="#tiadc" title="Permanent link">&para;</a></h2>
 <p>TiADC类中主要的方法：</p>
 <table>
 <thead>
@@ -858,24 +906,26 @@
 </tbody>
 </table>
 <p>TiADC类中他方法的技术说明请参考TiJOS JDK framework说明文档。</p>
-<h2 id="tiadc_1">TiADC对象创建与销毁</h2>
+<h2 id="tiadc_1">TiADC对象创建与销毁<a class="headerlink" href="#tiadc_1" title="Permanent link">&para;</a></h2>
 <p>TiADC对象的创建需要调用open静态方法，传入指定port参数，返回创建的接口对象。</p>
 <p>TiADC对象的销毁需要调用close方法。</p>
-<pre><code class="java">...
-int adcPort0 = 0; //定义接口，port0
-TiADC adc0 = TiADC.open(adcPort0); //打开port0，返回TiADC接口对象
-...
-...
-...
-adc0.close(); //销毁当前对象
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="kt">int</span> <span class="n">adcPort0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">//定义接口，port0</span>
+<span class="n">TiADC</span> <span class="n">adc0</span> <span class="o">=</span> <span class="n">TiADC</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">adcPort0</span><span class="o">);</span> <span class="c1">//打开port0，返回TiADC接口对象</span>
+<span class="o">...</span>
+<span class="o">...</span>
+<span class="o">...</span>
+<span class="n">adc0</span><span class="o">.</span><span class="na">close</span><span class="o">();</span> <span class="c1">//销毁当前对象</span>
+</pre></div>
 
-<h2 id="tiadc_2">TiADC电压测量</h2>
-<pre><code class="java">...
-double voltage = adc0.getVoltage(1.0, 5.0);  //获取电压数字量，其中1.0为平台内部参考电压， 5.0为分压                                         //倍数，这部分与平台相关，需要根据平台特性设置。
-                                             //以上设置电压测量范围：0-5V， 本例以TiKit-T600-                                           //ESP8266A平台为例。
-...
-</code></pre>
+
+<h2 id="tiadc_2">TiADC电压测量<a class="headerlink" href="#tiadc_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="kt">double</span> <span class="n">voltage</span> <span class="o">=</span> <span class="n">adc0</span><span class="o">.</span><span class="na">getVoltage</span><span class="o">(</span><span class="mf">1.0</span><span class="o">,</span> <span class="mf">5.0</span><span class="o">);</span>  <span class="c1">//获取电压数字量，其中1.0为平台内部参考电压， 5.0为分压                                         //倍数，这部分与平台相关，需要根据平台特性设置。</span>
+                                             <span class="c1">//以上设置电压测量范围：0-5V， 本例以TiKit-T600-                                           //ESP8266A平台为例。</span>
+<span class="o">...</span>
+</pre></div>
+
 
 <p>注意：电压测量参数中的内部参考电压和分压倍数受平台特性的限制，设置时须了解硬件平台特性。</p>
 <p>具体可参考TiJOS Framework说明文档。</p>
@@ -945,6 +995,14 @@ double voltage = adc0.getVoltage(1.0, 5.0);  //获取电压数字量，其中1.0
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

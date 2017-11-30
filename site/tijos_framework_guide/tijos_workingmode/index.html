@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -117,6 +119,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -139,6 +165,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -906,23 +954,23 @@
               
                 
                 
-                <h1 id="ostijos">关于钛极OS(TiJOS)系统工作模式</h1>
-<h2 id="_1">简介</h2>
+                <h1 id="ostijos">关于钛极OS(TiJOS)系统工作模式<a class="headerlink" href="#ostijos" title="Permanent link">&para;</a></h1>
+<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>为了给用户提供一个方便快捷的操作系统管理策略，钛极OS(TiJOS)系统提供两种工作模式，分别是Boot模式（引导模式）和User模式（用户模式）。</p>
-<h2 id="_2">工作模式定义</h2>
-<h3 id="boot">Boot模式</h3>
+<h2 id="_2">工作模式定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="boot">Boot模式<a class="headerlink" href="#boot" title="Permanent link">&para;</a></h3>
 <p><strong>Boot模式</strong>，即引导模式，此时只有系统Boot应用程序在运行，并接受上位机程序命令，用户可以使用Ti-Device Manager设备管理工具对设备进行<strong>配置</strong>和<strong>下载</strong>/<strong>运行</strong>用户应用程序。<strong>注：</strong>用户可以将此模式类比成PC机的BIOS模式。</p>
-<h3 id="user">User模式</h3>
+<h3 id="user">User模式<a class="headerlink" href="#user" title="Permanent link">&para;</a></h3>
 <p><strong>User模式</strong>，即用户模式，此时只有<strong>用户应用程序</strong>在运行，执行应用程序所有业务逻辑。<strong>注：</strong>在此模式下，<strong>不能</strong>再通过Ti-Device Manager设备管理工具进行配置和下载，需要手动让系统进入Boot模式。</p>
-<h2 id="_3">应用场景</h2>
+<h2 id="_3">应用场景<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>正如简介中所述，钛极OS(TiJOS)系统中引入工作模式的概念意在为用户提供方便快捷的操作系统管理策略，任何系统策略最终会在具体应用场景中体现，下面就详细讲解本系统工作模式的应用场景。</p>
 <p><strong>Boot模式应用</strong>，用户可以在该模式下通过Ti-Device Manager设备管理工具对设备进行配置，如：主机名等。该模式主要在<strong>开发阶段</strong>使用，用于用户应用程序的下载和运行测试，在Eclipse中运行用户应用程序<strong>必须</strong>在该模式下进行。</p>
 <p><strong>User模式应用</strong>，进入该模式后，系统会自动启动已经安装的用户应用程序，该模式主要在程序业务逻辑都得到正确性验证后使用，即在<strong>产品阶段</strong>使用。</p>
-<h2 id="_4">工作模式切换</h2>
+<h2 id="_4">工作模式切换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>如下图所示，钛极OS(TiJOS)系统的工作模式的切换分为<strong>自动切换</strong>和<strong>手动切换</strong>两种，系统在启动后首先判断<strong>用户应用已经安装</strong>与<strong>用户模式已开启</strong>两个条件是否同时成立，若同时成立，则自动进入User模式，并开始执行用户应用程序；否则就自动进入Boot模式，在此模式下系统等待Ti-Device Manager设备管理工具的连接，进行设配属性设置、用户应用程序下载/运行等操作。</p>
 <p>若当前工作模式为User模式，需要手动操作使其进入Boot模式。<strong>手动进入方法为：</strong>按住BOOT按钮，按一次RESET按钮，然后松开BOOT按钮。</p>
 <p><img alt="step-workmode" src="../img/step-workmode.png" /></p>
-<h2 id="_5">工作模式判断</h2>
+<h2 id="_5">工作模式判断<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>用户可以通过系统启动时打印的<strong>系统日志</strong>来判断系统当前工作在何种模式，下面将举例说明：</p>
 <ol>
 <li>如下图所示：</li>
@@ -940,7 +988,7 @@
 </ol>
 <p><img alt="boot-yesyes" src="../img/boot-yesyes.png" /></p>
 <p>以上是在User模式下手动进入Boot模式的系统日志，当前工作在手动Boot模式。</p>
-<h2 id="_6">总结</h2>
+<h2 id="_6">总结<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>以上详细讲解了钛极OS(TiJOS)系统工作模式的技术原理及使用方法，意在让用户快速理解并能合理运用，更多问题可访问<a href="http://bbs.tijos.net">钛极OS(TiJOS)技术交流社区</a>进行讨论。</p>
                 
                   
@@ -1008,6 +1056,14 @@
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

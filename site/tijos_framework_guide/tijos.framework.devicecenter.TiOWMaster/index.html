@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -858,10 +906,10 @@
               
                 
                 
-                <h1 id="tijosframeworkdevicecentertiowmaster-">tijos.framework.devicecenter.TiOWMaster - 单总线，主机模式</h1>
+                <h1 id="tijosframeworkdevicecentertiowmaster-">tijos.framework.devicecenter.TiOWMaster - 单总线，主机模式<a class="headerlink" href="#tijosframeworkdevicecentertiowmaster-" title="Permanent link">&para;</a></h1>
 <p>1-Wire总线是一个简单的信号传输电路，可通过一根共用的数据线实现主控制器与一个或一个以上从器件之间的半双工双向通信。具体可参考https://baike.baidu.com/item/1-Wire或https://en.wikipedia.org/wiki/1-Wire。</p>
 <p>TiJOS Framework提供TiOWMaster来支持1-Wire主机功能，其将OW Master按照port分组，共支持2组，组号范围0-1，即：port0-port1；其中每组内按照io划分4条输入输出，输入输出号范围0-3，即：io0-io3；每条输入输出都支持指定模式的单独设置。</p>
-<h2 id="tiowmaster">TiOWMaster工作模式定义</h2>
+<h2 id="tiowmaster">TiOWMaster工作模式定义<a class="headerlink" href="#tiowmaster" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -878,7 +926,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tiowmaster_1">TiOWMaster方法定义</h2>
+<h2 id="tiowmaster_1">TiOWMaster方法定义<a class="headerlink" href="#tiowmaster_1" title="Permanent link">&para;</a></h2>
 <p>TiOWMaster类中主要的方法：</p>
 <table>
 <thead>
@@ -915,49 +963,52 @@
 </tbody>
 </table>
 <p>TiOWMaster类中他方法的技术说明请参考TiJOS Framework说明文档。</p>
-<h2 id="tiowmaster_2">TiOWMaster对象创建与销毁</h2>
+<h2 id="tiowmaster_2">TiOWMaster对象创建与销毁<a class="headerlink" href="#tiowmaster_2" title="Permanent link">&para;</a></h2>
 <p>TiOWMaster对象的创建需要调用open静态方法，传入指定port和io集合参数，返回创建的接口对象。</p>
 <p>TiOWMaster对象的销毁需要调用close方法。</p>
-<pre><code class="java">...
-int owPort0 = 0;
-int owIo0 = 0; //定义io集合
-int owIo1 = 1;
-TiOWMaster ow0 = TiOWMaster.open(owPort0, owIo0, owIo1);
-...
-...
-...
-ow0.close();
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="kt">int</span> <span class="n">owPort0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">owIo0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">//定义io集合</span>
+<span class="kt">int</span> <span class="n">owIo1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="n">TiOWMaster</span> <span class="n">ow0</span> <span class="o">=</span> <span class="n">TiOWMaster</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">owPort0</span><span class="o">,</span> <span class="n">owIo0</span><span class="o">,</span> <span class="n">owIo1</span><span class="o">);</span>
+<span class="o">...</span>
+<span class="o">...</span>
+<span class="o">...</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</pre></div>
 
-<h2 id="tiowmaster_3">TiOWMaster模式设置</h2>
+
+<h2 id="tiowmaster_3">TiOWMaster模式设置<a class="headerlink" href="#tiowmaster_3" title="Permanent link">&para;</a></h2>
 <p>TiOWMaster模式设置通过setIoMode方法设置，设置参数为ioID和工作模式。</p>
-<pre><code class="java">...
-ow0.setIoMode(owIo0, TiOWMaster.MODE_STANDARD); //io0工作在标准模式
-ow0.setIoMode(owIo1, TiOWMaster.MODE_OVERDRIVE); //io1工作在高速模式
-...
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">setIoMode</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="n">TiOWMaster</span><span class="o">.</span><span class="na">MODE_STANDARD</span><span class="o">);</span> <span class="c1">//io0工作在标准模式</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">setIoMode</span><span class="o">(</span><span class="n">owIo1</span><span class="o">,</span> <span class="n">TiOWMaster</span><span class="o">.</span><span class="na">MODE_OVERDRIVE</span><span class="o">);</span> <span class="c1">//io1工作在高速模式</span>
+<span class="o">...</span>
+</pre></div>
+
 
 <p>注意：模式支持受平台特性限制，设置时须了解平台特性。</p>
-<h2 id="tiowmaster_4">TiOWMaster输入输出</h2>
+<h2 id="tiowmaster_4">TiOWMaster输入输出<a class="headerlink" href="#tiowmaster_4" title="Permanent link">&para;</a></h2>
 <p>TiOWMaster的输入输出操作通过resetIo、readIoBits和writeIoBits方法完成。</p>
-<pre><code class="java">...
-boolean status = ow0.resetIo(owIo0);
-if(!status) {
-    System.out.println(&quot;reset io0 fail.&quot;);
-    return ;
-}
-ow0.writeIoBits(owIo0, 0x80, 8);
-int value = ow0.readIoBits(owIo0, 8);
-...
-boolean status = ow0.resetIo(owIo1);
-if(!status) {
-    System.out.println(&quot;reset io1 fail.&quot;);
-    return ;
-}
-ow0.writeIoBits(owIo1, 0x01, 1);
-int value = ow0.readIoBits(owIo1, 2);
-...
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="kt">boolean</span> <span class="n">status</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">resetIo</span><span class="o">(</span><span class="n">owIo0</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(!</span><span class="n">status</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;reset io0 fail.&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">;</span>
+<span class="o">}</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">writeIoBits</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="mh">0x80</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">readIoBits</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
+<span class="o">...</span>
+<span class="kt">boolean</span> <span class="n">status</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">resetIo</span><span class="o">(</span><span class="n">owIo1</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(!</span><span class="n">status</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;reset io1 fail.&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">;</span>
+<span class="o">}</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">writeIoBits</span><span class="o">(</span><span class="n">owIo1</span><span class="o">,</span> <span class="mh">0x01</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">readIoBits</span><span class="o">(</span><span class="n">owIo1</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+<span class="o">...</span>
+</pre></div>
+
 
 <p>具体可参考TiJOS Framework说明文档。</p>
                 
@@ -1026,6 +1077,14 @@ int value = ow0.readIoBits(owIo1, 2);
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

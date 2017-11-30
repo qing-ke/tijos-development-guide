@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -844,7 +892,7 @@
               
                 
                 
-                <h1 id="tijosframeworknetmqtt-mqtt">tijos.framework.net.mqtt - MQTT 客户端</h1>
+                <h1 id="tijosframeworknetmqtt-mqtt">tijos.framework.net.mqtt - MQTT 客户端<a class="headerlink" href="#tijosframeworknetmqtt-mqtt" title="Permanent link">&para;</a></h1>
 <p>MQTT是一个物联网传输协议，它被设计用于轻量级的发布/订阅式消息传输，旨在为低带宽和不稳定的网络环境中的物联网设备提供可靠的网络服务， 请参考 https://en.wikipedia.org/wiki/MQTT 或 mqtt.org 了解更多信息。</p>
 <p>目前主流的物联云厂商均支持MQTT， 如Amazon, 百度云，阿里云等等， TiJOS 提供符合MQTT 3.1.1标准协议的MQTT Client, 可与所有支持MQTT 协议的服务器直接连接， 如百度物联云 https://cloud.baidu.com/product/iot.html  及 阿里物联云 https://www.aliyun.com/product/iot. </p>
 <p>TiJOS MQTT Client 包括如下类：</p>
@@ -871,7 +919,7 @@
 </tbody>
 </table>
 <p>TiJOS MQTT Client 支持TCP和SSL两种通讯方式， 符合MQTT3.1.1标准规范，支持QOS0,1,2, 支持高性能异步API,   在处理MQTT协议过程中通过事件回调返回操作结果， 可支持突发模式"burst-mode"客户端请求， 实现快速发布无等待， 避免客户端资源等待。</p>
-<h2 id="mqtt">MQTT 连接配置</h2>
+<h2 id="mqtt">MQTT 连接配置<a class="headerlink" href="#mqtt" title="Permanent link">&para;</a></h2>
 <p>MQTT 连接配置通过MqttConnectOptions 类进行，可进行如下配置：</p>
 <table>
 <thead>
@@ -920,31 +968,34 @@
 </tbody>
 </table>
 <p>MQTT服务器地址及客户端ClientID通过MqttClient初始化时进行设置。</p>
-<h2 id="mqtt_1">MQTT 连接建立步骤</h2>
+<h2 id="mqtt_1">MQTT 连接建立步骤<a class="headerlink" href="#mqtt_1" title="Permanent link">&para;</a></h2>
 <ol>
 <li>通过MqttConnectOptions设置相应的连接参数:</li>
 </ol>
-<pre><code class="java"> MqttConnectOptions connOpts = new MqttConnectOptions();
- connOpts.setUserName(username);
- connOpts.setPassword(password);
- connOpts.setAutomaticReconnect(true);
-</code></pre>
+<div class="codehilite"><pre><span></span> <span class="n">MqttConnectOptions</span> <span class="n">connOpts</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MqttConnectOptions</span><span class="o">();</span>
+ <span class="n">connOpts</span><span class="o">.</span><span class="na">setUserName</span><span class="o">(</span><span class="n">username</span><span class="o">);</span>
+ <span class="n">connOpts</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="n">password</span><span class="o">);</span>
+ <span class="n">connOpts</span><span class="o">.</span><span class="na">setAutomaticReconnect</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+</pre></div>
+
 
 <ol>
 <li>设置MQTT服务器地址及ClientID, 以百度物联云服务器为例:</li>
 </ol>
-<pre><code class="java">final String broker      = &quot;tcp://tijos.mqtt.iot.gz.baidubce.com:1883&quot;;
-final String clientId     = &quot;mqtt_test_java_client1&quot;;
+<div class="codehilite"><pre><span></span><span class="kd">final</span> <span class="n">String</span> <span class="n">broker</span>      <span class="o">=</span> <span class="s">&quot;tcp://tijos.mqtt.iot.gz.baidubce.com:1883&quot;</span><span class="o">;</span>
+<span class="kd">final</span> <span class="n">String</span> <span class="n">clientId</span>     <span class="o">=</span> <span class="s">&quot;mqtt_test_java_client1&quot;</span><span class="o">;</span>
 
-MqttClient mqttClient = new MqttClient(broker, clientId);
-</code></pre>
+<span class="n">MqttClient</span> <span class="n">mqttClient</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MqttClient</span><span class="o">(</span><span class="n">broker</span><span class="o">,</span> <span class="n">clientId</span><span class="o">);</span>
+</pre></div>
+
 
 <ol>
 <li>设置事件监听并连接服务器</li>
 </ol>
-<pre><code>mqttClient.SetMqttClientListener(new MqttEventLister());
+<div class="codehilite"><pre><span></span>mqttClient.SetMqttClientListener(new MqttEventLister());
 mqttClient.connect(connOpts, mqttClient);
-</code></pre>
+</pre></div>
+
 
 <ol>
 <li>连接成功或失败时会通过MqttClientListener中onMqttConnectSuccess或onMqttConnectFailure返回, 用户也可以不使用突发模式直接进行topic的发布和订阅以提高性能。</li>
@@ -961,7 +1012,7 @@ mqttClient.connect(connOpts, mqttClient);
 <p>​</p>
 </li>
 </ol>
-<h2 id="mqtt_2">MQTT 事件监听</h2>
+<h2 id="mqtt_2">MQTT 事件监听<a class="headerlink" href="#mqtt_2" title="Permanent link">&para;</a></h2>
 <p>MQTT的通过IMqttClientListener事件回调来处理事件，事件类型包括：</p>
 <table>
 <thead>
@@ -1005,16 +1056,17 @@ mqttClient.connect(connOpts, mqttClient);
 </tr>
 </tbody>
 </table>
-<h2 id="mqtt-topic">MQTT Topic 发布和订阅</h2>
+<h2 id="mqtt-topic">MQTT Topic 发布和订阅<a class="headerlink" href="#mqtt-topic" title="Permanent link">&para;</a></h2>
 <p>MQTT协议主要来进行topic的发布和订阅，即将数据发布到服务器和从服务器获得最数据更新，这主要通过MqttClient的publish和subscribe函数来完成：</p>
-<pre><code class="java">String topic        = &quot;topic2&quot;;
-String content      = &quot;Message from MQTT IoT demo&quot;;
-int Qos = 1;
-boolean retain = false;
+<div class="codehilite"><pre><span></span><span class="n">String</span> <span class="n">topic</span>        <span class="o">=</span> <span class="s">&quot;topic2&quot;</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">content</span>      <span class="o">=</span> <span class="s">&quot;Message from MQTT IoT demo&quot;</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">Qos</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="kt">boolean</span> <span class="n">retain</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
 
-int msgId = mqttClient.subscribe(topic, Qos);
-msgId = mqttClient.publish(topic, content.getBytes(), Qos, retain);
-</code></pre>
+<span class="kt">int</span> <span class="n">msgId</span> <span class="o">=</span> <span class="n">mqttClient</span><span class="o">.</span><span class="na">subscribe</span><span class="o">(</span><span class="n">topic</span><span class="o">,</span> <span class="n">Qos</span><span class="o">);</span>
+<span class="n">msgId</span> <span class="o">=</span> <span class="n">mqttClient</span><span class="o">.</span><span class="na">publish</span><span class="o">(</span><span class="n">topic</span><span class="o">,</span> <span class="n">content</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(),</span> <span class="n">Qos</span><span class="o">,</span> <span class="n">retain</span><span class="o">);</span>
+</pre></div>
+
 
 <p>publish和subscribe 返回msgId 用于标识本次操作，当操作完成后的事件回调中可通过msgId或topic名称来获得当前事件的执行结果。</p>
 <p>注意： </p>
@@ -1089,6 +1141,14 @@ msgId = mqttClient.publish(topic, content.getBytes(), Qos, retain);
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

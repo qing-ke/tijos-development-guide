@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -844,7 +892,7 @@
               
                 
                 
-                <h1 id="tijosframeworksensorhumiture-">tijos.framework.sensor.humiture - 温湿度传感类</h1>
+                <h1 id="tijosframeworksensorhumiture-">tijos.framework.sensor.humiture - 温湿度传感类<a class="headerlink" href="#tijosframeworksensorhumiture-" title="Permanent link">&para;</a></h1>
 <p>tijos.framework.sensor.humiture 中包含了与温度、湿度检监测的类。温湿度监测支持DHT11/DHT22数字温湿度传感器，支持测量范围为0~50℃、精度为±2℃的环境实时温度监测，以及范围为20~90%、精度为±5%的湿度监测。温度监测使用DS18B20数字温度传感器，可支持测量范围-55~+125℃、精度为±0.5℃的环境实时温度监测。</p>
 <p>包含类如下:</p>
 <table>
@@ -865,7 +913,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tidht">TiDHT</h2>
+<h2 id="tidht">TiDHT<a class="headerlink" href="#tidht" title="Permanent link">&para;</a></h2>
 <p>TiJOS提供使用DHT11和DHT22数字温湿度传感器的类。</p>
 <p>TiJOS DHT包括如下类：</p>
 <table>
@@ -882,7 +930,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tidht_1">TiDHT的创建、绑定与使用</h2>
+<h2 id="tidht_1">TiDHT的创建、绑定与使用<a class="headerlink" href="#tidht_1" title="Permanent link">&para;</a></h2>
 <p>TiDHT实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.framework.devicecenter.TiGPIO；设备总线的使用请参考：tijos.framework.devicecenter。</p>
 <p>构造器如下：</p>
 <table>
@@ -927,24 +975,25 @@
 </tbody>
 </table>
 <p>TiDHT中方法的使用如下：</p>
-<pre><code class="java">TiDHT dht = new TiDHT(gpio0, gpioPin0);
-// 设置传感器模式，本例程默认为DHT11
-while(true){
-  //调用测量方法
-  int err = dht.measure();
-  if(err&lt;0){
-    //错误处理
-    .....
-  }
-  else{
-    //获取最近一次测量的温度、湿度数据
-    double temperature = dht.getTemperature();
-    double humidity = dht.getHumidity();
-  }
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="n">TiDHT</span> <span class="n">dht</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiDHT</span><span class="o">(</span><span class="n">gpio0</span><span class="o">,</span> <span class="n">gpioPin0</span><span class="o">);</span>
+<span class="c1">// 设置传感器模式，本例程默认为DHT11</span>
+<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+  <span class="c1">//调用测量方法</span>
+  <span class="kt">int</span> <span class="n">err</span> <span class="o">=</span> <span class="n">dht</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
+  <span class="k">if</span><span class="o">(</span><span class="n">err</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">){</span>
+    <span class="c1">//错误处理</span>
+    <span class="o">.....</span>
+  <span class="o">}</span>
+  <span class="k">else</span><span class="o">{</span>
+    <span class="c1">//获取最近一次测量的温度、湿度数据</span>
+    <span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">dht</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
+    <span class="kt">double</span> <span class="n">humidity</span> <span class="o">=</span> <span class="n">dht</span><span class="o">.</span><span class="na">getHumidity</span><span class="o">();</span>
+  <span class="o">}</span>
+</pre></div>
+
 
 <p>TiDH类中他方法的使用请参考TiDHT11 数字温湿度传感器功能例程。</p>
-<h2 id="tids18b20">TiDS18B20</h2>
+<h2 id="tids18b20">TiDS18B20<a class="headerlink" href="#tids18b20" title="Permanent link">&para;</a></h2>
 <p>TiJOS提供使用DS18B20数字温度传感器的类。</p>
 <p>TiJOS DS18B20包括如下类：</p>
 <table>
@@ -965,7 +1014,7 @@ while(true){
 </tr>
 </tbody>
 </table>
-<h2 id="tids18b20_1">TiDS18B20的创建、绑定与使用</h2>
+<h2 id="tids18b20_1">TiDS18B20的创建、绑定与使用<a class="headerlink" href="#tids18b20_1" title="Permanent link">&para;</a></h2>
 <p>TiDS18B20实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.framework.devicecenter.TiOWMaster；设备总线的使用请参考：tijos.framework.devicecenter。</p>
 <p>构造器如下：</p>
 <table>
@@ -1034,32 +1083,34 @@ while(true){
 </tbody>
 </table>
 <p>当一根总线上只挂有一个DS18B20传感器时，使用方法如下：</p>
-<pre><code class="java">// 创建TiDS18B20对象ds18b20并将owIo0和owIoID0与其绑定
-TiDS18B20 ds18b20 = new TiDS18B20(owIo0, owIoID0);
-//选择只有单传感器
-ds18b20.selectSingle();
-while(true){
-  //调用measure方法测量温度
-  ds18b20.measure();
-  //获取最近一次测量的结果
-  double temperature = ds18b20.getTemperature();
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">// 创建TiDS18B20对象ds18b20并将owIo0和owIoID0与其绑定</span>
+<span class="n">TiDS18B20</span> <span class="n">ds18b20</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiDS18B20</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="n">owIoID0</span><span class="o">);</span>
+<span class="c1">//选择只有单传感器</span>
+<span class="n">ds18b20</span><span class="o">.</span><span class="na">selectSingle</span><span class="o">();</span>
+<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+  <span class="c1">//调用measure方法测量温度</span>
+  <span class="n">ds18b20</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
+  <span class="c1">//获取最近一次测量的结果</span>
+  <span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">ds18b20</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+
 
 <p>当一根总线上挂有多个DS18B20传感器时，使用方法如下：</p>
-<pre><code class="JAVA">// 创建TiDS18B20对象ds18b20并将owIo0和owIoID0与其绑定
-TiDS18B20 ds18b20 = new TiDS18B20(owIo0, owIoID0);
-//枚举单根总线上的所有传感器并返回传感器的ROM信息
-TiDS18B20ROM[] romlist = ds18b20.enumeration();
-//选择指定ROM信息的传感器，当前选择第一个
-ds18b20.select(romlist[0]); 
-while(true){
-  //使用指定ROM信息的传感器，调用measure方法测量温度
-  ds18b20.measure();
-  //使用指定ROM信息的传感器，获取最近一次测量的结果
-  double temperature = ds18b20.getTemperature();
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">// 创建TiDS18B20对象ds18b20并将owIo0和owIoID0与其绑定</span>
+<span class="n">TiDS18B20</span> <span class="n">ds18b20</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiDS18B20</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="n">owIoID0</span><span class="o">);</span>
+<span class="c1">//枚举单根总线上的所有传感器并返回传感器的ROM信息</span>
+<span class="n">TiDS18B20ROM</span><span class="o">[]</span> <span class="n">romlist</span> <span class="o">=</span> <span class="n">ds18b20</span><span class="o">.</span><span class="na">enumeration</span><span class="o">();</span>
+<span class="c1">//选择指定ROM信息的传感器，当前选择第一个</span>
+<span class="n">ds18b20</span><span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="n">romlist</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span> 
+<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
+  <span class="c1">//使用指定ROM信息的传感器，调用measure方法测量温度</span>
+  <span class="n">ds18b20</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
+  <span class="c1">//使用指定ROM信息的传感器，获取最近一次测量的结果</span>
+  <span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">ds18b20</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+
 
 <p>TiDS18B2类中他方法的使用请参考TiDS18B20数字温度传感器功能例程。</p>
                 
@@ -1128,6 +1179,14 @@ while(true){
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

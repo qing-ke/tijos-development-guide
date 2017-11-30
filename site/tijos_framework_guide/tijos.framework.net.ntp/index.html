@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -761,21 +809,22 @@
               
                 
                 
-                <h1 id="tijosframeworknetntp-">tijos.framework.net.ntp - 网络时间协议客户端</h1>
+                <h1 id="tijosframeworknetntp-">tijos.framework.net.ntp - 网络时间协议客户端<a class="headerlink" href="#tijosframeworknetntp-" title="Permanent link">&para;</a></h1>
 <p>NTP是网络时间协议(Network Time Protocol)，它是用来同步网络中各个计算机的时间的协议, 具体可参考https://baike.baidu.com/item/nTP 或 https://en.wikipedia.org/wiki/Network_Time_Protocol。</p>
 <p>TiJOS Framework提供NTPUDPClient来支持NTP协议， 方便运行TiJOS的设备可从网络中获得当前的准确时间， 此NTP实现来自 <strong>org.apache.commons.net.ntp.NTPUDPClient</strong>， 可参考相关资料获得更多信息。</p>
 <p>调用过程如下所示：</p>
-<pre><code class="java">NTPUDPClient ntpcli = new NTPUDPClient();
-long interval = 0;
-InetAddress host = InetAddress.getByName(&quot;58.220.207.226&quot;); //NTP Server IP
-TimeInfo tm = ntpcli.getTime(host);
-interval = tm.getOffset();
+<div class="codehilite"><pre><span></span><span class="n">NTPUDPClient</span> <span class="n">ntpcli</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NTPUDPClient</span><span class="o">();</span>
+<span class="kt">long</span> <span class="n">interval</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="n">InetAddress</span> <span class="n">host</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getByName</span><span class="o">(</span><span class="s">&quot;58.220.207.226&quot;</span><span class="o">);</span> <span class="c1">//NTP Server IP</span>
+<span class="n">TimeInfo</span> <span class="n">tm</span> <span class="o">=</span> <span class="n">ntpcli</span><span class="o">.</span><span class="na">getTime</span><span class="o">(</span><span class="n">host</span><span class="o">);</span>
+<span class="n">interval</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="na">getOffset</span><span class="o">();</span>
 
-//Display the network time
-Calendar cal = Calendar.getInstance();
-cal.setTimeInMillis(interval + System.currentTimeMillis());
-System.out.println(cal.getTime().toString());
-</code></pre>
+<span class="c1">//Display the network time</span>
+<span class="n">Calendar</span> <span class="n">cal</span> <span class="o">=</span> <span class="n">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="n">cal</span><span class="o">.</span><span class="na">setTimeInMillis</span><span class="o">(</span><span class="n">interval</span> <span class="o">+</span> <span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">());</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">cal</span><span class="o">.</span><span class="na">getTime</span><span class="o">().</span><span class="na">toString</span><span class="o">());</span>
+</pre></div>
+
 
 <p>tm.getOffset()返回当前主机时间与网络时间差距，单位毫秒.</p>
                 
@@ -844,6 +893,14 @@ System.out.println(cal.getTime().toString());
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

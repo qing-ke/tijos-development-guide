@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -117,6 +119,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -139,6 +165,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -810,7 +858,7 @@
               
                 
                 
-                <h1 id="tijosframeworkplatform-">tijos.framework.platform - 平台设置</h1>
+                <h1 id="tijosframeworkplatform-">tijos.framework.platform - 平台设置<a class="headerlink" href="#tijosframeworkplatform-" title="Permanent link">&para;</a></h1>
 <p>tijos.framework.platform中包含了与平台设置相关的类，主机名称，电源管理等等， 这些设置可通过Ti-DevManager工具进行设置，也可通过tijos.framework.platform中的相关类和接口进行设置。</p>
 <p>包含类如下:</p>
 <table>
@@ -831,7 +879,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tipowermgr">TiPowerMgr</h2>
+<h2 id="tipowermgr">TiPowerMgr<a class="headerlink" href="#tipowermgr" title="Permanent link">&para;</a></h2>
 <p>主要方法如下：</p>
 <table>
 <thead>
@@ -858,12 +906,13 @@
 <p>TiPowerMgr类中他方法的技术说明请参考TiJOS Framework说明文档。</p>
 <p>注意：电源管理受平台特性限制，设置时须了解硬件平台特性。</p>
 <p>调用过程举例：</p>
-<pre><code class="java">...
-TiPowerMgr.hibernate(60); //系统进入冬眠模式，并在60秒以后自动唤醒。
-...
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="n">TiPowerMgr</span><span class="o">.</span><span class="na">hibernate</span><span class="o">(</span><span class="mi">60</span><span class="o">);</span> <span class="c1">//系统进入冬眠模式，并在60秒以后自动唤醒。</span>
+<span class="o">...</span>
+</pre></div>
 
-<h2 id="tisettings">TiSettings</h2>
+
+<h2 id="tisettings">TiSettings<a class="headerlink" href="#tisettings" title="Permanent link">&para;</a></h2>
 <p>主要方法如下：</p>
 <table>
 <thead>
@@ -885,12 +934,12 @@ TiPowerMgr.hibernate(60); //系统进入冬眠模式，并在60秒以后自动�
 </table>
 <p>TiSettings类中他方法的技术说明请参考TiJOS Framework说明文档。</p>
 <p>调用过程举例：</p>
-<pre><code class="java">...
-TiSettings.hostRename(&quot;TiJOS-12345678&quot;); //重新命名主机名
-...
-TiSettings.setLoggerLevel(1000); //设置全局日志等级为1000
-...
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="n">TiSettings</span><span class="o">.</span><span class="na">hostRename</span><span class="o">(</span><span class="s">&quot;TiJOS-12345678&quot;</span><span class="o">);</span> <span class="c1">//重新命名主机名</span>
+<span class="o">...</span>
+<span class="n">TiSettings</span><span class="o">.</span><span class="na">setLoggerLevel</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span> <span class="c1">//设置全局日志等级为1000</span>
+<span class="o">...</span>
+</pre></div>
                 
                   
                 
@@ -957,6 +1006,14 @@ TiSettings.setLoggerLevel(1000); //设置全局日志等级为1000
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

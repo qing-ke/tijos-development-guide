@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -761,59 +809,61 @@
               
                 
                 
-                <h1 id="tijosutiljson-json">tijos.util.json - JSON</h1>
+                <h1 id="tijosutiljson-json">tijos.util.json - JSON<a class="headerlink" href="#tijosutiljson-json" title="Permanent link">&para;</a></h1>
 <p>JSON(JavaScript Object Notation)是一种轻量级的数据交换格式,  是目前最见的数据交换方式， 具体请参考 https://baike.baidu.com/item/JSON 或 https://en.wikipedia.org/wiki/JSON .</p>
 <p>TiJOS Framework中的JSON实现来自https://github.com/stleary/JSON-java, 支持JSONArray, JSONObject, JSONString, 具体可参考相关资料.</p>
 <p>例程:</p>
 <ol>
 <li>JSON格式编码</li>
 </ol>
-<pre><code class="java">//Generate JSON string
-JSONObject studentJSONObject = new JSONObject();  
-try {  
-         studentJSONObject.put(&quot;name&quot;, &quot;Jason&quot;);  
-         studentJSONObject.put(&quot;id&quot;, 20130001);  
-         studentJSONObject.put(&quot;phone&quot;, &quot;13579246810&quot;);  
-     } catch (JSONException e) {  
-            e.printStackTrace();  
-     }  
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">//Generate JSON string</span>
+<span class="n">JSONObject</span> <span class="n">studentJSONObject</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>  
+<span class="k">try</span> <span class="o">{</span>  
+         <span class="n">studentJSONObject</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;name&quot;</span><span class="o">,</span> <span class="s">&quot;Jason&quot;</span><span class="o">);</span>  
+         <span class="n">studentJSONObject</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;id&quot;</span><span class="o">,</span> <span class="mi">20130001</span><span class="o">);</span>  
+         <span class="n">studentJSONObject</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;phone&quot;</span><span class="o">,</span> <span class="s">&quot;13579246810&quot;</span><span class="o">);</span>  
+     <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">JSONException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>  
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>  
+     <span class="o">}</span>  
+</pre></div>
+
 
 <ol>
 <li>JSON格式解码</li>
 </ol>
-<pre><code class="java">final String JSON =   
-              &quot;{&quot; +  
-                  &quot;   \&quot;phone\&quot; : [\&quot;12345678\&quot;, \&quot;87654321\&quot;],&quot; +  
-                  &quot;   \&quot;name\&quot; : \&quot;jack\&quot;,&quot; +  
-                  &quot;   \&quot;age\&quot; : 21,&quot; +  
-                  &quot;   \&quot;address\&quot; : { \&quot;country\&quot; : \&quot;china\&quot;, \&quot;province\&quot; : \&quot;beijing\&quot; },&quot; +  
-                  &quot;   \&quot;married\&quot; : false,&quot; +  
-              &quot;}&quot;;  
+<div class="codehilite"><pre><span></span><span class="kd">final</span> <span class="n">String</span> <span class="n">JSON</span> <span class="o">=</span>   
+              <span class="s">&quot;{&quot;</span> <span class="o">+</span>  
+                  <span class="s">&quot;   \&quot;phone\&quot; : [\&quot;12345678\&quot;, \&quot;87654321\&quot;],&quot;</span> <span class="o">+</span>  
+                  <span class="s">&quot;   \&quot;name\&quot; : \&quot;jack\&quot;,&quot;</span> <span class="o">+</span>  
+                  <span class="s">&quot;   \&quot;age\&quot; : 21,&quot;</span> <span class="o">+</span>  
+                  <span class="s">&quot;   \&quot;address\&quot; : { \&quot;country\&quot; : \&quot;china\&quot;, \&quot;province\&quot; : \&quot;beijing\&quot; },&quot;</span> <span class="o">+</span>  
+                  <span class="s">&quot;   \&quot;married\&quot; : false,&quot;</span> <span class="o">+</span>  
+              <span class="s">&quot;}&quot;</span><span class="o">;</span>  
 
-              try {  
-                  JSONTokener jsonTokener = new JSONTokener(JSON);  
-                  JSONObject person = (JSONObject) jsonTokener.nextValue();  
+              <span class="k">try</span> <span class="o">{</span>  
+                  <span class="n">JSONTokener</span> <span class="n">jsonTokener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONTokener</span><span class="o">(</span><span class="n">JSON</span><span class="o">);</span>  
+                  <span class="n">JSONObject</span> <span class="n">person</span> <span class="o">=</span> <span class="o">(</span><span class="n">JSONObject</span><span class="o">)</span> <span class="n">jsonTokener</span><span class="o">.</span><span class="na">nextValue</span><span class="o">();</span>  
 
-                  JSONArray phoneArray = person.getJSONArray(&quot;phone&quot;);
-                  for(int i = 0; i &lt; phoneArray.length(); i ++)
-                  {
-                      System.out.println(&quot;Phone&quot; + i);
-                      System.out.println(phoneArray.getString(i));
-                  }
+                  <span class="n">JSONArray</span> <span class="n">phoneArray</span> <span class="o">=</span> <span class="n">person</span><span class="o">.</span><span class="na">getJSONArray</span><span class="o">(</span><span class="s">&quot;phone&quot;</span><span class="o">);</span>
+                  <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">phoneArray</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span> <span class="o">++)</span>
+                  <span class="o">{</span>
+                      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Phone&quot;</span> <span class="o">+</span> <span class="n">i</span><span class="o">);</span>
+                      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">phoneArray</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+                  <span class="o">}</span>
 
-                  System.out.println(person.getString(&quot;name&quot;));  
-                  System.out.println(person.getInt(&quot;age&quot;));  
+                  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;name&quot;</span><span class="o">));</span>  
+                  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="na">getInt</span><span class="o">(</span><span class="s">&quot;age&quot;</span><span class="o">));</span>  
 
-                  JSONObject addr = person.getJSONObject(&quot;address&quot;);
-                  System.out.println(addr.getString(&quot;country&quot;));
-                  System.out.println(addr.getString(&quot;province&quot;));
+                  <span class="n">JSONObject</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">person</span><span class="o">.</span><span class="na">getJSONObject</span><span class="o">(</span><span class="s">&quot;address&quot;</span><span class="o">);</span>
+                  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">addr</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;country&quot;</span><span class="o">));</span>
+                  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">addr</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="s">&quot;province&quot;</span><span class="o">));</span>
 
-                  System.out.println(person.getBoolean(&quot;married&quot;));  
-              } catch (JSONException ex) {  
-                   ex.printStackTrace();
-              }    
-</code></pre>
+                  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">person</span><span class="o">.</span><span class="na">getBoolean</span><span class="o">(</span><span class="s">&quot;married&quot;</span><span class="o">));</span>  
+              <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">JSONException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>  
+                   <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+              <span class="o">}</span>    
+</pre></div>
+
 
 <p>​</p>
                 
@@ -882,6 +932,14 @@ try {
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

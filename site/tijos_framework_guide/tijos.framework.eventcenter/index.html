@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -117,6 +119,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -139,6 +165,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -838,9 +886,9 @@
               
                 
                 
-                <h1 id="tijosframeworkeventcenter-">tijos.framework.eventcenter - 硬件事件中心</h1>
+                <h1 id="tijosframeworkeventcenter-">tijos.framework.eventcenter - 硬件事件中心<a class="headerlink" href="#tijosframeworkeventcenter-" title="Permanent link">&para;</a></h1>
 <p>TiJOS硬件事件中心主要用于与硬件设备总线相关的事件监听处理， 如GPIO事件等等， 类似于硬件中的中断处理， 与事件相关的硬件相关驱动均通过事件中心进行处理，如TiButton等。</p>
-<h2 id="-tieventtype">事件类型 - TiEventType</h2>
+<h2 id="-tieventtype">事件类型 - TiEventType<a class="headerlink" href="#-tieventtype" title="Permanent link">&para;</a></h2>
 <p>硬件事件类型有多种， 目前TiJOS支持GPIO事件和USB事件， 随着总线类型的增加，相应的事件类型也会增加。</p>
 <table>
 <thead>
@@ -860,7 +908,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="-itieventlistener">事件监听器 - ITiEventListener</h2>
+<h2 id="-itieventlistener">事件监听器 - ITiEventListener<a class="headerlink" href="#-itieventlistener" title="Permanent link">&para;</a></h2>
 <p>事件监听接口ITiEventListener用于支持事件回调，需要处理总线事件的传感器驱动均需要实现该接口。</p>
 <table>
 <thead>
@@ -880,38 +928,39 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_1">事件注册及事件处理</h2>
+<h2 id="_1">事件注册及事件处理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>当需要处理硬件事件时，需要实现ITiEventListener接口并在事件中心中进行注册， 事件中心通过getEventCenter来获取，当事件发生时, 在OnEvent中进行相应事件的处理，一般过程如下：</p>
-<pre><code class="java">//GPIO事件监听器
-public class TiGPIOEventHandler implements ITiEventListener
-{
-    //在事件中心中注册GPIO事件
-    TiGPIOEventHandler()
-    {
-        TiEventCenter.getEventCenter().addListener(this);
-    }
+<div class="codehilite"><pre><span></span><span class="c1">//GPIO事件监听器</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">TiGPIOEventHandler</span> <span class="kd">implements</span> <span class="n">ITiEventListener</span>
+<span class="o">{</span>
+    <span class="c1">//在事件中心中注册GPIO事件</span>
+    <span class="n">TiGPIOEventHandler</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="n">TiEventCenter</span><span class="o">.</span><span class="na">getEventCenter</span><span class="o">().</span><span class="na">addListener</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+    <span class="o">}</span>
 
-    @Override
-    public TiEventType getEventType() {
-        return TiEventType.GPIO;
-    }
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">TiEventType</span> <span class="nf">getEventType</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">TiEventType</span><span class="o">.</span><span class="na">GPIO</span><span class="o">;</span>
+    <span class="o">}</span>
 
-    //当事件发生时, onEvent被调用
-    @Override
-    public void onEvent(ITiEvent evt) 
-    {
-        //转换为指定的事件类进行处理
-        TiGPIOEvent event =  (TiGPIOEvent)evt;
-        if(event.getPin() == Pin1) 
-        {
-            switch(event.getIOEvent())
-            {
-                //xxx
-            }
-        }
-    }   
-}
-</code></pre>
+    <span class="c1">//当事件发生时, onEvent被调用</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onEvent</span><span class="o">(</span><span class="n">ITiEvent</span> <span class="n">evt</span><span class="o">)</span> 
+    <span class="o">{</span>
+        <span class="c1">//转换为指定的事件类进行处理</span>
+        <span class="n">TiGPIOEvent</span> <span class="n">event</span> <span class="o">=</span>  <span class="o">(</span><span class="n">TiGPIOEvent</span><span class="o">)</span><span class="n">evt</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">getPin</span><span class="o">()</span> <span class="o">==</span> <span class="n">Pin1</span><span class="o">)</span> 
+        <span class="o">{</span>
+            <span class="k">switch</span><span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">getIOEvent</span><span class="o">())</span>
+            <span class="o">{</span>
+                <span class="c1">//xxx</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>   
+<span class="o">}</span>
+</pre></div>
+
 
 <p>注意</p>
 <ol>
@@ -923,7 +972,7 @@ public class TiGPIOEventHandler implements ITiEventListener
 </li>
 </ol>
 <p>​</p>
-<h2 id="gpio-tigpioevent">GPIO事件 - TiGPIOEvent</h2>
+<h2 id="gpio-tigpioevent">GPIO事件 - TiGPIOEvent<a class="headerlink" href="#gpio-tigpioevent" title="Permanent link">&para;</a></h2>
 <p>TiGPIOEvent代表GPIO总线事件， 派生自ITiEvent， 一般在OnEvent中使用，包含了本次GPIO事件发生时的相关信息：</p>
 <table>
 <thead>
@@ -1022,6 +1071,14 @@ public class TiGPIOEventHandler implements ITiEventListener
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

@@ -45,10 +45,29 @@ pages:
 - 平台设置 : tijos_framework_guide/tijos.framework.platform.md
 - 更多在线资源 : resources.md
 
+# Repository
+repo_name: '钛极OS(TiJOS)文档中心'
+repo_url: 'http://www.tijos.net/docs#gitlab'
+
+
 # Copyright
 copyright: 'Copyright &copy; 2017 - 2020 TiCloud Technology'
-
 
 # Configuration
 theme:
   name: 'material'
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/TiJOSteam'
+      
+      # Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+      

@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -858,10 +906,10 @@
               
                 
                 
-                <h1 id="tijosframeworkdevicecentertiuart-">tijos.framework.devicecenter.TiUART - 通用异步收发传输器</h1>
+                <h1 id="tijosframeworkdevicecentertiuart-">tijos.framework.devicecenter.TiUART - 通用异步收发传输器<a class="headerlink" href="#tijosframeworkdevicecentertiuart-" title="Permanent link">&para;</a></h1>
 <p>通用异步收发传输器（Universal Asynchronous Receiver/Transmitter)，通常称作UART，是一种异步收发传输器，是电脑硬件的一部分。具体可参考https://baike.baidu.com/item/UART/4429746?fr=aladdin或https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter。</p>
 <p>TiJOS Framework提供TiUART来支持UART功能，其将UART按照port分组，共支持4组，组号范围0-3，即：port0-port3；每组都支持指定模式的单独设置。</p>
-<h2 id="tiuart">TiUART工作模式定义</h2>
+<h2 id="tiuart">TiUART工作模式定义<a class="headerlink" href="#tiuart" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -898,7 +946,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tiuart_1">TiUART方法定义</h2>
+<h2 id="tiuart_1">TiUART方法定义<a class="headerlink" href="#tiuart_1" title="Permanent link">&para;</a></h2>
 <p>TiUART类中主要的方法：</p>
 <table>
 <thead>
@@ -939,39 +987,42 @@
 </tbody>
 </table>
 <p>TiUART类中他方法的技术说明请参考TiJOS Framework说明文档。</p>
-<h2 id="tiuart_2">TiUART对象创建与销毁</h2>
+<h2 id="tiuart_2">TiUART对象创建与销毁<a class="headerlink" href="#tiuart_2" title="Permanent link">&para;</a></h2>
 <p>TiUART对象的创建需要调用open静态方法，传入指定port参数，返回创建的接口对象。</p>
 <p>TiUART对象的销毁需要调用close方法。</p>
-<pre><code class="java">...
-int uartPort0 = 0;
-TiUART uart0 = TiUART.open(uartPort0);
-...
-...
-...
-uart0.close();
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="kt">int</span> <span class="n">uartPort0</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="n">TiUART</span> <span class="n">uart0</span> <span class="o">=</span> <span class="n">TiUART</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">uartPort0</span><span class="o">);</span>
+<span class="o">...</span>
+<span class="o">...</span>
+<span class="o">...</span>
+<span class="n">uart0</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</pre></div>
 
-<h2 id="tiuart_3">TiUART模式设置</h2>
+
+<h2 id="tiuart_3">TiUART模式设置<a class="headerlink" href="#tiuart_3" title="Permanent link">&para;</a></h2>
 <p>TiUART模式设置通过setMode方法设置，设置参数为波特率、数据位、结束位和奇偶校验位。</p>
-<pre><code class="java">...
-uart0.setMode(9600, 8, 1, TiUART.MODE_PARITY_NONE); //波特率9600bps, 8数据位, 1停止位, 无校验位
-...
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="n">uart0</span><span class="o">.</span><span class="na">setMode</span><span class="o">(</span><span class="mi">9600</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span> <span class="n">TiUART</span><span class="o">.</span><span class="na">MODE_PARITY_NONE</span><span class="o">);</span> <span class="c1">//波特率9600bps, 8数据位, 1停止位, 无校验位</span>
+<span class="o">...</span>
+</pre></div>
+
 
 <p>注意：模式支持受平台特性限制，设置时须了解硬件平台特性。</p>
-<h2 id="tiuart_4">TiUART输入输出</h2>
+<h2 id="tiuart_4">TiUART输入输出<a class="headerlink" href="#tiuart_4" title="Permanent link">&para;</a></h2>
 <p>TiUART的输入输出操作通过available、clear、read和write方法完成。</p>
-<pre><code class="java">...
-uart0.clear(TiUART.TYPE_BOTH_BUF); //清除输入输出缓冲
-while(true) {
-    int length = uart0.available();//获取当前有效数据长度
-    if(length &lt;= 0)
-        continue; //无数据继续等待
-    byte[] buffer = new byte[length];
-    length = uart0.read(buffer, 0, length); //接收数据
-    uart0.write(buffer, 0, length); //将接收到的数据发送
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="n">uart0</span><span class="o">.</span><span class="na">clear</span><span class="o">(</span><span class="n">TiUART</span><span class="o">.</span><span class="na">TYPE_BOTH_BUF</span><span class="o">);</span> <span class="c1">//清除输入输出缓冲</span>
+<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">uart0</span><span class="o">.</span><span class="na">available</span><span class="o">();</span><span class="c1">//获取当前有效数据长度</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">length</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span>
+        <span class="k">continue</span><span class="o">;</span> <span class="c1">//无数据继续等待</span>
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">length</span><span class="o">];</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="n">uart0</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">);</span> <span class="c1">//接收数据</span>
+    <span class="n">uart0</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">length</span><span class="o">);</span> <span class="c1">//将接收到的数据发送</span>
+<span class="o">}</span>
+</pre></div>
+
 
 <p>具体可参考TiJOS Framework说明文档。</p>
                 
@@ -1040,6 +1091,14 @@ while(true) {
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

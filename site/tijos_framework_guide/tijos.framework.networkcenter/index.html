@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -868,9 +916,9 @@
               
                 
                 
-                <h1 id="tijosframeworknetworkcenter-">tijos.framework.networkcenter - 网络管理中心</h1>
+                <h1 id="tijosframeworknetworkcenter-">tijos.framework.networkcenter - 网络管理中心<a class="headerlink" href="#tijosframeworknetworkcenter-" title="Permanent link">&para;</a></h1>
 <p>TiJOS网络管理中心主要用于设置与网络相关的功能，如WLAN， DNS等等。</p>
-<h2 id="wlan-tiwlan">WLAN设置 - TiWLAN</h2>
+<h2 id="wlan-tiwlan">WLAN设置 - TiWLAN<a class="headerlink" href="#wlan-tiwlan" title="Permanent link">&para;</a></h2>
 <p>TiWLAN 包含了所有与WLAN相关的操作和设置, WLAN支持Station和Station + softAP两种模式， 当打开softAP模式时，允许其它WLAN设备连接到此AP， 一般用于设备设置等功能。</p>
 <p>TiWLAN为单例，在操作网络时可通过getInstance获得实例并调用相应的方法。</p>
 <p>主要方法如下：</p>
@@ -937,78 +985,81 @@
 </tbody>
 </table>
 <p>TiWLAN类中他方法的技术说明请参考TiJOS Framework说明文档。</p>
-<h3 id="wlan">WLAN设置例程</h3>
+<h3 id="wlan">WLAN设置例程<a class="headerlink" href="#wlan" title="Permanent link">&para;</a></h3>
 <p>WLAN连接目标AP，IP地址动态分配（推荐使用方式）， WLAN相关设置也可从Ti-Dev Manager中设置，这样就无需在代码设置WLAN连接</p>
-<pre><code class="java">...
-//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失
-TiWLAN.getInstance().changeWLANSSID(&quot;TPLink-123&quot;);
-TiWLAN.getInstance().changePassword(&quot;12345678&quot;);
-...
-//启动WLAN，连接目标AP，超时10秒
-int status = TiWLAN.getInstance().startup(10);
-if(status == -1) {
-    System.out.println(&quot;connect timeout.&quot;);
-    return ;
-}
-if(status == -2) {
-    System.out.println(&quot;connect fail.&quot;);
-    return ;    
-}
-System.out.println(&quot;connect success.&quot;);
-...
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="c1">//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changeWLANSSID</span><span class="o">(</span><span class="s">&quot;TPLink-123&quot;</span><span class="o">);</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changePassword</span><span class="o">(</span><span class="s">&quot;12345678&quot;</span><span class="o">);</span>
+<span class="o">...</span>
+<span class="c1">//启动WLAN，连接目标AP，超时10秒</span>
+<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startup</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect timeout.&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">;</span>
+<span class="o">}</span>
+<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect fail.&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">;</span>    
+<span class="o">}</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect success.&quot;</span><span class="o">);</span>
+<span class="o">...</span>
+</pre></div>
+
 
 <p>WLAN连接目标AP，IP地址静态设置。</p>
-<pre><code class="java">...
-//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失
-...
-TiWLAN.getInstance().changeWLANSSID(&quot;TPLink-123&quot;);
-TiWLAN.getInstance().changePassword(&quot;12345678&quot;);
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="c1">//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失</span>
+<span class="o">...</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changeWLANSSID</span><span class="o">(</span><span class="s">&quot;TPLink-123&quot;</span><span class="o">);</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changePassword</span><span class="o">(</span><span class="s">&quot;12345678&quot;</span><span class="o">);</span>
 
-//设置静态IP，网关，子网掩码
-TiWLAN.getInstance().setStaticAddress(&quot;192.168.1.100&quot;, &quot;192.168.1.1&quot;, &quot;255.255.255.0&quot;);
-...
-//启动WLAN，连接目标AP，超时10秒
-int status = TiWLAN.getInstance().startup(10);
-if(status == -1) {
-    System.out.println(&quot;connect timeout.&quot;);
-    return ;
-}
-if(status == -2) {
-    System.out.println(&quot;connect fail.&quot;);
-    return ;    
-}
-System.out.println(&quot;connect success.&quot;);
-...
-</code></pre>
+<span class="c1">//设置静态IP，网关，子网掩码</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">setStaticAddress</span><span class="o">(</span><span class="s">&quot;192.168.1.100&quot;</span><span class="o">,</span> <span class="s">&quot;192.168.1.1&quot;</span><span class="o">,</span> <span class="s">&quot;255.255.255.0&quot;</span><span class="o">);</span>
+<span class="o">...</span>
+<span class="c1">//启动WLAN，连接目标AP，超时10秒</span>
+<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startup</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect timeout.&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">;</span>
+<span class="o">}</span>
+<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect fail.&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">;</span>    
+<span class="o">}</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect success.&quot;</span><span class="o">);</span>
+<span class="o">...</span>
+</pre></div>
+
 
 <p>WLAN连接目标AP，IP地址动态分配，同时启动SoftAP。</p>
-<pre><code class="java">...
-//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失
-...
-TiWLAN.getInstance().changeWLANSSID(&quot;TPLink-123&quot;);
-TiWLAN.getInstance().changePassword(&quot;12345678&quot;);
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="c1">//更改AP的SSID和密码，设置一次即可，也可通过TiDeviceManager工具设置，本设置掉电不丢失</span>
+<span class="o">...</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changeWLANSSID</span><span class="o">(</span><span class="s">&quot;TPLink-123&quot;</span><span class="o">);</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changePassword</span><span class="o">(</span><span class="s">&quot;12345678&quot;</span><span class="o">);</span>
 
-//更改SoftAP的SSID和密码，设置一次即可，本设置掉电不丢失
-TiWLAN.getInstance().changeSoftAPSSID(&quot;TiJOS-SoftAP&quot;);
-TiWLAN.getInstance().changeSoftAPPassword(&quot;12345678&quot;, true);
-...
-//启动WLAN，连接目标AP，超时10秒
-int status =TiWLAN.getInstance().startup(10);
-//不论目标AP是否连接成功，都启动SoftAP, SSID不隐藏
-TiWLAN.getInstance().startupSoftAP(false);
-if(status == -1) {
-    System.out.println(&quot;connect timeout.&quot;);
-    return ;
-}
-if(status == -2) {
-    System.out.println(&quot;connect fail.&quot;);
-    return ;    
-}
-System.out.println(&quot;connect success.&quot;);
-</code></pre>
+<span class="c1">//更改SoftAP的SSID和密码，设置一次即可，本设置掉电不丢失</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changeSoftAPSSID</span><span class="o">(</span><span class="s">&quot;TiJOS-SoftAP&quot;</span><span class="o">);</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changeSoftAPPassword</span><span class="o">(</span><span class="s">&quot;12345678&quot;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+<span class="o">...</span>
+<span class="c1">//启动WLAN，连接目标AP，超时10秒</span>
+<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span><span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startup</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+<span class="c1">//不论目标AP是否连接成功，都启动SoftAP, SSID不隐藏</span>
+<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startupSoftAP</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect timeout.&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">;</span>
+<span class="o">}</span>
+<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect fail.&quot;</span><span class="o">);</span>
+    <span class="k">return</span> <span class="o">;</span>    
+<span class="o">}</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect success.&quot;</span><span class="o">);</span>
+</pre></div>
 
-<h2 id="dns-tidns">DNS设置  - TiDNS</h2>
+
+<h2 id="dns-tidns">DNS设置  - TiDNS<a class="headerlink" href="#dns-tidns" title="Permanent link">&para;</a></h2>
 <p>TiDNS中包含了所有与DNS服务器相关的设置， 默认DNS服务器使用OpenDNS服务器，IP为208.67.222.222，208.67.220.220， 用户可通过TiDNS进行修改。</p>
 <p>TiDNS为单例，在操作网络时可通过getInstance获得实例并调用相应的方法。</p>
 <p>主要方法如下：</p>
@@ -1042,12 +1093,12 @@ System.out.println(&quot;connect success.&quot;);
 </tr>
 </tbody>
 </table>
-<h3 id="dns">DNS功能调用</h3>
-<pre><code class="java">...
-TiDNS.getInstance().startupDNS();
-...
-TiDNS.getInstance().shutdown();
-</code></pre>
+<h3 id="dns">DNS功能调用<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="o">...</span>
+<span class="n">TiDNS</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startupDNS</span><span class="o">();</span>
+<span class="o">...</span>
+<span class="n">TiDNS</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">shutdown</span><span class="o">();</span>
+</pre></div>
                 
                   
                 
@@ -1114,6 +1165,14 @@ TiDNS.getInstance().shutdown();
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

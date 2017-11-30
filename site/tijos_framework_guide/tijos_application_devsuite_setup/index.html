@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -117,6 +119,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -139,6 +165,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -852,15 +900,15 @@
               
                 
                 
-                <h1 id="ostijos">钛极OS(TiJOS)应用开发环境搭建</h1>
+                <h1 id="ostijos">钛极OS(TiJOS)应用开发环境搭建<a class="headerlink" href="#ostijos" title="Permanent link">&para;</a></h1>
 <p>钛极OS(TiJOS)应用开发环境只需在Eclipse中在线安装Ti-Dev Studio插件即可，安装成功后即可在Eclipse中进行TiJOS应用的开发和运行，Eclipse中Ti-Dev Studio插件安装路径http://dev.tijos.net/studio/release, 按Eclipse标准插件安装流程进行安装即可。具体过程如下：</p>
-<h2 id="_1">开发平台支持</h2>
+<h2 id="_1">开发平台支持<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>最低要求：Windows 7及以上</p>
-<h2 id="eclipse">安装Eclipse</h2>
+<h2 id="eclipse">安装Eclipse<a class="headerlink" href="#eclipse" title="Permanent link">&para;</a></h2>
 <p>TiJOS应用与标准Java 应用类似，通过在Eclipse中安装Ti-Dev Studio插件即可通过Eclipse进行TiJOS应用的开发和调试，Eclipse可在http://www.eclipse.org/downloads/ 下载。</p>
 <p>如果您已安装Eclipses, 可直接安装Ti-Dev Stuido即可。</p>
 <p>Eclipse版本支持：4.6 及以上</p>
-<h2 id="ti-dev-studio">安装Ti-Dev Studio</h2>
+<h2 id="ti-dev-studio">安装Ti-Dev Studio<a class="headerlink" href="#ti-dev-studio" title="Permanent link">&para;</a></h2>
 <p>在Eclipse中通过Help菜单下的"Install New Software" 安装Ti-Dev Stuido 插件, 安装过程如下:</p>
 <ol>
 <li>从Eclipse菜单"Help"下选择"Install New Software"</li>
@@ -891,13 +939,13 @@
 <p>当新建TiJOS Application Project后， 完成编码在TiKit开发板上进行测试时， 可选择"Run As  TiJOS Application" 在开发板上运行</p>
 <p><img alt="TiJOSPlugin_RunAs" src="../.\img\TiJOSPlugin_RunAs.png" /></p>
 <p>经过以上步骤后， Ti-Dev Studio 即成功安装并运行在Eclipse当中。</p>
-<h2 id="tikit">连接TiKit开发板</h2>
+<h2 id="tikit">连接TiKit开发板<a class="headerlink" href="#tikit" title="Permanent link">&para;</a></h2>
 <p>将TiKit硬件开发板连接到开发机器， 并在Ti-Dev Manager检测设备连接，如果是网络应用，还可在Ti-Dev Manager中配置网络设置，如无线WIFI， 网关，DNS等等， 在开发过程中可根据需求连接相关的传感器进行开发和测试。</p>
 <p>Ti-Dev Manager可通过Ti-Dev菜单直接打开：</p>
 <p><img alt="TiJOSPlugin_DevManager" src="../img/TiJOSPlugin_DevManager.png" /></p>
 <p>如果设备连接成功，在Ti-Dev Manager中可以看到当前连接的设备：</p>
 <p><img alt="DevInfo" src="../img/DevInfo.png" /></p>
-<h2 id="tijos">TiJOS应用开发</h2>
+<h2 id="tijos">TiJOS应用开发<a class="headerlink" href="#tijos" title="Permanent link">&para;</a></h2>
 <p>完成以上设置后， 通过Eclipse中新建TiJOS Application Project即可进行TiJOS应用开发了。 </p>
                 
                   
@@ -965,6 +1013,14 @@
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

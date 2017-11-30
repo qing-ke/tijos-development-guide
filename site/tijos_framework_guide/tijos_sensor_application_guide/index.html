@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -117,6 +119,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -139,6 +165,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -906,22 +954,22 @@
               
                 
                 
-                <h1 id="tijos">TiJOS传感器应用开发指南</h1>
-<h2 id="_1">概述</h2>
+                <h1 id="tijos">TiJOS传感器应用开发指南<a class="headerlink" href="#tijos" title="Permanent link">&para;</a></h1>
+<h2 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>钛极OS(TiJOS)系统运行时库中提供丰富的虚拟设备总线驱动类和传感器驱动类，用户可以非常容易的将需要的传感器类实例化并绑定到指定的虚拟设备总线上，绑定后就可以通过对象方法操作真实硬件对应接口上连接的传感器硬件；运行时库中所有传感器驱动类的应用开发都遵循”资源三部曲”原则，即，”资源分配“，”资源绑定“，”资源使用“，这使不同传感器的使用更加统一化，简单化，高效化。</p>
-<h2 id="_2">系统架构</h2>
+<h2 id="_2">系统架构<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>由于传感器类应用的开发涉及到硬件和软件两部分技术相关知识点，也是电子系统中难度最大的，用户在普通硬件平台上设计程序时需要考虑的因素也比较多，如：寄存器的配置，外部I/O的分配，内存资源分配等等，如此多的专业知识就要求开发人员具有很高的电子工程设计能力，一款传感器应用产品从设计到产品化需要很长的时间，其中大部分时间都浪费在了硬件底层的开发设计以及BUG查找上；如果产品未来需要再不同硬件平台上实现，则需要耗费大量人力物力来完成程序代码的移植，同时还要面临新BUG的引入风险。</p>
 <p>钛极OS(TiJOS)系统完美解决的上述问题，它屏蔽了硬件底层操作细节，直接给用户提供应用接口级的支持，用户只需要将精力集中在应用层业务逻辑上，不需要关心硬件实现细节。系统使用面向对象的JAVA高级编程语言编写用用程序，同一个程序可以运行在运行有钛极OS(TiJOS)系统的不同硬件平台上，真正意义上实现了”软件定义硬件“，为用户应用的运行和跨平台提供了可靠的系统级支持。</p>
 <p>如下图所示，钛极OS(TiJOS)完整系统由执行环境、真实硬件，传感器三大部分组成，其中执行环境中运行有钛极OS(TiJOS)操作系统，系统核心为JAVA虚拟机，其将真实硬件虚拟化，这是用户程序可以跨平台执行的技术基础；运行时库除了提供标准JAVA库功能外，还为用户提供丰富的虚拟设备总线类和传感器类驱动功能支持，用户程序调用传感器对象方法就可以轻松的控制硬件上连接的传感器。</p>
 <p><img alt="TiJOS" src="../.\img\TiJOS.png" /></p>
-<h2 id="_3">资源定义</h2>
+<h2 id="_3">资源定义<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>钛极OS(TiJOS)系统将“资源”分成两大类，分别为“软件资源”和”硬件资源“。“软件资源”主要是系统对象内存资源，”硬件资源“主要是其管理的所运行硬件平台的硬件资源，如：网络、文件、设备总线，传感器等。本文讲解的“资源”指的是<strong>设备总线</strong>和<strong>传感器</strong>资源。</p>
 <p>钛极OS(TiJOS)系统将硬件提供的设备总线进行<strong>虚拟化</strong>，在不同的硬件平台上都提供统一的<strong>虚拟设备总线</strong>类驱动，这样做的原因是屏蔽不同硬件平台的差异化，对应用层高度统一，用户程序面对的是虚拟硬件，而不是真实硬件，这也是用户程序“一次编译，到处运行“的跨平台机制理论基础。</p>
 <p>如下图所示，YYY为真实硬件的某种设备总线，TiYYY则为其虚拟设备总线，此时真实硬件的设备总线资源会被虚拟化，资源会被重定义，用户不需要再关心。最左面的XXX为某传感器硬件，用过电气线连接在真实硬件上，最右面的TiXXX则为实例化的传感器，操作实例化的传感器对象就等于操作传感器硬件。</p>
 <p><img alt="TiXXX" src="../.\img\TiXXX.png" /></p>
 <p>如下图所示，虚拟设备总线类型为TiGPIO的总线，真实硬件上连接有Button按键模块和LED灯模块，应用程序中实例化TiButton和TiLED类并绑定到预先分配的虚拟设备总线资源上，通过调用对象方法即可完成对相应传感器硬件的控制。</p>
 <p><img alt="TiLED" src="../.\img\TiBL.png" /></p>
-<h2 id="_4">应用开发</h2>
+<h2 id="_4">应用开发<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>前面讲到“资源”的分类和虚拟设备总线的定义，以及传感器硬件的控制方法，接下来将详细讲解虚拟设备总线资源和传感器资源应用方法，后续内容中提到的"资源"都代表虚拟设备总线资源和传感器资源，不再另行标注。</p>
 <p>如下图所示，极OS(TiJOS)系统中“资源”的使用都遵循”资源三部曲”原则，即，”资源分配“，”资源绑定“，”资源使用“。</p>
 <p><strong>资源分配</strong>，用户需要预先定定义传感器实例化需要使用的硬件资源，如，使用TiGPIO的哪个port和哪个pin等。</p>
@@ -931,29 +979,31 @@
 <p>后面将通过TiLED灯模块的传感器简单应用实例，详细讲解”资源三部曲”原则的理论实践，TiLED传感器不需要事件监听，只需直接控制方法即可，实现起来更简单也比较典型，较适合初学者入门。</p>
 <p>如果用户想了解具有事件监听的资源使用方法可以参考：《单按键事件例程》。</p>
 <p><strong>注：</strong>用户需要对硬件知识有个简单了解，如：电源线、地线、信号线等技术术语，了解的越多，对传感器应用开发的帮助就越大，开发效率也就越高。</p>
-<h3 id="_5">资源分配</h3>
+<h3 id="_5">资源分配<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>遵循JAVA标准开发方式，用户需要导入用到的JAVA类，这里包括虚拟设备总线类TiGPIO和传感器TiLED类。</p>
-<pre><code class="java">import tijos.framework.devicecenter.TiGPIO; 
-import tijos.framework.transducer.led.TiLED; 
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tijos.framework.devicecenter.TiGPIO</span><span class="o">;</span> 
+<span class="kn">import</span> <span class="nn">tijos.framework.transducer.led.TiLED</span><span class="o">;</span> 
+</pre></div>
+
 
 <p>如下图所示，定义TiLED需要用到的TiGPIO的port和pin，这里我们定义使用port0和pin0，接下来正式进行资源分配，调用TiGPIO类静态方法open，传入ledPort和ledPin参数，方法返回分配好的TiGPIO虚拟设备总线资源，分配好的资源为：TiGPIO总线的port0及port0下的pin0。</p>
 <p><img alt="Step3" src="../.\img\Step1.png" /></p>
 <p>在进行资源分配时，用户都会有一个疑问，那就是如何知道某个传感器类需要何种“资源”？其实很简单，用户只要查看要用的传感器类的构造方法入口参数对象类型即可，下面以TiLED灯传感器类举例说明：</p>
-<pre><code class="java">public TiLED(TiGPIO gpio, int signalPinID)
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="nf">TiLED</span><span class="o">(</span><span class="n">TiGPIO</span> <span class="n">gpio</span><span class="o">,</span> <span class="kt">int</span> <span class="n">signalPinID</span><span class="o">)</span>
+</pre></div>
+
 
 <p>从上面的的构造方法可以知道“资源”需求情况如下：①虚拟设备总线需要的是TiGPIO对象；②同时需要对象某个Port下的某一个Pin，这就反向验证了上图中TiLED传感器需要使用TiGPIO类进行资源分配的原因。</p>
 <p><strong>注：</strong>TiGPIO技术原理可以参考：<a href="http://dev.tijos.net/manual/tijos_framework_guide/tijos.framework.devicecenter.TiGPIO/">http://dev.tijos.net/manual/tijos_framework_guide/tijos.framework.devicecenter.TiGPIO/</a></p>
-<h3 id="_6">资源绑定</h3>
+<h3 id="_6">资源绑定<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>绑定过程就是传感器类构造过程，同时需要传入需要的“资源”。如下图所示，实例化一个TiLED类，构造方法传入的参数为事先分配好的TiGPIO对象gpio和ledPin，构造完毕后即完成了资源绑定操作，构造出的led对象就是对应TiLED硬件的实例，接下来就可以通过调用led对象方法操作硬件了。</p>
 <p><img alt="Step3" src="../.\img\Step2.png" /></p>
 <p><strong>注：</strong>由于传感器实例需要绑定到具体的设备总线资源上，设备总线的技术资料请另行参考文档 “tijos.framework.devicecenter.md”。</p>
-<h3 id="_7">资源使用</h3>
+<h3 id="_7">资源使用<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>在资源绑定成功后就可以使用资源了，如下图所示，调用led对象turnOn方法完成TiLED灯的点亮。</p>
 <p><img alt="Step3" src="../.\img\Step3.png" /></p>
 <p>至此，“资源三部曲”原则详细讲解结束，用户可以将以上程序代码片段合并在Eclipse开发环境中编译测试，进一步巩固TiJOS传感器应用基础知识，具体可参考《LED控制例程》。</p>
-<h2 id="_8">总结</h2>
+<h2 id="_8">总结<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>以上，详细讲解了“资源三部曲”原则的每个技术基础知识点，并通过一个简单的TiLED应用实例代码片段，从开发层面深入详细讲解，意在帮助用户更快的了解TiJOS传感器应用开发的核心技术；由于篇幅限制，无法将所有传感器的使用都一一讲解，用户可以下载GitHub中钛极OS(TiJOS) 外设操作例程源代码做更深入的学习，举一反三，快速掌握其他传感器的应用。例程下载地址: https://github.com/TiJOSteam/tijos-hardware-example。</p>
 <p>更多问题可访问<a href="http://bbs.tijos.net">钛极OS(TiJOS)技术交流社区</a>进行讨论。</p>
                 
@@ -1022,6 +1072,14 @@ import tijos.framework.transducer.led.TiLED;
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

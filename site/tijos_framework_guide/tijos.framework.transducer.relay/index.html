@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -816,7 +864,7 @@
               
                 
                 
-                <h1 id="tijosframeworktransducerrelay-">tijos.framework.transducer.relay - 继电器类</h1>
+                <h1 id="tijosframeworktransducerrelay-">tijos.framework.transducer.relay - 继电器类<a class="headerlink" href="#tijosframeworktransducerrelay-" title="Permanent link">&para;</a></h1>
 <p>tijos.framework.transducer.relay 中包含了与继电器相关的类，继电器的主要功能是使用低电压控制高电压、大电流以及交流电等强电电路的开断，被广泛用于工业控制、家庭电器以及汽车电子等多个行业。</p>
 <p>包含类如下:</p>
 <table>
@@ -833,7 +881,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tirelay1ch">TiRelay1CH</h2>
+<h2 id="tirelay1ch">TiRelay1CH<a class="headerlink" href="#tirelay1ch" title="Permanent link">&para;</a></h2>
 <p>TiJOS提供控制单通道继电器的类。</p>
 <p>TiJOS Relay1CH包括如下类：</p>
 <table>
@@ -850,7 +898,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tirelay1ch_1">TiRelay1CH</h2>
+<h2 id="tirelay1ch_1">TiRelay1CH<a class="headerlink" href="#tirelay1ch_1" title="Permanent link">&para;</a></h2>
 <p>TiRelay1CH实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.framework.devicecenter.TiGPIO；设备总线的使用请参考：tijos.framework.devicecenter。</p>
 <p>构造器如下：</p>
 <table>
@@ -895,13 +943,14 @@
 </tbody>
 </table>
 <p>TiRelay中主要方法的使用如下：</p>
-<pre><code class="java">//创建TiRelay对象
-TiRelay1CH relay = new TiRelay1CH(gpio0, gpioPin0);
-//打开继电器
-relay.turnOn();
-//关闭继电器
-relay.turnOff();
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">//创建TiRelay对象</span>
+<span class="n">TiRelay1CH</span> <span class="n">relay</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiRelay1CH</span><span class="o">(</span><span class="n">gpio0</span><span class="o">,</span> <span class="n">gpioPin0</span><span class="o">);</span>
+<span class="c1">//打开继电器</span>
+<span class="n">relay</span><span class="o">.</span><span class="na">turnOn</span><span class="o">();</span>
+<span class="c1">//关闭继电器</span>
+<span class="n">relay</span><span class="o">.</span><span class="na">turnOff</span><span class="o">();</span>
+</pre></div>
+
 
 <p>TiRelay1CH类中他方法的使用请参考TiRelay1CH继电器控制例程。</p>
                 
@@ -970,6 +1019,14 @@ relay.turnOff();
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

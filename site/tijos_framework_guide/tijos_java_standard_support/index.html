@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -117,6 +119,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -139,6 +165,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -852,7 +900,7 @@
               
                 
                 
-                <h1 id="java">Java 标准核心类支持</h1>
+                <h1 id="java">Java 标准核心类支持<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
 <p>TiJOS JDK中包含了大部分常用的JAVA基础核心类，包括java.lang, java.io, java.net, java.util等，这几个包中的类是整个Java JDK的基础， 可以满足各种应用开发需求。</p>
 <p>考虑到TiJOS 运行于资源非常有限的MCU下, 以下Java 特性在TiJOS JDK中不支持</p>
 <ol>
@@ -889,7 +937,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="javalang">java.lang 包支持说明</h2>
+<h2 id="javalang">java.lang 包支持说明<a class="headerlink" href="#javalang" title="Permanent link">&para;</a></h2>
 <p>TiJOS JDK中支持标准java.lang核心包中的大部分类， 但是不支持与反射相关的类和方法，如ClassLoader等等， 下面仅列出TiJOS JDK所支持的标准Java类和接口，具体的使用方法请参考标准Java文档</p>
 <p><strong>支持的Classes 列表</strong></p>
 <ul>
@@ -915,7 +963,7 @@
 <li>Throwable</li>
 <li>Void</li>
 </ul>
-<h2 id="javaio">java.io包支持说明</h2>
+<h2 id="javaio">java.io包支持说明<a class="headerlink" href="#javaio" title="Permanent link">&para;</a></h2>
 <p>TiJOS JDK中支持标准java.io核心包中的主要类, 不支持序列化。</p>
 <p>下面仅列出TiJOS JDK所支持的标准Java类和接口，具体的使用方法请参考标准Java文档</p>
 <p><strong>支持的Classes 列表</strong></p>
@@ -961,7 +1009,7 @@
 <li>StringWriter</li>
 <li>Writer</li>
 </ul>
-<h2 id="javanet">java.net包支持说明</h2>
+<h2 id="javanet">java.net包支持说明<a class="headerlink" href="#javanet" title="Permanent link">&para;</a></h2>
 <p>TiJOS JDK中支持标准java.net核心包中与TCP, UDP, DNS等网络协议相关的类， 与Socket, ServerSocket,DatagramSocket, URI等类， 暂不支持Proxy, HTTP, URL相关的类。</p>
 <p>下面仅列出TiJOS JDK所支持的标准Java类和接口，具体的使用方法请参考标准Java文档</p>
 <p><strong>支持的Classes 列表</strong></p>
@@ -977,7 +1025,7 @@
 <li>SocketAddress</li>
 <li>URI</li>
 </ul>
-<h2 id="javautil">java.util包支持说明</h2>
+<h2 id="javautil">java.util包支持说明<a class="headerlink" href="#javautil" title="Permanent link">&para;</a></h2>
 <p>TiJOS JDK中支持java.util中大部分类，包括集合，时钟，等等，暂不支持Locale, TimeZone等功能。</p>
 <p>下面仅列出TiJOS JDK所支持的标准Java类和接口，具体的使用方法请参考标准Java文档</p>
 <ul>
@@ -1018,7 +1066,7 @@
 <li>UUID</li>
 <li>Vector</li>
 </ul>
-<h2 id="_1">总结</h2>
+<h2 id="_1">总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>以上为目前TiJOS JDK中所支持的包和相关的类，用法与标准JAVA相同，这些类是java编程中最常用的核心类，同时我们会根据需求逐渐增加其它更多的类方便用户使用。 </p>
                 
                   
@@ -1086,6 +1134,14 @@
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>

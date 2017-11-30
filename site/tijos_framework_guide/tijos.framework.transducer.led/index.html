@@ -59,6 +59,8 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" id="gitlab"><path fill="currentColor" d="M93.667 473.347l90.684-279.097H2.983l90.684 279.097z" transform="translate(156.198 1.16)"/><path fill="currentColor" d="M221.333 473.345L130.649 194.25H3.557l217.776 279.095z" transform="translate(28.531 1.16)" opacity=".7"/><path fill="currentColor" d="M32 195.155L4.441 279.97a18.773 18.773 0 0 0 6.821 20.99l238.514 173.29L32 195.155z" transform="translate(.089 .256)" opacity=".5"/><path fill="currentColor" d="M2.667-84.844h127.092L75.14-252.942c-2.811-8.649-15.047-8.649-17.856 0L2.667-84.844z" transform="translate(29.422 280.256)"/><path fill="currentColor" d="M2.667 473.345L93.351 194.25h127.092L2.667 473.345z" transform="translate(247.198 1.16)" opacity=".7"/><path fill="currentColor" d="M221.334 195.155l27.559 84.815a18.772 18.772 0 0 1-6.821 20.99L3.557 474.25l217.777-279.095z" transform="translate(246.307 .256)" opacity=".5"/><path fill="currentColor" d="M130.667-84.844H3.575l54.618-168.098c2.811-8.649 15.047-8.649 17.856 0l54.618 168.098z" transform="translate(336.974 280.256)"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
@@ -121,6 +123,30 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -143,6 +169,28 @@
     </span>
     钛极OS(TiJOS)应用开发指南
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="http://www.tijos.net/docs#gitlab" title="Go to repository" class="md-source" data-md-source="gitlab">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#gitlab" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      钛极OS(TiJOS)文档中心
+    </div>
+  </a>
+
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -872,7 +920,7 @@
               
                 
                 
-                <h1 id="tijosframeworktransducerled-led">tijos.framework.transducer.led - LED显示类</h1>
+                <h1 id="tijosframeworktransducerled-led">tijos.framework.transducer.led - LED显示类<a class="headerlink" href="#tijosframeworktransducerled-led" title="Permanent link">&para;</a></h1>
 <p>tijos.framework.transducer.led中包含了LED灯、RGBELD灯以及OLED屏幕相关的类。其中LED灯为普通单色发光二极管，套件中自带红色、黄色、蓝色、绿色四种颜色的发光二极管，可以通过不同的PIN口单独控制亮灭，适用于需要指示灯、报警灯等场景；RGB三基色LED灯包含红色、绿色和蓝色三种基础色，可通过TiPWM接口各自输出不同的亮度等级，最终混色成相应的颜色，适用于需要变色指示灯、呼吸灯等场景；OLED屏幕使用TiICMaster接口控制，可输出4*16个字符，适用于需要显示信息、带有人机交互界面的设备。</p>
 <p>包含类如下:</p>
 <table>
@@ -897,7 +945,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tiled">TiLED</h2>
+<h2 id="tiled">TiLED<a class="headerlink" href="#tiled" title="Permanent link">&para;</a></h2>
 <p>TiJOS提供控制LED灯的类。</p>
 <p>TiJOS LED包括如下类：</p>
 <table>
@@ -914,7 +962,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="tiled_1">TiLED的创建、绑定与使用</h2>
+<h2 id="tiled_1">TiLED的创建、绑定与使用<a class="headerlink" href="#tiled_1" title="Permanent link">&para;</a></h2>
 <p>TiLED实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.framework.devicecenter.TiGPIO；设备总线的使用请参考：tijos.framework.devicecenter。</p>
 <p>构造器如下：</p>
 <table>
@@ -963,16 +1011,17 @@
 </tbody>
 </table>
 <p>TiLED中主要方法的使用如下：</p>
-<pre><code class="java">//创建TiLED对象
-TiLED red = new TiLED(gpio0, gpioPin0,false);
-//点亮LED灯
-red.turnOn();
-//关闭LED灯
-red.turnOff();
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">//创建TiLED对象</span>
+<span class="n">TiLED</span> <span class="n">red</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiLED</span><span class="o">(</span><span class="n">gpio0</span><span class="o">,</span> <span class="n">gpioPin0</span><span class="o">,</span><span class="kc">false</span><span class="o">);</span>
+<span class="c1">//点亮LED灯</span>
+<span class="n">red</span><span class="o">.</span><span class="na">turnOn</span><span class="o">();</span>
+<span class="c1">//关闭LED灯</span>
+<span class="n">red</span><span class="o">.</span><span class="na">turnOff</span><span class="o">();</span>
+</pre></div>
+
 
 <p>TiLED类中他方法的使用请参考TiLED灯控制例程。</p>
-<h2 id="tirgbled">TiRGBLED</h2>
+<h2 id="tirgbled">TiRGBLED<a class="headerlink" href="#tirgbled" title="Permanent link">&para;</a></h2>
 <p>TiJOS提供控制RGBLED三基色灯的类。</p>
 <p>TiJOS RGBLED包括如下类：</p>
 <table>
@@ -989,7 +1038,7 @@ red.turnOff();
 </tr>
 </tbody>
 </table>
-<h2 id="tirgbled_1">TiRGBLED的创建、绑定与使用</h2>
+<h2 id="tirgbled_1">TiRGBLED的创建、绑定与使用<a class="headerlink" href="#tirgbled_1" title="Permanent link">&para;</a></h2>
 <p>TiRGBLED实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.framework.devicecenter.TiPWM；设备总线的使用请参考：tijos.framework.devicecenter。</p>
 <p>构造器如下：</p>
 <table>
@@ -1050,24 +1099,25 @@ red.turnOff();
 </tbody>
 </table>
 <p>TiRGBLED类中主要方法的使用如下：</p>
-<pre><code class="java">//创建TiRGBLED对象,传入需要使用的pwm对象并绑定相应的通道
-TiRGBLED rgbled = new TiRGBLED(pwm0, CH0,CH1,CH2,false);
-//设置PWM周期为1000hz
-rgbled.setPeriod(1000);
-//随机选取三个亮度等级
-r = 35;
-g = 87;
-b = 128;
-//设置相应颜色的亮等级
-rgbled.setRedBrightness(r);
-rgbled.setGreenBrightness(g);
-rgbled.setBlueBrightness(b);
-//将设置好的亮度等级更新到硬件中
-rgbled.updateBrightness();
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">//创建TiRGBLED对象,传入需要使用的pwm对象并绑定相应的通道</span>
+<span class="n">TiRGBLED</span> <span class="n">rgbled</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiRGBLED</span><span class="o">(</span><span class="n">pwm0</span><span class="o">,</span> <span class="n">CH0</span><span class="o">,</span><span class="n">CH1</span><span class="o">,</span><span class="n">CH2</span><span class="o">,</span><span class="kc">false</span><span class="o">);</span>
+<span class="c1">//设置PWM周期为1000hz</span>
+<span class="n">rgbled</span><span class="o">.</span><span class="na">setPeriod</span><span class="o">(</span><span class="mi">1000</span><span class="o">);</span>
+<span class="c1">//随机选取三个亮度等级</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mi">35</span><span class="o">;</span>
+<span class="n">g</span> <span class="o">=</span> <span class="mi">87</span><span class="o">;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">128</span><span class="o">;</span>
+<span class="c1">//设置相应颜色的亮等级</span>
+<span class="n">rgbled</span><span class="o">.</span><span class="na">setRedBrightness</span><span class="o">(</span><span class="n">r</span><span class="o">);</span>
+<span class="n">rgbled</span><span class="o">.</span><span class="na">setGreenBrightness</span><span class="o">(</span><span class="n">g</span><span class="o">);</span>
+<span class="n">rgbled</span><span class="o">.</span><span class="na">setBlueBrightness</span><span class="o">(</span><span class="n">b</span><span class="o">);</span>
+<span class="c1">//将设置好的亮度等级更新到硬件中</span>
+<span class="n">rgbled</span><span class="o">.</span><span class="na">updateBrightness</span><span class="o">();</span>
+</pre></div>
+
 
 <p>TiRGBLE类中他方法的使用请参考TiRGBLED灯控制例程。</p>
-<h2 id="tioled_ug2864">TiOLED_UG2864</h2>
+<h2 id="tioled_ug2864">TiOLED_UG2864<a class="headerlink" href="#tioled_ug2864" title="Permanent link">&para;</a></h2>
 <p>TiJOS提供操作TiOLED_UG2864屏幕的类。</p>
 <p>TiJOS OLED_UG2864包括如下类：</p>
 <table>
@@ -1084,7 +1134,7 @@ rgbled.updateBrightness();
 </tr>
 </tbody>
 </table>
-<h2 id="tioled_ug2864_1">TiOLED_UG2864的创建、绑定与使用</h2>
+<h2 id="tioled_ug2864_1">TiOLED_UG2864的创建、绑定与使用<a class="headerlink" href="#tioled_ug2864_1" title="Permanent link">&para;</a></h2>
 <p>TiOLED_UG2864实例在创建时需要和具体总线设备绑定，具体绑定类型与其工作方式以及通讯协议有关，本实例绑定的设备总线类为 tijos.framework.devicecenter.TiI2C；设备总线的使用请参考：tijos.framework.devicecenter。</p>
 <p>构造器如下：</p>
 <table>
@@ -1137,30 +1187,32 @@ rgbled.updateBrightness();
 </tbody>
 </table>
 <p>TiOLED_UG2864类中主要方法的使用如下(单屏显示)：</p>
-<pre><code class="java">//创建对象并传入默认设备地址0x78
-TiOLED_UG2864 oled = new TiOLED_UG2864(i2c0, 0x78);
-String s = &quot;Welcome to the TiKit world !&quot;;
-/*给屏幕上电*/
-oled.turnOn();
-/*清屏*/
-oled.clear();
-/*从第0行0列开始打印字符串*/
-oled.print(0, 0, s);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">//创建对象并传入默认设备地址0x78</span>
+<span class="n">TiOLED_UG2864</span> <span class="n">oled</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiOLED_UG2864</span><span class="o">(</span><span class="n">i2c0</span><span class="o">,</span> <span class="mh">0x78</span><span class="o">);</span>
+<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;Welcome to the TiKit world !&quot;</span><span class="o">;</span>
+<span class="cm">/*给屏幕上电*/</span>
+<span class="n">oled</span><span class="o">.</span><span class="na">turnOn</span><span class="o">();</span>
+<span class="cm">/*清屏*/</span>
+<span class="n">oled</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+<span class="cm">/*从第0行0列开始打印字符串*/</span>
+<span class="n">oled</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">s</span><span class="o">);</span>
+</pre></div>
+
 
 <p>支持回滚的显示方法：</p>
-<pre><code class="java">//创建对象并传入默认设备地址0x78
-TiOLED_UG2864 oled = new TiOLED_UG2864(i2c0, 0x78);
-String s = &quot;Welcome to the TiKit world !&quot;;
-/*给屏幕上电*/
-oled.turnOn();
-/*清屏*/
-oled.clear();
-/*设置行起始坐标和列起始坐标，第1行第2列*/
-oled.setPosition(1, 2);
-/*在已经设置好的指定位置显示字符串（第1行第2列）*/
-oled.output(s);
-</code></pre>
+<div class="codehilite"><pre><span></span><span class="c1">//创建对象并传入默认设备地址0x78</span>
+<span class="n">TiOLED_UG2864</span> <span class="n">oled</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiOLED_UG2864</span><span class="o">(</span><span class="n">i2c0</span><span class="o">,</span> <span class="mh">0x78</span><span class="o">);</span>
+<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;Welcome to the TiKit world !&quot;</span><span class="o">;</span>
+<span class="cm">/*给屏幕上电*/</span>
+<span class="n">oled</span><span class="o">.</span><span class="na">turnOn</span><span class="o">();</span>
+<span class="cm">/*清屏*/</span>
+<span class="n">oled</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+<span class="cm">/*设置行起始坐标和列起始坐标，第1行第2列*/</span>
+<span class="n">oled</span><span class="o">.</span><span class="na">setPosition</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+<span class="cm">/*在已经设置好的指定位置显示字符串（第1行第2列）*/</span>
+<span class="n">oled</span><span class="o">.</span><span class="na">output</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+</pre></div>
+
 
 <p>TiOLED_UG286类中他方法的使用请参TiOLED_UG2864屏幕控制例程。</p>
                 
@@ -1229,6 +1281,14 @@ oled.output(s);
       </div>
       
         
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/TiJOSteam" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
       
     </div>
   </div>
