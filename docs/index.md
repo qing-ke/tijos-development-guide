@@ -37,6 +37,7 @@
 |                                          | [蜂鸣器](tijos_framework_guide/tijos.framework.transducer.buzzer.md) |
 |                                          | [LED/OLED显示](tijos_framework_guide/tijos.framework.transducer.led.md) |
 |                                          | [继电器](tijos_framework_guide/tijos.framework.transducer.relay.md) |
+|                                          | [通用传感器](tijos_framework_guide/tijos.framework.sensor.general.md) |
 | [网络应用开发指南](tijos_framework_guide/tijos_net.md) |                                          |
 |                                          | [MQTT 客户端](tijos_framework_guide/tijos.framework.net.mqtt.md) |
 |                                          | [网络时间协议客户端](tijos_framework_guide/tijos.framework.net.ntp.md) |
