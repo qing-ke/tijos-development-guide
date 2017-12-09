@@ -10,7 +10,7 @@
 
 TiJOS应用与标准Java 应用类似，通过在Eclipse中安装Ti-Dev Studio插件即可通过Eclipse进行TiJOS应用的开发和调试，Eclipse可在http://www.eclipse.org/downloads/ 下载。
 
-如果您已安装Eclipses, 可直接安装Ti-Dev Stuido即可。
+如果您已安装Eclipse, 可直接安装Ti-Dev Stuido即可。
 
 Eclipse版本支持：4.6 及以上
 
@@ -64,13 +64,13 @@ Installing...
 
 ## 连接TiKit开发板
 
-将TiKit硬件开发板连接到开发机器， 并在Ti-Dev Manager检测设备连接，如果是网络应用，还可在Ti-Dev Manager中配置网络设置，如无线WIFI， 网关，DNS等等， 在开发过程中可根据需求连接相关的传感器进行开发和测试。
+将TiKit硬件开发板连接到开发机器， 并在Ti-DeviceManager检测设备连接，如果是网络应用，还可在Ti-Device Manager中配置网络设置，如无线WIFI， 网关，DNS等等， 在开发过程中可根据需求连接相关的传感器进行开发和测试。
 
-Ti-Dev Manager可通过Ti-Dev菜单直接打开：
+Ti-Device Manager可通过Ti-Dev菜单直接打开：
 
 ![TiJOSPlugin_DevManager](./img/TiJOSPlugin_DevManager.png)
 
-如果设备连接成功，在Ti-Dev Manager中可以看到当前连接的设备：
+如果设备连接成功，在Ti-Device Manager中可以看到当前连接的设备：
 
 ![DevInfo](./img/DevInfo.png)
 

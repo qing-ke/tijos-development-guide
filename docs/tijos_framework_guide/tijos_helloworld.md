@@ -13,7 +13,7 @@ Internet网络连接正常
 ## 准备工作
 
 1. 在Eclipse安装Ti-Dev Studio 插件
-2. TiKit 开发板连接正常并在Ti-Dev Manager中状态正常
+2. TiKit 开发板连接正常并在Ti-DeviceManager中状态正常
 
 ## 新建工程
 
