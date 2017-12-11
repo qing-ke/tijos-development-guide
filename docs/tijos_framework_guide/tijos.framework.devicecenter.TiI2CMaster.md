@@ -25,8 +25,10 @@ TiI2CMaster类中主要的方法：
 | void close()                             | 关闭当前对象                                   |
 | void setBaudRate(int baud)               | 设置通讯波特率                                  |
 | void selectSlave(int address)            | 选择从机，地址范围：0-127                          |
-| int read(byte[] data, int offset, int len) | 从从机读数据                                   |
-| int write(byte[] data, int offset, int len) | 向从机写数据                                   |
+| boolean read(byte[] data, int offset, int len) | 从从机读数据                                   |
+| boolean write(byte[] data, int offset, int len) | 向从机写数据                                   |
+| boolean read(byte[] data, int offset, int len, boolean repeated) | 从从机读数据并使能重复，即，不发送stop                    |
+| boolean write(byte[] data, int offset, int len, boolean repeated) | 向从机写数据并使能重复，即，不发送stop                    |
 
 TiI2CMaster类中他方法的技术说明请参考TiJOS Framework说明文档。
 
@@ -72,8 +74,8 @@ TiI2CMaster的输入输出操作通过selectSlave、read和write方法完成。
 ...
 i2c0.selectSlave(0x78);
 byte[] dataBuffer = {1, 2, 3, 4, 5};
-int writeLength = i2c0.write(dataBuffer, 0, dataBuffer.length);
-int readLength = i2c0.read(dataBuffer, 0, dataBuffer.length);
+boolean writeStatus = i2c0.write(dataBuffer, 0, dataBuffer.length);
+boolean readStatus = i2c0.read(dataBuffer, 0, dataBuffer.length);
 ...
 ```
 
