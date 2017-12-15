@@ -21,14 +21,14 @@ TiJOS Framework提供TiSPIMaster来支持SPI主机功能，其将SPI Master按�
 
 TiSPIMaster类中主要的方法：
 
-| 方法                                       | 说明                                       |
-| ---------------------------------------- | ---------------------------------------- |
-| TiSPIMaster open(int portID)             | 通过指定port打开指定SPI Master，返回TiSPIMaster对象，**若需要再次打开或打开为其他设备时需要先调用close关闭当前实例** |
-| void close()                             | 关闭已打开的TiSPIMaster实例                      |
-| void setMode(int workMode, int baudRate, int direction, int io) | 设置工作模式，波特率、位传输模式、位宽模式                    |
-| void selectSlave(boolean enable)         | 从机选择使能控制                                 |
-| int read(byte[] data, int offset, int len) | 读取数据，返回实际读取长度                            |
-| int write(byte[] data, int offset, int len) | 写入数据，返回实际写入长度                            |
+| 方法                                       | 说明                                     |
+| ---------------------------------------- | -------------------------------------- |
+| TiSPIMaster open(int portID)             | 通过指定port打开指定SPI Master，返回TiSPIMaster对象 |
+| void close()                             | 关闭已打开的TiSPIMaster实例                    |
+| void setMode(int workMode, int baudRate, int direction, int io) | 设置工作模式，波特率、位传输模式、位宽模式                  |
+| void selectSlave(boolean enable)         | 从机选择使能控制                               |
+| int read(byte[] data, int offset, int len) | 读取数据，返回实际读取长度                          |
+| int write(byte[] data, int offset, int len) | 写入数据，返回实际写入长度                          |
 
 TiSPIMaster类中他方法的技术说明请参考TiJOS Framework说明文档。
 

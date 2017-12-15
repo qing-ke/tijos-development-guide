@@ -42,7 +42,7 @@ TiDHT实例在创建时需要和具体总线设备绑定，具体绑定类型与
 
 | 方法                      | 说明                    |
 | ----------------------- | --------------------- |
-| int measure()           | 测量当前温度和湿度             |
+| void measure()          | 测量当前温度和湿度             |
 | double getTemperature() | 获取当前环境温度（单位：摄氏度）      |
 | double getHumidity()    | 获取当前环境湿度（单位：与空气相对百分比） |
 
@@ -51,18 +51,14 @@ TiDHT中方法的使用如下：
 ```java
 TiDHT dht = new TiDHT(gpio0, gpioPin0);
 // 设置传感器模式，本例程默认为DHT11
-while(true){
-  //调用测量方法
-  int err = dht.measure();
-  if(err<0){
-    //错误处理
-    .....
-  }
-  else{
-    //获取最近一次测量的温度、湿度数据
-    double temperature = dht.getTemperature();
-    double humidity = dht.getHumidity();
-  }
+
+//调用测量方法
+dht.measure();
+
+//获取最近一次测量的温度、湿度数据
+double temperature = dht.getTemperature();
+double humidity = dht.getHumidity();
+
 ```
 
 TiDH类中他方法的使用请参考TiDHT11 数字温湿度传感器功能例程。
@@ -108,7 +104,7 @@ TiDS18B20实例在创建时需要和具体总线设备绑定，具体绑定类�
 | byte[] getSerialNumber()      | 获取当前传感器的唯一ID（通过ROM对象获取）          |
 | int setResolution(int bits)   | 设置当前传感器的分辨率（默认为12位）              |
 | int getResolution()           | 获取当前传感器当前的分辨率                    |
-| int measure()                 | 测量当前环境温度                         |
+| void measure()                | 测量当前环境温度                         |
 | double getTemperature()       | 获取当前温度数据（单位：摄氏度）                 |
 
 当一根总线上只挂有一个DS18B20传感器时，使用方法如下：
@@ -118,12 +114,11 @@ TiDS18B20实例在创建时需要和具体总线设备绑定，具体绑定类�
 TiDS18B20 ds18b20 = new TiDS18B20(owIo0, owIoID0);
 //选择只有单传感器
 ds18b20.selectSingle();
-while(true){
-  //调用measure方法测量温度
-  ds18b20.measure();
-  //获取最近一次测量的结果
-  double temperature = ds18b20.getTemperature();
-}
+//调用measure方法测量温度
+ds18b20.measure();
+//获取最近一次测量的结果
+double temperature = ds18b20.getTemperature();
+
 ```
 
 当一根总线上挂有多个DS18B20传感器时，使用方法如下：
@@ -135,12 +130,12 @@ TiDS18B20 ds18b20 = new TiDS18B20(owIo0, owIoID0);
 TiDS18B20ROM[] romlist = ds18b20.enumeration();
 //选择指定ROM信息的传感器，当前选择第一个
 ds18b20.select(romlist[0]); 
-while(true){
-  //使用指定ROM信息的传感器，调用measure方法测量温度
-  ds18b20.measure();
-  //使用指定ROM信息的传感器，获取最近一次测量的结果
-  double temperature = ds18b20.getTemperature();
-}
+
+//使用指定ROM信息的传感器，调用measure方法测量温度
+ds18b20.measure();
+//使用指定ROM信息的传感器，获取最近一次测量的结果
+double temperature = ds18b20.getTemperature();
+
 ```
 
 TiDS18B2类中他方法的使用请参考TiDS18B20数字温度传感器功能例程。

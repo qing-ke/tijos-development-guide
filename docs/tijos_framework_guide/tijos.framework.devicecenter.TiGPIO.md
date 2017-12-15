@@ -44,16 +44,16 @@ TiJOS Framework提供TiGPIO来支持GPIO功能，其将GPIO按照port分组，�
 
 TiGPIO类中主要的方法：
 
-| 方法                                       | 说明                                       |
-| ---------------------------------------- | ---------------------------------------- |
-| TiGPIO open(int portID, int... pinIDs)   | 静态方法，通过指定port和pin集合打开指定GPIO，返回TiGPIO对象，**若需要再次打开或打开为其他设备时需要先调用close关闭当前实例** |
-| void close()                             | 关闭当前TiGPIO对象                             |
-| void setPinMode(int pinID, int direction, int pull) | 设置当前TiGPIO对象指定pin的工作模式和上拉模式              |
-| void setPinEvent(int pinID, int type, int minPeriod) | 设置当前TiGPIO对象指定pin的事件模式和最小捕获周期，捕获周期单位：us  |
-| readPort()                               | 读当前TiGPIO对象port数据，8位数据                   |
-| writePort(int value)                     | 写当前TiGPIO对象port数据，8位数据                   |
-| readPin(int pinID)                       | 读当前TiGPIO对象指定pin电平                       |
-| writePin(int pinID, int levelValue)      | 写当前TiGPIO对象指定pin电平                       |
+| 方法                                       | 说明                                      |
+| ---------------------------------------- | --------------------------------------- |
+| TiGPIO open(int portID, int... pinIDs)   | 静态方法，通过指定port和pin集合打开指定GPIO，返回TiGPIO对象  |
+| void close()                             | 关闭当前TiGPIO对象                            |
+| void setPinMode(int pinID, int direction, int pull) | 设置当前TiGPIO对象指定pin的工作模式和上拉模式             |
+| void setPinEvent(int pinID, int type, int minPeriod) | 设置当前TiGPIO对象指定pin的事件模式和最小捕获周期，捕获周期单位：us |
+| readPort()                               | 读当前TiGPIO对象port数据，8位数据                  |
+| writePort(int value)                     | 写当前TiGPIO对象port数据，8位数据                  |
+| readPin(int pinID)                       | 读当前TiGPIO对象指定pin电平                      |
+| writePin(int pinID, int levelValue)      | 写当前TiGPIO对象指定pin电平                      |
 
 TiGPIO类中他方法的技术说明请参考TiJOS JDK framework说明文档。
 

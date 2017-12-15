@@ -52,11 +52,11 @@ TiMQ类中主要方法的使用：
 
 TiMQ的事件监听主要通过TiMQEventListener事件回调来处理事件，事件类型包括：
 
-| 方法                                       | 说明      |
-| ---------------------------------------- | ------- |
-| void setEventListener(TiMQEventListener lc) | 设置监听    |
-| void OnAlarm(TiMQ mq)                    | 报警事件    |
-| void OnRecovery(TiMQ mq)                 | 传感器恢复事件 |
+| 方法                                       | 说明               |
+| ---------------------------------------- | ---------------- |
+| void setEventListener(TiMQEventListener lc) | 设置监听             |
+| void onThresholdNotify(TiMQ mq)          | 超出阈值事件(GPIO电平变化) |
+|                                          |                  |
 
 创建TiMQ事件监听对象：
 
@@ -74,13 +74,12 @@ mq.setEventListener(lc);
 
 ```java
 class MQEventListener implements TiMQEventListener {
-  /*报警事件处理*/
-    public void OnAlarm(TiMQ mq){
-      /*①读取ADC接口采集到的传感器输出的实际电压值*/
+  /*报警事件或传感器已恢复到正常状态处理*/
+    public void onThresholdNotify(TiMQ mq){
+      /*读取ADC接口采集到的传感器输出的实际电压值*/
       double vol = mq.getAnalogVoltage();
-    }
-    /*传感器已恢复到正常状态*/
-    public void OnRecovery(TiMQ mq){
+      /*当前DO口电平状态*/
+      int do = getDigitalOutput();
     }
 }
 ```

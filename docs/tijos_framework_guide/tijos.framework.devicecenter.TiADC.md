@@ -10,11 +10,11 @@ TiJOS Framework提供TiADC来支持ADC功能，其将ADC按照port分组，共�
 
 TiADC类中主要的方法：
 
-| 方法                                       | 说明                                       |
-| ---------------------------------------- | ---------------------------------------- |
-| TiADC open(int portID)                   | 静态方法，通过指定port打开ADC，返回TiADC对象，**若需要再次打开或打开为其他设备时需要先调用close关闭当前对象** |
-| void close()                             | 关闭当前对象                                   |
-| double getVoltage(double refVoltage, double multiple) | 获取当前对象电压测量值，单位V                          |
+| 方法                                       | 说明                           |
+| ---------------------------------------- | ---------------------------- |
+| TiADC open(int portID)                   | 静态方法，通过指定port打开ADC，返回TiADC对象 |
+| void close()                             | 关闭当前对象                       |
+| double getVoltage(double refVoltage, double multiple) | 获取当前对象电压测量值，单位V              |
 
 TiADC类中他方法的技术说明请参考TiJOS JDK framework说明文档。
 

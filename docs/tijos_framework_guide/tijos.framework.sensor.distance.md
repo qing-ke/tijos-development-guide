@@ -41,7 +41,7 @@ TiHCSR04实例在创建时需要和具体总线设备绑定，具体绑定类型
 | 方法                          | 说明                        |
 | --------------------------- | ------------------------- |
 | void setSpeed(double speed) | 设置声波的速度（单位：m/s，默认为340m/s） |
-| int measure()               | 开始测量                      |
+| void measure()              | 开始测量                      |
 | double getDistance()        | 获取测量结果（单位：m）              |
 
 TiHCSR04测距方法的使用：
@@ -53,7 +53,7 @@ TiHCSR04测距方法的使用：
 */	
  TiHCSR04 hcsr04 = new TiHCSR04(gpio0, gpioPin0, gpioPin1);
 //开始测量
-int err = hcsr04.measure();
+hcsr04.measure();
 //获取最近一次的测量结果
 distance = hcsr04.getDistance();
 ```

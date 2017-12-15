@@ -45,7 +45,7 @@ Internet网络连接正常
 
 ![HellowTiJOS_Class](.\img\HellowTiJOS_Class.png)
 
-加入代码将输出打印到Ti-DevManager日志输出中
+加入代码将输出打印到Ti-Device Manager日志输出中
 
 ```
   public class HelloWorld {
@@ -75,7 +75,7 @@ Internet网络连接正常
 
 ## 导出
 
-当应用调试测试成功后， 可将编译结果导出为tapk文件通过Ti-Dev Manager直接下载到设备中进行测试， 同时该文件也用于最新的量产或OTA应用更新过程。
+当应用调试测试成功后， 可将编译结果导出为tapk文件通过Ti-Device Manager直接下载到设备中进行测试， 同时该文件也用于最新的量产或OTA应用更新过程。
 
 导出tapk时， 在工程右键菜单中选择"Export", 在弹出的导出类型列表中选择“TiJOS Development"下的”Export TiJOS Application Package..."
 
@@ -89,5 +89,5 @@ Internet网络连接正常
 
 ![ExportTAPK_StorageOptions](.\img\ExportTAPK_StorageOptions.png)
 
-点击"Finish"即可完成tapk应用包导出， 导出的tapk文件可通过Ti-Dev Manager中的下载、运行功能直接对实际设备进行测试。
+点击"Finish"即可完成tapk应用包导出， 导出的tapk文件可通过Ti-Device Manager中的下载、运行功能直接对实际设备进行测试。
 

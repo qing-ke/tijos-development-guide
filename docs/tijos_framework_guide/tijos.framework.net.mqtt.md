@@ -13,6 +13,7 @@ TiJOS MQTT Client 包括如下类：
 | MqttClient         | Mqtt客户端    |
 | MqttConnectOptions | Mqtt连接项设置  |
 | MqttClientListener | Mqtt消息监听接口 |
+| MqttException      | Mqtt异常     |
 
 TiJOS MQTT Client 支持TCP和SSL两种通讯方式， 符合MQTT3.1.1标准规范，支持QOS0,1,2, 支持高性能异步API,   在处理MQTT协议过程中通过事件回调返回操作结果， 可支持突发模式"burst-mode"客户端请求， 实现快速发布无等待， 避免客户端资源等待。
 

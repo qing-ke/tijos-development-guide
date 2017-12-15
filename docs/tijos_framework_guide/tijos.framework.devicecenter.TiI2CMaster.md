@@ -21,12 +21,12 @@ TiI2CMaster类中主要的方法：
 
 | 方法                                       | 说明                                       |
 | ---------------------------------------- | ---------------------------------------- |
-| TiI2CMaster(int portID)                  | 静态方法，通过指定port打开I2C Master，返回TiI2CMaster对象，**若需要再次打开或打开为其他设备时需要先调用close关闭当前对象** |
+| TiI2CMaster(int portID)                  | 静态方法，通过指定port打开I2C Master，返回TiI2CMaster对象 |
 | void close()                             | 关闭当前对象                                   |
-| void setBaudRate(int baud)               | 设置通讯波特率                                  |
+| void setBaudRate(int baud)               | 设置通讯波特率, 以Kbps为单位                        |
 | void selectSlave(int address)            | 选择从机，地址范围：0-127                          |
-| int read(byte[] data, int offset, int len) | 从从机读数据                                   |
-| int write(byte[] data, int offset, int len) | 向从机写数据                                   |
+| void read(byte[] data, int offset, int len) | 从从机读数据                                   |
+| void write(byte[] data, int offset, int len) | 向从机写数据                                   |
 
 TiI2CMaster类中他方法的技术说明请参考TiJOS Framework说明文档。
 

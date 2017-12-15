@@ -13,7 +13,7 @@ TiWLAN为单例，在操作网络时可通过getInstance获得实例并调用相
 | 方法                                       | 说明                                       |
 | ---------------------------------------- | ---------------------------------------- |
 | TiWLAN getInstance()                     | 获取WLAN实例                                 |
-| int startup(int timeout)                 | 启动WLAN并连接AP                              |
+| void startup(int timeout)                | 启动WLAN并连接AP, timeout以秒为单位                |
 | void shutdown()                          | 关闭WLAN                                   |
 | void startupSoftAP(boolean hidden)       | 启动WLAN SoftAP功能，WLAN必须已经开启, hidden为true时， SSID将不广播 |
 | void shutdownSoftAP()                    | 关闭WLAN SoftAP                            |
@@ -67,15 +67,13 @@ TiWLAN.getInstance().changePassword("12345678");
 TiWLAN.getInstance().setStaticAddress("192.168.1.100", "192.168.1.1", "255.255.255.0");
 ...
 //启动WLAN，连接目标AP，超时10秒
-int status = TiWLAN.getInstance().startup(10);
-if(status == -1) {
-    System.out.println("connect timeout.");
-    return ;
+try{
+  TiWLAN.getInstance().startup(10);
 }
-if(status == -2) {
-    System.out.println("connect fail.");
-    return ;    
+catch(IOException ex) {
+    ex.printStackTrace(); //connect fail 
 }
+
 System.out.println("connect success.");
 ...
 ```
@@ -93,18 +91,15 @@ TiWLAN.getInstance().changePassword("12345678");
 TiWLAN.getInstance().changeSoftAPSSID("TiJOS-SoftAP");
 TiWLAN.getInstance().changeSoftAPPassword("12345678", true);
 ...
-//启动WLAN，连接目标AP，超时10秒
-int status =TiWLAN.getInstance().startup(10);
-//不论目标AP是否连接成功，都启动SoftAP, SSID不隐藏
-TiWLAN.getInstance().startupSoftAP(false);
-if(status == -1) {
-    System.out.println("connect timeout.");
-    return ;
+try{
+  //启动WLAN，连接目标AP，超时10秒
+  TiWLAN.getInstance().startup(10);
+  //不论目标AP是否连接成功，都启动SoftAP, SSID不隐藏
+  TiWLAN.getInstance().startupSoftAP(false);
 }
-if(status == -2) {
-    System.out.println("connect fail.");
-    return ;    
-}
+catch(IOException ex){
+  ex.printStackTrace(); //connect fail 
+}  
 System.out.println("connect success.");
 ```
 

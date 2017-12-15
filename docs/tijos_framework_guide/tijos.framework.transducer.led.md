@@ -155,10 +155,10 @@ TiOLED_UG2864实例在创建时需要和具体总线设备绑定，具体绑定�
 | ---------------------------------------- | ---------------------------------------- |
 | void turnOn()                            | 点亮屏幕                                     |
 | void turnOff()                           | 关闭屏幕                                     |
-| boolean clear()                          | 清除当前屏幕显示的所有信息                            |
-| boolean print(int lineId, int columnId, String text) | 在指定行列坐标处开始显示字符（可显示的最大数据量为一个满屏幕的数据量，即：4*16个字符，多余字符将无法显示） |
+| void clear()                             | 清除当前屏幕显示的所有信息                            |
+| void print(int lineId, int columnId, String text) | 在指定行列坐标处开始显示字符（可显示的最大数据量为一个满屏幕的数据量，即：4*16个字符，多余字符将无法显示） |
 | void setPosition(int lineId, int columnId) | 设置指定的行坐标和列坐标（支持0~3行，0~15列）               |
-| boolean output(String text)              | 在指定坐标（由setPosition方法设置）处开始显示字符（当字符超出屏幕末端时，回滚从0行0列开始覆盖显示） |
+| void output(String text)                 | 在指定坐标（由setPosition方法设置）处开始显示字符（当字符超出屏幕末端时，回滚从0行0列开始覆盖显示） |
 
 TiOLED_UG2864类中主要方法的使用如下(单屏显示)：
 

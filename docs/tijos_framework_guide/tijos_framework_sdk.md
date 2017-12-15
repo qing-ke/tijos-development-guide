@@ -20,6 +20,7 @@ TiJOS Framework提供了用户在应用中对硬件资源及传感器类等进�
 | tijos.framework.transducer.buzzer | 蜂鸣类                                      |
 | tijos.framework.transducer.led    | LED显示类                                   |
 | tijos.framework.transducer.relay  | 继电器类                                     |
+| tijos.framework.sensor.general    | 通讯传感器类                                   |
 | tijos.framework.net.ntp           | 网络时间协议客户端                                |
 | tijos.framework.net.mqtt          | MQTT 客户端，支持3.1.1标准                       |
 | tijos.framework.ota               | 应用在线升级类                                  |

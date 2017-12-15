@@ -96,7 +96,7 @@ class GeneralSensorEventListener implements ITiGeneralSensorEventListener {
 
 	@Override
 	public void onThresholdNotify(TiGeneralSensor sensor) {
-		System.out.println("onEvent ");
+		System.out.println("onThresholdNotify ");
 	}
 }
 
