@@ -627,6 +627,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-nav__link">
+      通用传感器
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -958,12 +970,20 @@
 <td>选择从机，地址范围：0-127</td>
 </tr>
 <tr>
-<td>int read(byte[] data, int offset, int len)</td>
+<td>void read(byte[] data, int offset, int len)</td>
 <td>从从机读数据</td>
 </tr>
 <tr>
-<td>int write(byte[] data, int offset, int len)</td>
+<td>void write(byte[] data, int offset, int len)</td>
 <td>向从机写数据</td>
+</tr>
+<tr>
+<td>void read(byte[] data, int offset, int len, boolean repeated)</td>
+<td>从从机读数据并使能重复，即，不发送stop</td>
+</tr>
+<tr>
+<td>void write(byte[] data, int offset, int len, boolean repeated)</td>
+<td>向从机写数据并使能重复，即，不发送stop</td>
 </tr>
 </tbody>
 </table>
@@ -995,8 +1015,8 @@
 <div class="codehilite"><pre><span></span><span class="o">...</span>
 <span class="n">i2c0</span><span class="o">.</span><span class="na">selectSlave</span><span class="o">(</span><span class="mh">0x78</span><span class="o">);</span>
 <span class="kt">byte</span><span class="o">[]</span> <span class="n">dataBuffer</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">};</span>
-<span class="kt">int</span> <span class="n">writeLength</span> <span class="o">=</span> <span class="n">i2c0</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">dataBuffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">dataBuffer</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
-<span class="kt">int</span> <span class="n">readLength</span> <span class="o">=</span> <span class="n">i2c0</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">dataBuffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">dataBuffer</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+<span class="n">i2c0</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">dataBuffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">dataBuffer</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+<span class="n">i2c0</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">dataBuffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">dataBuffer</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
 <span class="o">...</span>
 </pre></div>
 

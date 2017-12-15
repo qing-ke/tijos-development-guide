@@ -620,6 +620,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-nav__link">
+      通用传感器
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -961,7 +973,7 @@
 </thead>
 <tbody>
 <tr>
-<td>int measure()</td>
+<td>void measure()</td>
 <td>测量当前温度和湿度</td>
 </tr>
 <tr>
@@ -977,18 +989,13 @@
 <p>TiDHT中方法的使用如下：</p>
 <div class="codehilite"><pre><span></span><span class="n">TiDHT</span> <span class="n">dht</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiDHT</span><span class="o">(</span><span class="n">gpio0</span><span class="o">,</span> <span class="n">gpioPin0</span><span class="o">);</span>
 <span class="c1">// 设置传感器模式，本例程默认为DHT11</span>
-<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
-  <span class="c1">//调用测量方法</span>
-  <span class="kt">int</span> <span class="n">err</span> <span class="o">=</span> <span class="n">dht</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
-  <span class="k">if</span><span class="o">(</span><span class="n">err</span><span class="o">&lt;</span><span class="mi">0</span><span class="o">){</span>
-    <span class="c1">//错误处理</span>
-    <span class="o">.....</span>
-  <span class="o">}</span>
-  <span class="k">else</span><span class="o">{</span>
-    <span class="c1">//获取最近一次测量的温度、湿度数据</span>
-    <span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">dht</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
-    <span class="kt">double</span> <span class="n">humidity</span> <span class="o">=</span> <span class="n">dht</span><span class="o">.</span><span class="na">getHumidity</span><span class="o">();</span>
-  <span class="o">}</span>
+
+<span class="c1">//调用测量方法</span>
+<span class="n">dht</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
+
+<span class="c1">//获取最近一次测量的温度、湿度数据</span>
+<span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">dht</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
+<span class="kt">double</span> <span class="n">humidity</span> <span class="o">=</span> <span class="n">dht</span><span class="o">.</span><span class="na">getHumidity</span><span class="o">();</span>
 </pre></div>
 
 
@@ -1073,7 +1080,7 @@
 <td>获取当前传感器当前的分辨率</td>
 </tr>
 <tr>
-<td>int measure()</td>
+<td>void measure()</td>
 <td>测量当前环境温度</td>
 </tr>
 <tr>
@@ -1087,12 +1094,10 @@
 <span class="n">TiDS18B20</span> <span class="n">ds18b20</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiDS18B20</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="n">owIoID0</span><span class="o">);</span>
 <span class="c1">//选择只有单传感器</span>
 <span class="n">ds18b20</span><span class="o">.</span><span class="na">selectSingle</span><span class="o">();</span>
-<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
-  <span class="c1">//调用measure方法测量温度</span>
-  <span class="n">ds18b20</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
-  <span class="c1">//获取最近一次测量的结果</span>
-  <span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">ds18b20</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
-<span class="o">}</span>
+<span class="c1">//调用measure方法测量温度</span>
+<span class="n">ds18b20</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
+<span class="c1">//获取最近一次测量的结果</span>
+<span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">ds18b20</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
 </pre></div>
 
 
@@ -1103,12 +1108,11 @@
 <span class="n">TiDS18B20ROM</span><span class="o">[]</span> <span class="n">romlist</span> <span class="o">=</span> <span class="n">ds18b20</span><span class="o">.</span><span class="na">enumeration</span><span class="o">();</span>
 <span class="c1">//选择指定ROM信息的传感器，当前选择第一个</span>
 <span class="n">ds18b20</span><span class="o">.</span><span class="na">select</span><span class="o">(</span><span class="n">romlist</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span> 
-<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">){</span>
-  <span class="c1">//使用指定ROM信息的传感器，调用measure方法测量温度</span>
-  <span class="n">ds18b20</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
-  <span class="c1">//使用指定ROM信息的传感器，获取最近一次测量的结果</span>
-  <span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">ds18b20</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
-<span class="o">}</span>
+
+<span class="c1">//使用指定ROM信息的传感器，调用measure方法测量温度</span>
+<span class="n">ds18b20</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
+<span class="c1">//使用指定ROM信息的传感器，获取最近一次测量的结果</span>
+<span class="kt">double</span> <span class="n">temperature</span> <span class="o">=</span> <span class="n">ds18b20</span><span class="o">.</span><span class="na">getTemperature</span><span class="o">();</span>
 </pre></div>
 
 

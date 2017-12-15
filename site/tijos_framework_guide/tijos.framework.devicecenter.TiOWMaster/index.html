@@ -627,6 +627,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-nav__link">
+      通用传感器
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -938,26 +950,26 @@
 <tbody>
 <tr>
 <td>TiOWMaster open(int portID, int... ioIDs)</td>
-<td>静态方法，通过指定port和io集合打开OW Master，返回TiOWMaster对象，<strong>若需要再次打开或打开为其他设备时需要先调用close关闭当前对象</strong></td>
+<td>静态方法，通过指定port和io集合打开OW Master，返回TiOWMaster对象</td>
 </tr>
 <tr>
 <td>void close()</td>
 <td>关闭当前对象</td>
 </tr>
 <tr>
-<td>setIoMode(int ioID, int mode)</td>
+<td>setMode(int ioID, int mode)</td>
 <td>设置工作模式</td>
 </tr>
 <tr>
-<td>boolean resetIo(int ioID)</td>
+<td>void reset(int ioID)</td>
 <td>复位I/O</td>
 </tr>
 <tr>
-<td>int readIoBits(int ioID, int bits)</td>
+<td>int readBits(int ioID, int bits)</td>
 <td>读I/O位数据</td>
 </tr>
 <tr>
-<td>void writeIoBits(int ioID, int value, int bits)</td>
+<td>void writeBits(int ioID, int value, int bits)</td>
 <td>写I/O位数据</td>
 </tr>
 </tbody>
@@ -989,23 +1001,15 @@
 
 <p>注意：模式支持受平台特性限制，设置时须了解平台特性。</p>
 <h2 id="tiowmaster_4">TiOWMaster输入输出<a class="headerlink" href="#tiowmaster_4" title="Permanent link">&para;</a></h2>
-<p>TiOWMaster的输入输出操作通过resetIo、readIoBits和writeIoBits方法完成。</p>
+<p>TiOWMaster的输入输出操作通过reset、readBits和writeBits方法完成。</p>
 <div class="codehilite"><pre><span></span><span class="o">...</span>
-<span class="kt">boolean</span> <span class="n">status</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">resetIo</span><span class="o">(</span><span class="n">owIo0</span><span class="o">);</span>
-<span class="k">if</span><span class="o">(!</span><span class="n">status</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;reset io0 fail.&quot;</span><span class="o">);</span>
-    <span class="k">return</span> <span class="o">;</span>
-<span class="o">}</span>
-<span class="n">ow0</span><span class="o">.</span><span class="na">writeIoBits</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="mh">0x80</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
-<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">readIoBits</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">reset</span><span class="o">(</span><span class="n">owIo0</span><span class="o">);</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">writeBits</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="mh">0x80</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">readBits</span><span class="o">(</span><span class="n">owIo0</span><span class="o">,</span> <span class="mi">8</span><span class="o">);</span>
 <span class="o">...</span>
-<span class="kt">boolean</span> <span class="n">status</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">resetIo</span><span class="o">(</span><span class="n">owIo1</span><span class="o">);</span>
-<span class="k">if</span><span class="o">(!</span><span class="n">status</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;reset io1 fail.&quot;</span><span class="o">);</span>
-    <span class="k">return</span> <span class="o">;</span>
-<span class="o">}</span>
-<span class="n">ow0</span><span class="o">.</span><span class="na">writeIoBits</span><span class="o">(</span><span class="n">owIo1</span><span class="o">,</span> <span class="mh">0x01</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
-<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">readIoBits</span><span class="o">(</span><span class="n">owIo1</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">reset</span><span class="o">(</span><span class="n">owIo1</span><span class="o">);</span>
+<span class="n">ow0</span><span class="o">.</span><span class="na">writeBits</span><span class="o">(</span><span class="n">owIo1</span><span class="o">,</span> <span class="mh">0x01</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">ow0</span><span class="o">.</span><span class="na">readBits</span><span class="o">(</span><span class="n">owIo1</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>
 <span class="o">...</span>
 </pre></div>
 

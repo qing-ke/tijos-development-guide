@@ -613,6 +613,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-nav__link">
+      通用传感器
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -952,8 +964,16 @@
 </thead>
 <tbody>
 <tr>
-<td>double getAnalogVoltage()</td>
-<td>获取当前传感器输出的电压值（单位：V）</td>
+<td>boolean isGreaterThanThreshold()</td>
+<td>获取当前测量值是否已经大于门限值</td>
+</tr>
+<tr>
+<td>double getAnalogOutput()</td>
+<td>获取当前传感器AO口输出的模拟电压值（单位：V）</td>
+</tr>
+<tr>
+<td>int getDigitalOutput()</td>
+<td>获取当前传感器DO口输出的数字电平（1:高电平，0:低电平）</td>
 </tr>
 <tr>
 <td>long getEventTime()</td>
@@ -980,12 +1000,8 @@
 <td>设置监听</td>
 </tr>
 <tr>
-<td>void OnAlarm(TiMQ mq)</td>
-<td>报警事件</td>
-</tr>
-<tr>
-<td>void OnRecovery(TiMQ mq)</td>
-<td>传感器恢复事件</td>
+<td>void onThresholdNotify(TiMQ mq)</td>
+<td>门限检测通知</td>
 </tr>
 </tbody>
 </table>
@@ -1002,13 +1018,15 @@
 
 <p>事件处理：</p>
 <div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">MQEventListener</span> <span class="kd">implements</span> <span class="n">TiMQEventListener</span> <span class="o">{</span>
-  <span class="cm">/*报警事件处理*/</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">OnAlarm</span><span class="o">(</span><span class="n">TiMQ</span> <span class="n">mq</span><span class="o">){</span>
-      <span class="cm">/*①读取ADC接口采集到的传感器输出的实际电压值*/</span>
-      <span class="kt">double</span> <span class="n">vol</span> <span class="o">=</span> <span class="n">mq</span><span class="o">.</span><span class="na">getAnalogVoltage</span><span class="o">();</span>
-    <span class="o">}</span>
-    <span class="cm">/*传感器已恢复到正常状态*/</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">OnRecovery</span><span class="o">(</span><span class="n">TiMQ</span> <span class="n">mq</span><span class="o">){</span>
+  <span class="cm">/*通知事件处理*/</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onThresholdNotify</span><span class="o">(</span><span class="n">TiMQ</span> <span class="n">mq</span><span class="o">)</span> <span class="o">{</span>
+      <span class="cm">/*获取检测值是否大于门限值*/</span>
+      <span class="kt">boolean</span> <span class="n">alarm</span> <span class="o">=</span> <span class="n">mq</span><span class="o">.</span><span class="na">isGreaterThanThreshold</span>
+      <span class="cm">/*读取AO模拟电压值*/</span>
+      <span class="kt">double</span> <span class="n">vol</span> <span class="o">=</span> <span class="n">mq</span><span class="o">.</span><span class="na">getAnalogOutput</span><span class="o">();</span>
+      <span class="cm">/*读取DO数字电平值*/</span>
+      <span class="kt">int</span> <span class="n">level</span> <span class="o">=</span> <span class="n">mq</span><span class="o">.</span><span class="na">getDigitalOutput</span><span class="o">();</span>
+      <span class="o">...</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>

@@ -561,6 +561,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-nav__link">
+      通用传感器
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -935,8 +947,8 @@
 <td>获取WLAN实例</td>
 </tr>
 <tr>
-<td>int startup(int timeout)</td>
-<td>启动WLAN并连接AP</td>
+<td>void startup(int timeout)</td>
+<td>启动WLAN并连接AP, timeout以秒为单位</td>
 </tr>
 <tr>
 <td>void shutdown()</td>
@@ -1018,15 +1030,13 @@
 <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">setStaticAddress</span><span class="o">(</span><span class="s">&quot;192.168.1.100&quot;</span><span class="o">,</span> <span class="s">&quot;192.168.1.1&quot;</span><span class="o">,</span> <span class="s">&quot;255.255.255.0&quot;</span><span class="o">);</span>
 <span class="o">...</span>
 <span class="c1">//启动WLAN，连接目标AP，超时10秒</span>
-<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startup</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
-<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect timeout.&quot;</span><span class="o">);</span>
-    <span class="k">return</span> <span class="o">;</span>
+<span class="k">try</span><span class="o">{</span>
+  <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startup</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
 <span class="o">}</span>
-<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect fail.&quot;</span><span class="o">);</span>
-    <span class="k">return</span> <span class="o">;</span>    
+<span class="k">catch</span><span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span> <span class="c1">//connect fail </span>
 <span class="o">}</span>
+
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect success.&quot;</span><span class="o">);</span>
 <span class="o">...</span>
 </pre></div>
@@ -1043,18 +1053,15 @@
 <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changeSoftAPSSID</span><span class="o">(</span><span class="s">&quot;TiJOS-SoftAP&quot;</span><span class="o">);</span>
 <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">changeSoftAPPassword</span><span class="o">(</span><span class="s">&quot;12345678&quot;</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
 <span class="o">...</span>
-<span class="c1">//启动WLAN，连接目标AP，超时10秒</span>
-<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span><span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startup</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
-<span class="c1">//不论目标AP是否连接成功，都启动SoftAP, SSID不隐藏</span>
-<span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startupSoftAP</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
-<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect timeout.&quot;</span><span class="o">);</span>
-    <span class="k">return</span> <span class="o">;</span>
+<span class="k">try</span><span class="o">{</span>
+  <span class="c1">//启动WLAN，连接目标AP，超时10秒</span>
+  <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startup</span><span class="o">(</span><span class="mi">10</span><span class="o">);</span>
+  <span class="c1">//不论目标AP是否连接成功，都启动SoftAP, SSID不隐藏</span>
+  <span class="n">TiWLAN</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">startupSoftAP</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
 <span class="o">}</span>
-<span class="k">if</span><span class="o">(</span><span class="n">status</span> <span class="o">==</span> <span class="o">-</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect fail.&quot;</span><span class="o">);</span>
-    <span class="k">return</span> <span class="o">;</span>    
-<span class="o">}</span>
+<span class="k">catch</span><span class="o">(</span><span class="n">IOException</span> <span class="n">ex</span><span class="o">){</span>
+  <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span> <span class="c1">//connect fail </span>
+<span class="o">}</span>  
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;connect success.&quot;</span><span class="o">);</span>
 </pre></div>
 

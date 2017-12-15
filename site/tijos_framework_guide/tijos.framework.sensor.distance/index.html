@@ -606,6 +606,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-nav__link">
+      通用传感器
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -929,7 +941,7 @@
 <td>设置声波的速度（单位：m/s，默认为340m/s）</td>
 </tr>
 <tr>
-<td>int measure()</td>
+<td>void measure()</td>
 <td>开始测量</td>
 </tr>
 <tr>
@@ -945,7 +957,7 @@
 <span class="cm">*/</span>  
  <span class="n">TiHCSR04</span> <span class="n">hcsr04</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TiHCSR04</span><span class="o">(</span><span class="n">gpio0</span><span class="o">,</span> <span class="n">gpioPin0</span><span class="o">,</span> <span class="n">gpioPin1</span><span class="o">);</span>
 <span class="c1">//开始测量</span>
-<span class="kt">int</span> <span class="n">err</span> <span class="o">=</span> <span class="n">hcsr04</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
+<span class="n">hcsr04</span><span class="o">.</span><span class="na">measure</span><span class="o">();</span>
 <span class="c1">//获取最近一次的测量结果</span>
 <span class="n">distance</span> <span class="o">=</span> <span class="n">hcsr04</span><span class="o">.</span><span class="na">getDistance</span><span class="o">();</span>
 </pre></div>

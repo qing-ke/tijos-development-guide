@@ -561,6 +561,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-nav__link">
+      通用传感器
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -990,6 +1002,7 @@
 <span class="c1">//发送数据到服务端</span>
 <span class="n">OutputStream</span>  <span class="n">output</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">();</span>
 <span class="n">output</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">&quot;Hello, this is client&quot;</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+<span class="n">output</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
 
 <span class="c1">//从服务端获取数据</span>
 <span class="n">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
@@ -1023,6 +1036,7 @@
 <span class="c1">//发送数据到客户端</span>
 <span class="n">OutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">();</span>
 <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">&quot;Hello, This is the server.&quot;</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+<span class="n">out</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
 
 <span class="c1">//读取客户端数据</span>
 <span class="n">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">();</span>
@@ -1089,7 +1103,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../tijos.framework.transducer.relay/" title="继电器" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1098,7 +1112,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                继电器
+                通用传感器
               </span>
             </div>
           </a>
