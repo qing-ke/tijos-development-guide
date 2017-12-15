@@ -39,11 +39,13 @@ TiMQ类中主要方法的使用：
 
 主要方法如下：
 
-| 方法                        | 说明                  |
-| ------------------------- | ------------------- |
-| double getAnalogVoltage() | 获取当前传感器输出的电压值（单位：V） |
-| long getEventTime()       | 获取事件发生时间，单位：us      |
-| int getSignalPinID()      | 获取报警信号pin ID        |
+| 方法                               | 说明                             |
+| -------------------------------- | ------------------------------ |
+| boolean isGreaterThanThreshold() | 获取当前测量值是否已经大于门限值               |
+| double getAnalogOutput()         | 获取当前传感器AO口输出的模拟电压值（单位：V）       |
+| int getDigitalOutput()           | 获取当前传感器DO口输出的数字电平（1:高电平，0:低电平） |
+| long getEventTime()              | 获取事件发生时间，单位：us                 |
+| int getSignalPinID()             | 获取报警信号pin ID                   |
 
 
 
@@ -52,11 +54,10 @@ TiMQ类中主要方法的使用：
 
 TiMQ的事件监听主要通过TiMQEventListener事件回调来处理事件，事件类型包括：
 
-| 方法                                       | 说明               |
-| ---------------------------------------- | ---------------- |
-| void setEventListener(TiMQEventListener lc) | 设置监听             |
-| void onThresholdNotify(TiMQ mq)          | 超出阈值事件(GPIO电平变化) |
-|                                          |                  |
+| 方法                                       | 说明     |
+| ---------------------------------------- | ------ |
+| void setEventListener(TiMQEventListener lc) | 设置监听   |
+| void onThresholdNotify(TiMQ mq)          | 门限检测通知 |
 
 创建TiMQ事件监听对象：
 
@@ -74,12 +75,15 @@ mq.setEventListener(lc);
 
 ```java
 class MQEventListener implements TiMQEventListener {
-  /*报警事件或传感器已恢复到正常状态处理*/
-    public void onThresholdNotify(TiMQ mq){
-      /*读取ADC接口采集到的传感器输出的实际电压值*/
-      double vol = mq.getAnalogVoltage();
-      /*当前DO口电平状态*/
-      int do = getDigitalOutput();
+  /*通知事件处理*/
+    public void onThresholdNotify(TiMQ mq) {
+      /*获取检测值是否大于门限值*/
+      boolean alarm = mq.isGreaterThanThreshold
+      /*读取AO模拟电压值*/
+      double vol = mq.getAnalogOutput();
+      /*读取DO数字电平值*/
+      int level = mq.getDigitalOutput();
+      ...
     }
 }
 ```
