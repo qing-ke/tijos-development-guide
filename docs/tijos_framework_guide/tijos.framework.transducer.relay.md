@@ -1,4 +1,4 @@
-# tijos.framework.transducer.relay - 继电器类
+# 继电器类
 
 tijos.framework.transducer.relay 中包含了与继电器相关的类，继电器的主要功能是使用低电压控制高电压、大电流以及交流电等强电电路的开断，被广泛用于工业控制、家庭电器以及汽车电子等多个行业。
 

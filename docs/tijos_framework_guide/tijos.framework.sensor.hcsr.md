@@ -1,6 +1,6 @@
-# tijos.framework.sensor.distance - 测距类
+# HC-SR系列测距传感器类
 
-tijos.framework.sensor.distance中包含了与距离测量相关的类，通过例如HC-SR04之类的超声波测距传感器，完成测距的功能，可满足室内、近场以及多种环境的使用。
+tijos.framework.sensor.hcsr中包含了HC-SR系统距离测量相关的传感器类，通过例如HC-SR04之类的超声波测距传感器，完成测距的功能，可满足室内、近场以及多种环境的使用。
 
 包含类如下:
 

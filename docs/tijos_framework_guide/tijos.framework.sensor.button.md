@@ -1,4 +1,4 @@
-# tijos.framework.sensor.button - 按键类
+# 按键类
 
 tijos.framework.sensor.button中包含了与按键相关的类，如单按键，矩阵键盘等等，通过按键事件监听模式满足不同的按键应用场景。
 

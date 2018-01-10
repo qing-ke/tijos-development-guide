@@ -1,6 +1,6 @@
-# tijos.framework.sensor.infrared - 红外线类
+# VS1838BNEC 红外线传感器类
 
-tijos.framework.sensor.infrared中包含了与红外接收相关的类，如VS1838B等，可通过接收事件监听满足不同的红外应用场景。
+tijos.framework.sensor.vs1838b中包含了与VS1838B红外接收传感器相关的类，可通过接收事件监听满足不同的红外应用场景。
 
 包含类如下:
 

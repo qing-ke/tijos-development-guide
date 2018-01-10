@@ -1,4 +1,4 @@
-# tijos.framework.transducer.buzzer 蜂鸣类
+#  蜂鸣器类
 
 tijos.framework.transducer.buzzer中包含了与蜂鸣器相关的类，通过使用不同延时控制蜂鸣器的导通、关闭，来实现不同频率的提示声，满足声音提示、报警提示以及按键提示等多种提示音。
 

@@ -13,14 +13,16 @@ TiJOS Framework提供了用户在应用中对硬件资源及传感器类等进�
 | tijos.framework.networkcenter     | 网络中心类，管理网络相关配置及状态等，如：WLAN、DNS等           |
 | tijos.framework.devicecenter      | 设备总线相关类，如GPIO, I2C, PWM等等，可用来开发在标准库中不支持的传感器 |
 | tijos.framework.sensor.button     | 按键类                                      |
-| tijos.framework.sensor.distance   | 测距类                                      |
-| tijos.framework.sensor.gas        | 气体传感类                                    |
-| tijos.framework.sensor.humiture   | 温湿度传感类                                   |
-| tijos.framework.sensor.infrared   | 红外线类                                     |
+| tijos.framework.sensor.hcsr       | HC-SR 超声测距传感器类                           |
+| tijos.framework.sensor.mq         | MQ系列气体传感器类                               |
+| tijos.framework.sensor.dht        | dht温湿度传感类                                |
+| tijos.framework.sensor.ds18b20    | ds18b20温度传感器类                            |
+| tijos.framework.sensor.vs1838b    | VS1838B红外线传感器类                           |
 | tijos.framework.transducer.buzzer | 蜂鸣类                                      |
 | tijos.framework.transducer.led    | LED显示类                                   |
+| tijos.framework.transducer.oled   | OLED显示类                                  |
 | tijos.framework.transducer.relay  | 继电器类                                     |
-| tijos.framework.sensor.general    | 通讯传感器类                                   |
+| tijos.framework.sensor.general    | 通用传感器类                                   |
 | tijos.framework.net.ntp           | 网络时间协议客户端                                |
 | tijos.framework.net.mqtt          | MQTT 客户端，支持3.1.1标准                       |
 | tijos.framework.ota               | 应用在线升级类                                  |

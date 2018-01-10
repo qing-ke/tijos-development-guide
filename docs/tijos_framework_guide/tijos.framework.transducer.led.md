@@ -1,4 +1,4 @@
-# tijos.framework.transducer.led - LED显示类
+# LED显示类
 
 tijos.framework.transducer.led中包含了LED灯、RGBELD灯以及OLED屏幕相关的类。其中LED灯为普通单色发光二极管，套件中自带红色、黄色、蓝色、绿色四种颜色的发光二极管，可以通过不同的PIN口单独控制亮灭，适用于需要指示灯、报警灯等场景；RGB三基色LED灯包含红色、绿色和蓝色三种基础色，可通过TiPWM接口各自输出不同的亮度等级，最终混色成相应的颜色，适用于需要变色指示灯、呼吸灯等场景；OLED屏幕使用TiICMaster接口控制，可输出4*16个字符，适用于需要显示信息、带有人机交互界面的设备。
 
