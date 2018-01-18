@@ -10,13 +10,13 @@ TiJOS Framework提供TiPWM来支持PWM功能，其将PWM按照port分组，共�
 
 TiPWM类中主要的方法：
 
-| 方法                                       | 说明                                       |
-| ---------------------------------------- | ---------------------------------------- |
-| TiPWM open(int portID, int... channelIDs) | 静态方法，通过指定port和channel集合打开PWM，返回TiPWM对象，**若需要再次打开或打开为其他设备时需要先调用close关闭当前对象** |
-| void close()                             | 关闭当前对象                                   |
-| void changePeriod(int periodValue)       | 设置脉冲周期                                   |
-| void changeChannelDuty(int channelID, int dutyValue) | 设置脉冲占空比                                  |
-| void updatePeriodAndDuty()               | 更新周期和占空比                                 |
+| 方法                                       | 说明                                     |
+| ---------------------------------------- | -------------------------------------- |
+| TiPWM open(int portID, int... channelIDs) | 静态方法，通过指定port和channel集合打开PWM，返回TiPWM对象 |
+| void close()                             | 关闭当前对象                                 |
+| void changePeriod(int periodValue)       | 设置脉冲周期                                 |
+| void changeChannelDuty(int channelID, int dutyValue) | 设置脉冲占空比                                |
+| void updatePeriodAndDuty()               | 更新周期和占空比                               |
 
 TiPWM类中他方法的技术说明请参考TiJOS Framework说明文档。
 

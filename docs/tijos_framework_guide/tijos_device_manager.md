@@ -1,8 +1,8 @@
-# Ti-Dev Manager 设备管理器使用说明
+# Ti-Device Manager 设备管理器使用说明
 
-Ti-Dev Manager设备管理器是钛极OS(TiJOS)应用开发套件的一部分， 该工具由Ti-Dev Studio自动启动运行，通过此工具开发者可轻松操作TiKit开发板进行设备诊断、配置、应用执行等功能。
+Ti-Device Manager设备管理器是钛极OS(TiJOS)应用开发套件的一部分， 该工具由Ti-Dev Studio自动启动运行，通过此工具开发者可轻松操作TiKit开发板进行设备诊断、配置、应用执行等功能。
 
-Ti-Dev Manager功能包括：
+Ti-Device Manager功能包括：
 
 - 通过应用下载端口与开发板建立连接获取设备信息
 - 对TiKit开发板基础信息及网络信息进行设置
@@ -18,7 +18,7 @@ Ti-Dev Manager功能包括：
 
 ![](.\img\MgrTryicon.png)
 
-## Ti-Dev Manager主界面
+## Ti-Device Manager主界面
 
 该工具主界面分为三大区域，如下图：
 
@@ -60,7 +60,7 @@ Ti-Dev Manager功能包括：
 
 #### 运行
 
-手动运行TiKit开发板中的应用，已经进入用户模式的设备将无法通过Ti-Dev Manager操作，确保系统进入BOOT模式，启动方法：按住BOOT按键，按一次RESET按键，然后松开BOOT按键
+手动运行TiKit开发板中的应用，已经进入用户模式的设备将无法通过Ti-Device Manager操作，确保系统进入BOOT模式，启动方法：按住BOOT按键，按一次RESET按键，然后松开BOOT按键
 
 #### 日志
 
@@ -128,7 +128,7 @@ AP模式，提供无线接入服务，允许其它无线设备接入，提供数
 
 ## 下载应用到设备
 
-Ti-Dev Manager支持手工下载通过Ti-Dev Studio导出的应用tapk文件，通过点击"下载APP"，选择要下载的应用tapk文件，如下图：
+Ti-Device Manager支持手工下载通过Ti-Dev Studio导出的应用tapk文件，通过点击"下载APP"，选择要下载的应用tapk文件，如下图：
 
 ![](.\img\appdown.png)
 

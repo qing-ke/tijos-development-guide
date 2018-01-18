@@ -635,6 +635,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tijos.framework.sensor.general/" title="通用传感器" class="md-nav__link">
+      通用传感器
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -937,7 +949,7 @@
 <h2 id="_2">准备工作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>在Eclipse安装Ti-Dev Studio 插件</li>
-<li>TiKit 开发板连接正常并在Ti-Dev Manager中状态正常</li>
+<li>TiKit 开发板连接正常并在Ti-DeviceManager中状态正常</li>
 </ol>
 <h2 id="_3">新建工程<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>在Eclipse中新建菜单中选择"Other"</p>
@@ -953,7 +965,7 @@
 <p><img alt="NewTiJOSClass_Name" src="../.\img\NewTiJOSClass_Name.png" /></p>
 <p>类创建成功后，如下图所示：</p>
 <p><img alt="HellowTiJOS_Class" src="../.\img\HellowTiJOS_Class.png" /></p>
-<p>加入代码将输出打印到Ti-DevManager日志输出中</p>
+<p>加入代码将输出打印到Ti-Device Manager日志输出中</p>
 <div class="codehilite"><pre><span></span>  public class HelloWorld {
         public static void main (String[] args) {
           System.out.println(&quot;Hello TiJOS&quot;);
@@ -972,14 +984,14 @@
 <p>当需要进行调试时， 如果是与硬件无关的操作，可通过Debug As 中选择 "Java Application"进行调试， 如果是与硬件相应的功能调试， 则需要通过打印的方式观察输出结果。</p>
 <p>硬件开发板在线调试目前暂时不支持，将在后续版本中增加此功能。 </p>
 <h2 id="_6">导出<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p>当应用调试测试成功后， 可将编译结果导出为tapk文件通过Ti-Dev Manager直接下载到设备中进行测试， 同时该文件也用于最新的量产或OTA应用更新过程。</p>
+<p>当应用调试测试成功后， 可将编译结果导出为tapk文件通过Ti-Device Manager直接下载到设备中进行测试， 同时该文件也用于最新的量产或OTA应用更新过程。</p>
 <p>导出tapk时， 在工程右键菜单中选择"Export", 在弹出的导出类型列表中选择“TiJOS Development"下的”Export TiJOS Application Package..."</p>
 <p><img alt="ExportTAPK_ProjectSelection" src="../.\img\ExportTAPK_Selection.png" /></p>
 <p>点击Next后， 选择HelloTiJOS工程</p>
 <p><img alt="ExportTAPK_ProjectSelection" src="../.\img\ExportTAPK_ProjectSelection.png" /></p>
 <p>点击"Next"后选择主类及tapk文件存储路径：</p>
 <p><img alt="ExportTAPK_StorageOptions" src="../.\img\ExportTAPK_StorageOptions.png" /></p>
-<p>点击"Finish"即可完成tapk应用包导出， 导出的tapk文件可通过Ti-Dev Manager中的下载、运行功能直接对实际设备进行测试。</p>
+<p>点击"Finish"即可完成tapk应用包导出， 导出的tapk文件可通过Ti-Device Manager中的下载、运行功能直接对实际设备进行测试。</p>
                 
                   
                 

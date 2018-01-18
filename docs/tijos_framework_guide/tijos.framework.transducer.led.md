@@ -1,4 +1,4 @@
-# tijos.framework.transducer.led - LED显示类
+# LED显示类
 
 tijos.framework.transducer.led中包含了LED灯、RGBELD灯以及OLED屏幕相关的类。其中LED灯为普通单色发光二极管，套件中自带红色、黄色、蓝色、绿色四种颜色的发光二极管，可以通过不同的PIN口单独控制亮灭，适用于需要指示灯、报警灯等场景；RGB三基色LED灯包含红色、绿色和蓝色三种基础色，可通过TiPWM接口各自输出不同的亮度等级，最终混色成相应的颜色，适用于需要变色指示灯、呼吸灯等场景；OLED屏幕使用TiICMaster接口控制，可输出4*16个字符，适用于需要显示信息、带有人机交互界面的设备。
 
@@ -155,10 +155,10 @@ TiOLED_UG2864实例在创建时需要和具体总线设备绑定，具体绑定�
 | ---------------------------------------- | ---------------------------------------- |
 | void turnOn()                            | 点亮屏幕                                     |
 | void turnOff()                           | 关闭屏幕                                     |
-| boolean clear()                          | 清除当前屏幕显示的所有信息                            |
-| boolean print(int lineId, int columnId, String text) | 在指定行列坐标处开始显示字符（可显示的最大数据量为一个满屏幕的数据量，即：4*16个字符，多余字符将无法显示） |
+| void clear()                             | 清除当前屏幕显示的所有信息                            |
+| void print(int lineId, int columnId, String text) | 在指定行列坐标处开始显示字符（可显示的最大数据量为一个满屏幕的数据量，即：4*16个字符，多余字符将无法显示） |
 | void setPosition(int lineId, int columnId) | 设置指定的行坐标和列坐标（支持0~3行，0~15列）               |
-| boolean output(String text)              | 在指定坐标（由setPosition方法设置）处开始显示字符（当字符超出屏幕末端时，回滚从0行0列开始覆盖显示） |
+| void output(String text)                 | 在指定坐标（由setPosition方法设置）处开始显示字符（当字符超出屏幕末端时，回滚从0行0列开始覆盖显示） |
 
 TiOLED_UG2864类中主要方法的使用如下(单屏显示)：
 

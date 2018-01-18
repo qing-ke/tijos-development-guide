@@ -22,15 +22,15 @@ TiJOS Framework提供TiUART来支持UART功能，其将UART按照port分组，�
 
 TiUART类中主要的方法：
 
-| 方法                                       | 说明                                       |
-| ---------------------------------------- | ---------------------------------------- |
-| TiUART open(int portID)                  | 通过指定port打开指定UART，返回TiUART对象，**若需要再次打开或打开为其他设备时需要先调用close关闭当前实例** |
-| void close()                             | 关闭已打开的TiUART实例                           |
-| void setMode(int baudRate, int dataBits, int stopBits, int parity) | 设置工作模式，波特率、数据位、停止位，奇偶校验位                 |
-| int available()                          | 检查有效接收数据长度，单位字节                          |
-| void clear(int bufferType)               | 根据不同缓冲类型清除缓冲区                            |
-| int read(byte[] data, int offset, int len) | 读取数据，返回实际读取长度                            |
-| int write(byte[] data, int offset, int len) | 写入数据，返回实际写入长度                            |
+| 方法                                       | 说明                          |
+| ---------------------------------------- | --------------------------- |
+| TiUART open(int portID)                  | 通过指定port打开指定UART，返回TiUART对象 |
+| void close()                             | 关闭已打开的TiUART实例              |
+| void setMode(int baudRate, int dataBits, int stopBits, int parity) | 设置工作模式，波特率、数据位、停止位，奇偶校验位    |
+| int available()                          | 检查有效接收数据长度，单位字节             |
+| void clear(int bufferType)               | 根据不同缓冲类型清除缓冲区               |
+| int read(byte[] data, int offset, int len) | 读取数据，返回实际读取长度               |
+| int write(byte[] data, int offset, int len) | 写入数据，返回实际写入长度               |
 
 TiUART类中他方法的技术说明请参考TiJOS Framework说明文档。
 

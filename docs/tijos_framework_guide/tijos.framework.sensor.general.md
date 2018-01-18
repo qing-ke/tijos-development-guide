@@ -1,6 +1,6 @@
-# tijos.framework.sensor.general - 通用传感器
+# 通用报警传感器类
 
-钛极OS(TiJOS)通用传感器类提供对常见的不带通讯协议的传感器支持，这类传感器一般提供3个或4个外部连接线，包括VCC,GND, AO, DO. AO一般连接ADC用于获得传感器模拟量转为数字量的电压值， DO一般用于获得是否超过预置的阀值的电平，同时在超过阀值时通过DO管脚产生相应的中断.
+tijos.framework.sensor.general通用传感器类提供对常见的不带通讯协议的传感器支持，这类传感器一般提供3个或4个外部连接线，包括VCC,GND, AO, DO. AO一般连接ADC用于获得传感器模拟量转为数字量的电压值， DO一般用于获得是否超过预置的阀值的电平，同时在超过阀值时通过DO管脚产生相应的中断.
 
 钛极OS(TiJOS)通用传感器类该传感器类基于TiGPIO和TiADC设备总线驱动, 适用于一些常见报警类传感器，如温湿度传感器, 光线传感器，火焰传感器，等等， 同时也适用于按键传感器，该类型通过DO检测按键事件。
 
@@ -96,7 +96,7 @@ class GeneralSensorEventListener implements ITiGeneralSensorEventListener {
 
 	@Override
 	public void onThresholdNotify(TiGeneralSensor sensor) {
-		System.out.println("onEvent ");
+		System.out.println("onThresholdNotify ");
 	}
 }
 

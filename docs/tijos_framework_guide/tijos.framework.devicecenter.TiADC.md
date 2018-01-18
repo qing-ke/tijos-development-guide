@@ -21,7 +21,6 @@ TiADC类中主要的方法：
 TiADC类中他方法的技术说明请参考TiJOS JDK framework说明文档。
 
 
-
 ## TiADC对象创建与销毁
 
 TiADC对象的创建需要调用open静态方法，传入指定port参数，返回创建的接口对象。

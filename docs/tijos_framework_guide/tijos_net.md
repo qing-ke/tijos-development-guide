@@ -34,6 +34,7 @@ Socket client = new Socket(host, port);
 //发送数据到服务端
 OutputStream  output = client.getOutputStream();
 output.write("Hello, this is client".getBytes());
+output.flush();
 
 //从服务端获取数据
 InputStream input = client.getInputStream();
@@ -71,6 +72,7 @@ System.out.println("a client is connected: " + socket.getRemoteSocketAddress());
 //发送数据到客户端
 OutputStream out = socket.getOutputStream();
 out.write("Hello, This is the server.".getBytes());
+out.flush();
 
 //读取客户端数据
 InputStream input = socket.getInputStream();

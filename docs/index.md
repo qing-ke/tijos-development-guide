@@ -1,8 +1,8 @@
 # 钛极OS(TiJOS)应用开发指南
 
-| 文档版本   |    2.2     |
+| 文档版本   |    2.3     |
 | :----- | :--------: |
-| 最近更新时间 | 2017.11.10 |
+| 最近更新时间 | 2017.12.20 |
 |        |            |
 
 
@@ -30,14 +30,17 @@
 | [TiJOS传感器应用开发指南](tijos_framework_guide/tijos_sensor_application_guide.md) |                                          |
 | [传感器支持](tijos_framework_guide/tijos.framework.sensor.md) |                                          |
 |                                          | [按键](tijos_framework_guide/tijos.framework.sensor.button.md) |
-|                                          | [测距模块](tijos_framework_guide/tijos.framework.sensor.distance.md) |
-|                                          | [气体传感器](tijos_framework_guide/tijos.framework.sensor.gas.md) |
-|                                          | [温湿度传感器](tijos_framework_guide/tijos.framework.sensor.humiture.md) |
-|                                          | [红外线传感器](tijos_framework_guide/tijos.framework.sensor.infrared.md) |
+|                                          | [HC-SR测距模块](tijos_framework_guide/tijos.framework.sensor.hcsr.md) |
+|                                          | [MQ系列气体传感器](tijos_framework_guide/tijos.framework.sensor.mq.md) |
+|                                          | [DHT11温湿度传感器](tijos_framework_guide/tijos.framework.sensor.dht.md) |
+|                                          | [DS18B20温度传感器](tijos_framework_guide/tijos.framework.sensor.ds18b20.md) |
+|                                          | [VS1838B红外线传感器](tijos_framework_guide/tijos.framework.sensor.vs1838b.md) |
 |                                          | [蜂鸣器](tijos_framework_guide/tijos.framework.transducer.buzzer.md) |
-|                                          | [LED/OLED显示](tijos_framework_guide/tijos.framework.transducer.led.md) |
+|                                          | [LED显示](tijos_framework_guide/tijos.framework.transducer.led.md) |
+|                                          | [OLED显示](tijos_framework_guide/tijos.framework.transducer.oled.md) |
 |                                          | [继电器](tijos_framework_guide/tijos.framework.transducer.relay.md) |
 |                                          | [通用传感器](tijos_framework_guide/tijos.framework.sensor.general.md) |
+|                                          | [更多传感器支持](tijos_framework_guide/tijos.framework.sensor.more.md) |
 | [网络应用开发指南](tijos_framework_guide/tijos_net.md) |                                          |
 |                                          | [MQTT 客户端](tijos_framework_guide/tijos.framework.net.mqtt.md) |
 |                                          | [网络时间协议客户端](tijos_framework_guide/tijos.framework.net.ntp.md) |

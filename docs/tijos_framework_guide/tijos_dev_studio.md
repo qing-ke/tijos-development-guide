@@ -99,7 +99,7 @@ Ti-Dev Studio提供如下功能:
 
 2. 提示"Device manager startup failed"
 
-   请检查Preferences中Ti-Dev Studio配置路径是否正确。并尝试在菜单Ti-Dev --> Ti-Device Manager来启动工具。
+   请检查Preferences中Ti-Dev Studio配置路径是否正确。并尝试在菜单TiJOS --> Ti-Device Manager来启动工具。
 
 3. Run as --> TiJOS Application在线链接失败?
 
