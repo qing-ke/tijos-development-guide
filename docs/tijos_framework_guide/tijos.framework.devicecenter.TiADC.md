@@ -14,7 +14,9 @@ TiADC类中主要的方法：
 | ---------------------------------------- | ---------------------------------------- |
 | TiADC open(int portID)                   | 静态方法，通过指定port打开ADC，返回TiADC对象，**若需要再次打开或打开为其他设备时需要先调用close关闭当前对象** |
 | void close()                             | 关闭当前对象                                   |
-| double getVoltage(double refVoltage, double multiple) | 获取当前对象电压测量值，单位V                          |
+| double getVoltage()                      | 获取当前对象电压测量值，单位V                          |
+| void setRefVoltage(double refVoltage)    | 设置参考电压值，单位V。默认值：1.0                      |
+| void setDivCoefficient(double divCoefficient) | 设置采样分压倍数。默认值：5.0                         |
 
 TiADC类中他方法的技术说明请参考TiJOS JDK framework说明文档。
 
@@ -42,8 +44,11 @@ adc0.close(); //销毁当前对象
 
 ```java
 ...
-double voltage = adc0.getVoltage(1.0, 5.0);  //获取电压数字量，其中1.0为平台内部参考电压， 5.0为分压										  //倍数，这部分与平台相关，需要根据平台特性设置。
-                                             //以上设置电压测量范围：0-5V， 本例以TiKit-T600-											 //ESP8266A平台为例。
+  
+adc0.setRefVoltage(1.0);     //1.0为平台内部参考电压
+adc0.setDivCoefficient(5.0); //5.0为分压倍数
+  						   //以上设置电压测量范围：0-5V， 本例以TiKit-T600-										       //ESP8266A平台为例，这部分与平台相关，需要根据平台特性设置。
+double voltage = adc0.getVoltage();  //获取电压数字量
 ...
 ```
 

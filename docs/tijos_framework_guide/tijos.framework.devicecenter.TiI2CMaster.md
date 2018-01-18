@@ -24,11 +24,10 @@ TiI2CMaster类中主要的方法：
 | TiI2CMaster(int portID)                  | 静态方法，通过指定port打开I2C Master，返回TiI2CMaster对象，**若需要再次打开或打开为其他设备时需要先调用close关闭当前对象** |
 | void close()                             | 关闭当前对象                                   |
 | void setBaudRate(int baud)               | 设置通讯波特率                                  |
-| void selectSlave(int address)            | 选择从机，地址范围：0-127                          |
-| void read(byte[] data, int offset, int len) | 从从机读数据                                   |
-| void write(byte[] data, int offset, int len) | 向从机写数据                                   |
-| void read(byte[] data, int offset, int len, boolean repeated) | 从从机读数据并使能重复，即，不发送stop                    |
-| void write(byte[] data, int offset, int len, boolean repeated) | 向从机写数据并使能重复，即，不发送stop                    |
+| oid read(int address, byte[] data, int offset, int len) | 从从机读数据。从机地址范围：0-127                      |
+| void write(int address, byte[] data, int offset, int len) | 向从机写数据。从机地址范围：0-127                      |
+| void read(int address, byte[] data, int offset, int len, boolean repeated) | 从从机读数据并使能重复，即，不发送stop。从机地址范围：0-127       |
+| void write(int address, byte[] data, int offset, int len, boolean repeated) | 向从机写数据并使能重复，即，不发送stop。从机地址范围：0-127       |
 
 TiI2CMaster类中他方法的技术说明请参考TiJOS Framework说明文档。
 
@@ -68,14 +67,14 @@ i2c0.setBaudRate(100); //波特率100Kbps
 
 ## TiI2CMaster输入输出
 
-TiI2CMaster的输入输出操作通过selectSlave、read和write方法完成。
+TiI2CMaster的输入输出操作通过read和write方法完成。
 
 ```java
 ...
-i2c0.selectSlave(0x78);
-byte[] dataBuffer = {1, 2, 3, 4, 5};
-i2c0.write(dataBuffer, 0, dataBuffer.length);
-i2c0.read(dataBuffer, 0, dataBuffer.length);
+byte[] cmdBuffer = {0x40, 0x00};
+byte[] dataBuffer = {0x00, 0x00, 0x00, 0x00};
+i2c0.write(0x3C, dataBuffer, 0, 2, true);
+i2c0.read(0x3C, dataBuffer, 0, 4);
 ...
 ```
 
